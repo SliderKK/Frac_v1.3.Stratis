@@ -6,7 +6,7 @@
 
 if (!isServer) exitWith {};
 
-private ["_UID", "_bank", "_moneySaving", "_result", "_data", "_columns", "_dataTemp", "_ghostingTimer", "_secs"];
+private ["_UID", "_bank", "_moneySaving", "_result", "_gearLevel", "_data", "_columns", "_dataTemp", "_ghostingTimer", "_secs"];
 _UID = _this;
 
 _bank = 0;
@@ -22,6 +22,8 @@ if (_moneySaving) then
 	};
 };
 
+_gearLevel = (["getPlayerGearLevel:" + _UID, 2] call extDB_Database_async) param [0,0,[0]];
+
 _result = ([format ["checkPlayerSave:%1:%2", _UID, call A3W_extDB_MapID], 2] call extDB_Database_async) select 0;
 
 if (!_result) then
@@ -29,7 +31,8 @@ if (!_result) then
 	_data =
 	[
 		["PlayerSaveValid", false],
-		["BankMoney", _bank]
+		["BankMoney", _bank],
+		["GearLevel", _gearLevel]
 	];
 }
 else
@@ -100,7 +103,7 @@ else
 	} forEach _result;
 
 	_dataTemp = _data;
-	_data = [["PlayerSaveValid", true]];
+	_data = [["PlayerSaveValid", true], ["GearLevel", _gearLevel]];
 
 	_ghostingTimer = ["A3W_extDB_GhostingTimer", 5*60] call getPublicVar;
 
