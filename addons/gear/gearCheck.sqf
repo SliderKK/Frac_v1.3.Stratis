@@ -5,7 +5,7 @@
 
 // Supporter Loadout  
 _gearsEnabled = ["A3W_gearsEnabled"] call isConfigOn;
-_gearLevel = player getVariable ["gear", 0];
+_gearLevel = player getVariable ["GearLevel", 0];
 
 
 sleep 1;
