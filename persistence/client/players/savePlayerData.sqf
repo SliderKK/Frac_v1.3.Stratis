@@ -4,21 +4,23 @@
 //	@file Name: savePlayerData.sqf
 //	@file Author: AgentRev
 
-#define PLAYER_CONDITION (alive player && !(missionNamespace getVariable ["playerSpawning", true]) && (isNil "A3W_fnc_isUnconscious" || {!(player call A3W_fnc_isUnconscious)}))
-
 if (!isNil "savePlayerHandle" && {typeName savePlayerHandle == "SCRIPT"} && {!scriptDone savePlayerHandle}) exitWith {};
 
 savePlayerHandle = _this spawn
 {
-	if (PLAYER_CONDITION && {!isNil "isConfigOn" && {["A3W_playerSaving"] call isConfigOn}}) then
+	if (alive player &&
+	   {!isNil "isConfigOn" && {["A3W_playerSaving"] call isConfigOn}} &&
+	   {!isNil "playerSetupComplete" && {playerSetupComplete}} &&
+	   {!isNil "respawnDialogActive" && {!respawnDialogActive}} &&
+	   {player getVariable ["FAR_isUnconscious", 0] == 0}) then
 	{
 		_UID = getPlayerUID player;
-		_manualSave = param [0, false, [false]];
+		_manualSave = [_this, 0, false, [false]] call BIS_fnc_param;
 
 		// In case script is triggered via menu action
 		if (!_manualSave) then
 		{
-			_manualSave = param [3, false, [false]];
+			_manualSave = [_this, 3, false, [false]] call BIS_fnc_param;
 		};
 
 		_info =
@@ -61,7 +63,7 @@ savePlayerHandle = _this spawn
 			_data = _data - [-1];
 		};
 
-		if (PLAYER_CONDITION) then
+		if (alive player) then
 		{
 			if (count _info > 0 || count _data > 0) then
 			{
