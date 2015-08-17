@@ -29,7 +29,7 @@ spawnActionHandle = (_this select 1) spawn
 	if (isNil "playerData_resetPos") then
 	{
 		// Deal with money here
-		_baseMoney = ["A3W_startingMoney", 100] call getPublicVar;
+		_baseMoney = ["A3W_startingMoney", 100] call getPublicVar + (400 * (player getVariable ["gearLevel", 0]));
 		player setVariable ["cmoney", _baseMoney, true];
 		
 		[] execVM "addons\gear\gearCheck.sqf"; //Cael817, Add extra gear at respawn.
