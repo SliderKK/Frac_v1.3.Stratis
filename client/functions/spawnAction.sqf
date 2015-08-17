@@ -29,7 +29,7 @@ spawnActionHandle = (_this select 1) spawn
 	if (isNil "playerData_resetPos") then
 	{
 		// Deal with money here
-		_baseMoney = ["A3W_startingMoney", 100] call getPublicVar + (400 * (player getVariable ["gearLevel", 0]));
+		_baseMoney = ["A3W_startingMoney", 100] call getPublicVar;
 		player setVariable ["cmoney", _baseMoney, true];
 		
 		[] execVM "addons\gear\gearCheck.sqf"; //Cael817, Add extra gear at respawn.
@@ -72,7 +72,7 @@ _header = _dialog displayCtrl respawn_Content_Text;
 
 if (cbChecked (_dialog displayCtrl respawn_Preload_Checkbox)) then
 {
-	_header ctrlSetStructuredText parseText "<t size='0.5'> <br/></t><t size='1.33'>Preloading spawn...</t>";
+	_header ctrlSetStructuredText parseText "<t size='0.5'> <br/></t><t size='1.33'>Preloading spawn...</t>";
 };
 
 if (typeName spawnActionHandle == "SCRIPT") then
