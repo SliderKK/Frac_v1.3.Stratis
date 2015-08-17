@@ -4,6 +4,9 @@ A3Wasteland Stratis
 
 # Frac_v1.2 Update
 
+TestingPurposes for the Git Pull Requestst and Syncing
+
+
 (This is a work in progress to update A3W_1.1b to A3W_1.2)
 
 ==============
