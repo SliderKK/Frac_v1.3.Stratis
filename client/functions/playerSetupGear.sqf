@@ -8,8 +8,8 @@ private ["_player", "_uniform", "_vest", "_headgear", "_goggles", "_PlayerGearLe
 _player = _this;
 
 // Gear Loadout  
-+_gearsEnabled = ["A3W_gearsEnabled"] call isConfigOn;
-+_gearLevel = player getVariable ["gear", 0];
+_gearsEnabled = ["A3W_gearsEnabled"] call isConfigOn;
+_gearLevel = player getVariable ["gear", 0];
 
 
 // Clothing is now defined in "client\functions\getDefaultClothing.sqf"
