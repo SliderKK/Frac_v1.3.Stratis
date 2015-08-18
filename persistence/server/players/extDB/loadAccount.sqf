@@ -6,7 +6,7 @@
 
 if (!isServer) exitWith {};
 
-private ["_UID", "_bank", "_moneySaving", "_result", "_data", "_columns", "_dataTemp", "_ghostingTimer", "_secs", "_gears", "_gearsEnabled", "_PlayerGearEnabled", "_PlayerGearLevel"];
+private ["_UID", "_bank", "_moneySaving", "_result", "_data", "_columns", "_dataTemp", "_ghostingTimer", "_secs", "_gears", "_gearsEnabled"];
 _UID = _this;
 
 _bank = 0;
