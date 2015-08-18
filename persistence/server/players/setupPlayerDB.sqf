@@ -62,7 +62,7 @@ fn_kickPlayerIfFlagged = "persistence\server\players\fn_kickPlayerIfFlagged.sqf"
 			(owner _player) publicVariableClient _pvarName;
 
 			{
-				if (_x select 0 == "BankMoney") exitWith
+				if (_x select 0 == "BankMoney") then
 				{
 					_player setVariable ["bmoney", _x select 1, true];
 				};
