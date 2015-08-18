@@ -6,8 +6,6 @@ A3Wasteland Stratis
 
 (This is a work in progress to update A3W_1.1b to A3W_1.2)
 
-GENDO IKARI
-
 ==============
 
 # Legend:
