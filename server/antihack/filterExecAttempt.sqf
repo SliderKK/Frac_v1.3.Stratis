@@ -70,6 +70,8 @@ if (_packetName == "BIS_fnc_MP_packet") then
 			[
 				"A3W_fnc_",
 				"mf_remote_",
+				"BIS_fnc_spawn",
+				"BH_fnc_",
 				"APOC_srv_"
 			];
 		};
