@@ -204,9 +204,19 @@ switch (_boxType) do
 			["itm", "muzzle_snds_338_sand", RANDOM_BETWEEN(1,3)],
 			["itm", "muzzle_snds_93mmg", RANDOM_BETWEEN(1,3)],
 			["itm", "muzzle_snds_93mmg_tan", RANDOM_BETWEEN(1,3)],
+			["itm", "optic_NVS", RANDOM_BETWEEN(1,2)],
 			["itm", "optic_tws", RANDOM_BETWEEN(1,2)],
 			["itm", "optic_tws_mg", RANDOM_BETWEEN(1,2)],
-			["itm", "optic_Nightstalker", RANDOM_BETWEEN(1,2)]	
+			["itm", "optic_Nightstalker", RANDOM_BETWEEN(1,2)],
+			["itm", "U_B_GhillieSuit", RANDOM_BETWEEN(1,2)],
+			["itm", "U_O_GhillieSuit", RANDOM_BETWEEN(1,2)],
+			["itm", "U_I_GhillieSuit", RANDOM_BETWEEN(1,2)],
+			["wep", "arifle_MXM_Black_F", RANDOM_BETWEEN(1,3)],
+			["mag", "30Rnd_65x39_caseless_mag", RANDOM_BETWEEN(3,8)],
+			["wep", "SMG_01_F", RANDOM_BETWEEN(1,3)],
+			["mag", "30Rnd_45ACP_MAG_SMG_01", RANDOM_BETWEEN(3,8)],
+			["mag", ["ClaymoreDirectionalMine_Remote_Mag", "SLAMDirectionalMine_Wire_Mag", "ATMine_Range_Mag", "DemoCharge_Remote_Mag", "SatchelCharge_Remote_Mag", "IEDUrbanBig_Remote_Mag"], RANDOM_BETWEEN(3,8)]
+			
 		];
 	};
 };
