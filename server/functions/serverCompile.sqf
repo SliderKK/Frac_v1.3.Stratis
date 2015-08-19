@@ -15,6 +15,8 @@ diag_log "WASTELAND SERVER - Initializing Server Compile";
 _path = "server\missions\factoryMethods";
 attemptCompileMissions = [_path, "attemptCompileMissions.sqf"] call mf_compile;
 checkMissionVehicleLock = [_path, "checkMissionVehicleLock.sqf"] call mf_compile;
+createRandomPilot = [_path, "createUnits\createRandomPilot.sqf"] call mf_compile;
+createsmugglerGroup = [_path, "createUnits\smugglerGroup.sqf"] call mf_compile;
 cleanLocationObjects = [_path, "cleanLocationObjects.sqf"] call mf_compile;
 createCustomGroup = [_path, "createUnits\customGroup.sqf"] call mf_compile;
 createCustomGroup2 = [_path, "createUnits\customGroup2.sqf"] call mf_compile;
@@ -39,8 +41,6 @@ setMissionState = [_path, "setMissionState.sqf"] call mf_compile;
 //Function Compiles
 _path = "server\functions";
 A3W_fnc_checkHackedVehicles = [_path, "checkHackedVehicles.sqf"] call mf_compile;
-createRandomPilot = [_path, "createUnits\createRandomPilot.sqf"] call mf_compile;
-createsmugglerGroup = [_path, "createUnits\smugglerGroup.sqf"] call mf_compile;
 addMilCap = [_path, "addMilCap.sqf"] call mf_compile;
 basePartSetup = [_path, "basePartSetup.sqf"] call mf_compile;
 cleanVehicleWreck = [_path, "cleanVehicleWreck.sqf"] call mf_compile;
