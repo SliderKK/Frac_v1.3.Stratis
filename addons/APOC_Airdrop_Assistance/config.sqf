@@ -4,13 +4,15 @@
 APOC_AA_VehOptions =
 [
 // ["Menu Text",        ItemClassname,                       Price,  "Drop type"]
-["Quadbike (Civilian)", "C_Quadbike_01_F",                   500,   "vehicle"],
-["MH-9 Hummingbird",    "B_Heli_Light_01_F",                 2500,  "vehicle"],
-["Strider",             "I_MRAP_03_F",                       2000,  "vehicle"],
+["Quadbike (Civilian)", "C_Quadbike_01_F",                   500,    "vehicle"],
+["Rubber Boat",         "B_Boat_Transport_01_F",             500,    "vehicle"],
+["MH-9 Hummingbird",    "B_Heli_Light_01_F",                 2500,   "vehicle"],
+["Strider",             "I_MRAP_03_F",                       2000,   "vehicle"],
 ["Strider HMG",         "I_MRAP_03_hmg_F",                   10000,  "vehicle"],
+["Armed Boat",          "B_Boat_Armed_01_minigun_F",         2500,   "vehicle"],
 ["MSE-3 Marid",         "O_APC_Wheeled_02_rcws_F",           45000,  "vehicle"],
-["AH-9 Pawnee",         "B_Heli_Light_01_armed_F",           40000, "vehicle"],
-["MBT-52 Kuma",         "I_MBT_03_cannon_F",                 70000, "vehicle"]
+["AH-9 Pawnee",         "B_Heli_Light_01_armed_F",           40000,  "vehicle"],
+["MBT-52 Kuma",         "I_MBT_03_cannon_F",                 70000,  "vehicle"]
 ];
 
 APOC_AA_SupOptions =
