@@ -18,15 +18,15 @@ APOC_AA_VehOptions =
 APOC_AA_SupOptions =
 [
 // ["stringItemName",   "fn_refillBox crate,                 Price,  "Drop type"]
-["General Supplies",    "General_supplies",                  3000,  "supply"],
-["Diving Gear",         "Diving_Gear",                       3000,  "supply"],
-["Ammo Drop",           "Ammo_Drop",                         6000,  "supply"],
-["Assault Rifles",      "mission_USSpecial",                 4000,  "supply"],
-["DLC Rifles",          "airdrop_DLC_Rifles",                4500,  "supply"],
-["DLC LMGs",            "airdrop_DLC_LMGs",                  5000,  "supply"],
-["Sniper Rifles",       "airdrop_Snipers",                   5500,  "supply"],
-["Launchers",           "mission_USLaunchers",               6000,  "supply"],
-["Stealth Kit",         "stealth_kit",             		   100000,  "supply"],
+["General Supplies",    "General_supplies",                   3000,  "supply"],
+["Diving Gear",         "Diving_Gear",                        3000,  "supply"],
+["Ammo Drop",           "Ammo_Drop",                          6000,  "supply"],
+["Assault Rifles",      "mission_USSpecial",                  4000,  "supply"],
+["DLC Rifles",          "airdrop_DLC_Rifles",                 8500,  "supply"],
+["DLC LMGs",            "airdrop_DLC_LMGs",                  10000,  "supply"],
+["Sniper Rifles",       "airdrop_Snipers",                   25000,  "supply"],
+["Launchers",           "mission_USLaunchers",               10000,  "supply"],
+["Stealth Kit",         "stealth_kit",             		    100000,  "supply"],
 
 //"Menu Text",          "Food Type",                         Price,  "Drop type"]
 ["Food",                "Land_Sacks_goods_F",                1000,  "picnic"],
