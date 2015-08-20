@@ -6,48 +6,11 @@
 
 if (!isServer) exitWith {};
 
-MainMissions =
-[
-	// Mission filename, weight
-	["mission_ArmedDiversquad", .25],
-	["mission_Coastal_Convoy", .25],
-	["mission_Convoy", 1],
-	["mission_Hackers", 1],
-	["mission_HostileHeliFormation", 0.5],
-	//["mission_HostileJetFormation", 1],
-	["mission_APC", 1],
-	["mission_MBT", 1],
-	["mission_LightArmVeh", 1],
-	["mission_ArmedHeli", 0.5],
-	["mission_AbandonedJet", 1],
-	["mission_CivHeli", 1]
-];
+MainMissions = MainMissions;
 
-SideMissions =
-[
-	["mission_HostileHelicopter", 0.5],
-	["mission_MiniConvoy", 1],
-	["mission_SunkenSupplies", 0.25],
-	["mission_TownInvasion", 1],
-	["mission_AirWreck", 1],
-	["mission_WepCache", 1],
-	["mission_Outpost", 1],
-	["mission_Truck", 1],
-	["mission_Roadblock", 1],
-	//["mission_HostileJet", 1],
-	["mission_Sniper", 1],
-	["mission_Smugglers", 1],
-	["mission_drugsRunners", 1],
-	["mission_GeoCache", 1]
-];
+SideMissions = SideMissions;
 
-MoneyMissions =
-[
-	["mission_MoneyShipment", 1],
-	["mission_SunkenTreasure", .25],
-	["mission_militaryPatrol", 1],
-	["mission_altisPatrol", 1]
-];
+MoneyMissions = MoneyMissions;
 
 MainMissions = [MainMissions, [["A3W_heliPatrolMissions", ["mission_Coastal_Convoy", "mission_HostileHeliFormation", "mission_HostileJetFormation"]], ["A3W_underWaterMissions", ["mission_ArmedDiversquad"]]]] call removeDisabledMissions;
 SideMissions = [SideMissions, [["A3W_heliPatrolMissions", ["mission_HostileHelicopter", "mission_HostileJet"]], ["A3W_underWaterMissions", ["mission_SunkenSupplies"]]]] call removeDisabledMissions;
