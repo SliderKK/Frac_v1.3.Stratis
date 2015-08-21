@@ -20,17 +20,13 @@ _setupObjects =
 {
 	_missionPos = markerPos _missionLocation;
 
-	_boxes1 = ["Box_FIA_Support_F","Box_FIA_Wps_F","Box_FIA_Ammo_F"];
-	_currBox1 = _boxes1 call BIS_fnc_selectRandom;
-	_randomBox = ["mission_USLaunchers","mission_USSpecial","mission_Main_A3snipers","stealth_kit"] call BIS_fnc_selectRandom;
-	_box1 = createVehicle [_currBox1,[(_missionPos select 0), (_missionPos select 1),0],[], 0, "NONE"];
-	[_box1, _randomBox] call fn_refillbox;
-	
-	_boxes2 = ["Box_FIA_Support_F","Box_FIA_Wps_F","Box_FIA_Ammo_F"];
-	_currBox2 = _boxes2 call BIS_fnc_selectRandom;
-	_box2 = createVehicle [_currBox2,[(_missionPos select 0) - 5, (_missionPos select 1) - 8,0],[], 0, "NONE"];
-	_box2 allowDamage false;
-	_box2 setVariable ["R3F_LOG_disabled", true, true];
+	_box1 = createVehicle ["Box_IND_WpsSpecial_F", _missionPos, [], 5, "None"];
+	_box1 setDir random 360;
+	[_box1, "mission_Main_A3snipers"] call fn_refillbox;
+
+	_box2 = createVehicle ["Box_NATO_WpsSpecial_F", _missionPos, [], 5, "None"];
+	_box2 setDir random 360;
+	[_box2, "mission_USSpecial2"] call fn_refillbox;
 
 	{
 		_boxPos = getPosASL _x;
