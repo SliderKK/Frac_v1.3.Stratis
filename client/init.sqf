@@ -142,6 +142,7 @@ if(hasInterface) then{[] execVM "addons\statusBar\statusbar.sqf"}; //Status Bar
 [] execVM "addons\far_revive\FAR_revive_init.sqf";
 [] execVM "addons\camera\functions.sqf";
 [] execVM "addons\UAV_Control\functions.sqf";
+[] execVM "addons\disableThermal\disablethermal.sqf";  //disable thermal vision
 [] execVM "addons\water_edge\functions.sqf";
 [] execVM "addons\cctv\functions.sqf";
 
