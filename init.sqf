@@ -91,7 +91,7 @@ if (hasInterface || isServer) then
 	[] execVM "addons\HvT\HvD.sqf"; // High Value Drugs
 	[] execVM "addons\zlt_fastrope\zlt_fastrope.sqf";     // Fastrope
 	[] execVM "addons\outlw_magRepack\MagRepack_init_sv.sqf";
-	[] execVM "addons\disableThermal\disablethermal.sqf";
+	//[] execVM "addons\disableThermal\disablethermal.sqf";
 	[] execVM "addons\laptop\init.sqf";
 	[] execVM "addons\vactions\functions.sqf";
 	if (isNil "drn_DynamicWeather_MainThread") then { drn_DynamicWeather_MainThread = [] execVM "addons\scripts\DynamicWeatherEffects.sqf" };
