@@ -17,4 +17,4 @@ _class = typeOf _obj;
     (_staticWeaponSavingOn && {_class call _isStaticWeapon}) ||
 	(_cameraSavingOn && {_obj call _isCamera})}) || //Camera saving
 	{_warchestSavingOn && {_obj call _isWarchest}} ||
-	{_beaconSavingOn && {_obj call _isBeacon}}}) ||
+	{_beaconSavingOn && {_obj call _isBeacon}}})
