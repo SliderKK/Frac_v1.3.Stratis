@@ -23,7 +23,19 @@ player createDiaryRecord ["changelog",
 [
 "v1.1",
 "
-<br/>[Fixes] To server Optimization
+<br/>[Changed] Clean up Script to be more aggressive
+<br/>[Fixed] Admin List
+<br/>[Changed] CoolDown Timer on Airdrops from 15 to 5
+<br/>[Fixed] Explosive Placements near Gunstores
+<br/>[Fixed] Briefing
+<br/>[Added] Boats to AirDrops
+<br/>[Removed] Break Lock Alarm Sound
+<br/>[Changed] Break Lock Timer
+<br/>[Removed] cctv (cause of desync issues)
+<br/>[Added] Server Loading Screen  
+<br/>[Implemented] v1.2 With New Stuff
+<br/>
+<br/>[Fixed] server Optimization
 <br/>[Updated] Anti-hack
 <br/>[Added] Side-specific laser designators and IR grenades
 <br/>[Fixed] Bug with MagRepacker
@@ -126,6 +138,12 @@ player createDiaryRecord ["credits",
 [
 "Credits",
 "
+<br/><font size='16' color='#BBBBBB'>Fractured Developers for Wasteland:</font>
+<br/>   * Mokey (Lead Developer)
+<br/>	* Ghostyy (Website Developer)
+<br/>	* Lenymo (A3W Developer)
+<br/>	* Pyro (Database Dev)
+<br/>
 <br/><font size='16' color='#BBBBBB'>Developed by A3Wasteland.com:</font>
 <br/>	* AgentRev (TeamPlayerGaming)
 <br/>	* JoSchaap (GoT/Tweakers.net)
@@ -448,22 +466,22 @@ player createDiaryRecord ["admins",
 <br/> * Lenymo
 <br/> * Korimer
 <br/> * TexasOutlaw
-<br/> * BadColonel
-<br/> * KroNiC
 <br/> * Ghostyy
 <br/> * Droid
 <br/> * M4GHOST45
 <br/> * Gnomes
+<br/> * TaterSalad
+<br/> * Cheeky__T
 <br/>
 <br/><font color='#0066FF' size='18'>High Admins</font>
 <br/>
 <br/> * RickGrimes
 <br/> * Rush Lionheart
-<br/> * Cheeky__T
+<br/> * Thor
 <br/>
 <br/><font color='#002FFF' size='18'>Low Admins</font>
 <br/>
 <br/> * Shabac
-<br/> * Bun6ie
+<br/> * Dalton
 "
 ]];
