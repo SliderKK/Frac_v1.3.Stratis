@@ -482,6 +482,8 @@ player createDiaryRecord ["admins",
 <br/><font color='#002FFF' size='18'>Low Admins</font>
 <br/>
 <br/> * Shabac
+<br/> * Pyro
 <br/> * Dalton
+<br/> * Vick
 "
 ]];
