@@ -23,6 +23,7 @@ player createDiaryRecord ["changelog",
 [
 "v1.1",
 "
+<br/>[Added] Group Size Limit =6
 <br/>[Fixed] Gas GL Ammo
 <br/>[Changed] Admin List in map menu
 <br/>[Added] TAW_VD (Original View Distance UI) 
