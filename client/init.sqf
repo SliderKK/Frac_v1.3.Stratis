@@ -145,11 +145,6 @@ if(hasInterface) then{[] execVM "addons\statusBar\statusbar.sqf"}; //Status Bar
 [] execVM "addons\disableThermal\disablethermal.sqf";  //disable thermal vision
 [] execVM "addons\water_edge\functions.sqf";
 
-// View Distance Settings 
-CHVD_allowNoGrass = true; // Set 'false' if you want to disable "None" option for terrain (default: true)
-CHVD_maxView = 3000; // Set maximum view distance (default: 12000)
-CHVD_maxObj = 3000; // Set maximimum object view distance (default: 12000)
-
 call compile preprocessFileLineNumbers "client\functions\generateAtmArray.sqf";
 [] execVM "client\functions\drawPlayerMarkers.sqf";
 

@@ -69,8 +69,6 @@ class RscTitles
 	#include "addons\statusBar\statusBar.hpp"
 };
 
-#include "addons\CHVD\dialog.hpp"
-
 class CfgFunctions
 {
 	class A3W
@@ -78,7 +76,6 @@ class CfgFunctions
 		#include "client\CfgFunctions.hpp"
 		#include "server\CfgFunctions.hpp"
 	};
-		#include "addons\CHVD\CfgFunctions.hpp"
 };
 
 class CfgNotifications

@@ -190,14 +190,6 @@ class playerSettings {
 			x = 0.02; y = 0.57;
 			w = 0.125; h = 0.033 * safezoneH;
 		};
-		
-		class btnDistanceCustom : w_RscButton {
-			idc = -1;
-			text = "Custom";
-			onButtonClick = "call CHVD_fnc_openDialog";
-			x = 0.158; y = 0.57;
-			w = 0.125; h = 0.033 * safezoneH;
-		};
 
 		class btnDistanceEffects : w_RscButton {
 			idc = -1;
