@@ -57,6 +57,7 @@ loadScreen = "mapConfig\Loading.jpg";
 #include "addons\TOParmaInfo\dialog\TOParmaInfo_dialog.hpp"
 #include "addons\beacondetector\sound\cfgsounds.hpp"
 #include "addons\outlw_magrepack\MagRepack_Config.hpp"
+#include "addons\taw_vd\dialog.hpp"
 #include "addons\laptop\downloadData.hpp"
 
 class RscTitles
@@ -71,6 +72,7 @@ class RscTitles
 
 class CfgFunctions
 {
+	#include "addons\taw_vd\CfgFunctions.hpp"
 	class A3W
 	{
 		#include "client\CfgFunctions.hpp"
