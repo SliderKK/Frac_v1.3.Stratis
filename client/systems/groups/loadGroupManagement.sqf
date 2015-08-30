@@ -70,6 +70,25 @@ while{groupManagmentActive} do
 		_groupDisband ctrlShow false;
 		_groupLeaveButton ctrlShow false;
 	};
+	
+	// Added Limit group sizes (Starts line 74) *************************
+	if(count units player > 5) then
+	{
+		if(player == leader player) then
+		{
+			_groupInvite ctrlShow false;
+	                _groupKick ctrlShow true;
+		        _groupDisband ctrlShow true;
+		        _groupLeaveButton ctrlShow true;
+		} else 	{
+			_groupLeaveButton ctrlShow true;
+		};
+	} else {
+		_groupKick ctrlShow false;
+		_groupDisband ctrlShow false;
+		_groupLeaveButton ctrlShow false;
+	};
+	// Finish group size limit ********************************
 
 	//Sort Invite Controls
 	if(_hasInvite) then
