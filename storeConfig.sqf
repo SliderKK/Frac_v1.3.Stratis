@@ -217,7 +217,7 @@ ammoArray = compileFinal str
 	["Titan Anti-Personnel Missile", "Titan_AP", 350],        // Direct damage: low       | Splash damage: high   | Guidance: mouse, laser
 	["Titan Anti-Air Missile", "Titan_AA", 350],              // Direct damage: low       | Splash damage: medium | Guidance: aircraft
 	["40mm Toxic Gas Grenade", "1Rnd_SmokeYellow_Grenade_shell", 850],
-	["40mm 3Rnd Toxic Gas Grenade", "3Rnd_UGL_FlareYellow_F", 500],
+	["40mm 3Rnd Toxic Gas Grenade", "3Rnd_SmokeYellow_Grenade_shell", 500],
 	["40mm HE Grenade Round", "1Rnd_HE_Grenade_shell", 125],
 	["40mm 3Rnd HE Grenades", "3Rnd_HE_Grenade_shell", 250],
 	["40mm Smoke Round (White)", "1Rnd_Smoke_Grenade_shell", 50],
@@ -230,7 +230,6 @@ ammoArray = compileFinal str
 	["40mm 3Rnd Smokes (Purple)", "3Rnd_SmokePurple_Grenade_shell", 100],
 	["40mm 3Rnd Smokes (Blue)", "3Rnd_SmokeBlue_Grenade_shell", 100],
 	["40mm 3Rnd Smokes (Green)", "3Rnd_SmokeGreen_Grenade_shell", 100],
-	["40mm 3Rnd Smokes (Yellow)", "3Rnd_SmokeYellow_Grenade_shell", 100],
 	["40mm 3Rnd Smokes (Orange)", "3Rnd_SmokeOrange_Grenade_shell", 100],
 	["40mm 3Rnd Smokes (Red)", "3Rnd_SmokeRed_Grenade_shell", 100],
 	["40mm Flare Round (White)", "UGL_FlareWhite_F", 25],
@@ -240,6 +239,7 @@ ammoArray = compileFinal str
 	["40mm Flare Round (IR)", "UGL_FlareCIR_F", 25],
 	["40mm 3Rnd Flares (White)", "3Rnd_UGL_FlareWhite_F", 50],
 	["40mm 3Rnd Flares (Green)", "3Rnd_UGL_FlareGreen_F", 50],
+	["40mm 3Rnd Flares (Yellow)", "3Rnd_UGL_FlareYellow_F", 500],
 	["40mm 3Rnd Flares (Red)", "3Rnd_UGL_FlareRed_F", 50],
 	["40mm 3Rnd Flares (IR)", "3Rnd_UGL_FlareCIR_F", 50]
 ];
