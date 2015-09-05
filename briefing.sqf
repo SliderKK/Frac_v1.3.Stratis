@@ -23,6 +23,8 @@ player createDiaryRecord ["changelog",
 [
 "v1.1",
 "
+<br/>[Removed] Bastground to statusbar
+<br/>[Fixed] TawVD error
 <br/>[Added] Group Size Limit =6
 <br/>[Fixed] Gas GL Ammo
 <br/>[Changed] Admin List in map menu
