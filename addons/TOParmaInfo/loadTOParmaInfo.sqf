@@ -22,7 +22,7 @@ _serverInfoString = format ["<t color='#A0FFFFFF'>Fractured Wasteland #%1 %2</t>
 _serverInfoText ctrlSetStructuredText parseText _serverInfoString;
 
 _generalInfoText = _display displayCtrl TOParmaInfo_General_Info_BG;
-_generalInfoString = "Website: <t color='#0091CD'><a href='http://www.Fractured-Gaming.Com'>Fractured-Gaming.</a></t> Forums: <t color='#0091CD'><a href='http://fractured-gaming.com/forum.php'>Fractured-Gaming Forums</a></t> TeamSpeak: ts.Fractued-Gaming.com";
+_generalInfoString = "Website: <t color='#0091CD'><a href='http://www.Fractured-Gaming.Com'>Fractured-Gaming.</a></t> Forums: <t color='#0091CD'><a href='http://fractured-gaming.com/forum.php'>Fractured-Gaming Forums</a></t> TeamSpeak: ts.Fractured-Gaming.com";
 _generalInfoText ctrlSetStructuredText parseText _generalInfoString;
 
 
