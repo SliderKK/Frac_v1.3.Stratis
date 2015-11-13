@@ -147,8 +147,9 @@ player createDiaryRecord ["credits",
 "
 <br/><font size='16' color='#BBBBBB'>Fractured Developers for Wasteland:</font>
 <br/>   * Mokey (Lead Developer)
-<br/>	* Ghostyy (Website Developer)
+<br/>	* Ghostyy (Website/A3W Developer)
 <br/>	* Lenymo (A3W Developer)
+<br/>	* Isaac (A3W Developer)
 <br/>	* Pyro (Database Dev)
 <br/>
 <br/><font size='16' color='#BBBBBB'>Developed by A3Wasteland.com:</font>
@@ -477,24 +478,25 @@ player createDiaryRecord ["admins",
 <br/> * Ghostyy
 <br/> * Droid
 <br/> * M4GHOST45
-<br/> * Gnomes
-<br/> * TaterSalad
-<br/> * Cheeky__T
 <br/>
 <br/><font color='#0066FF' size='18'>High Admins</font>
 <br/><font color='#00FFEF' size='12'>Teleport, Spectate, Slay Delete Hacked objects</font>
 <br/>
+<br/> * Shabac
 <br/> * RickGrimes
+<br/> * LoricatusVulpes
+<br/> * Vick
 <br/> * Rush Lionheart
 <br/> * Thor
 <br/>
 <br/><font color='#002FFF' size='18'>Low Admins</font>
 <br/><font color='#00FFEF' size='12'>Spectate, Slay, Delete Hacked Objects</font>
 <br/>
-<br/> * Shabac
-<br/> * Puppet
-<br/> * Pyro
 <br/> * Dalton
-<br/> * Vick
+<br/> * OutlawII
+<br/> * OfficerFriendly
+<br/> * Octofish
+<br/> * Switch
+<br/> * GunfighterAlpha
 "
 ]];
