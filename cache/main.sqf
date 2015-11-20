@@ -111,7 +111,7 @@ if (hasInterface) then {
 	true spawn { 
     waitUntil { 
         { 
-            if(agent _x isKindOf "Rabbit_F" || agent _x isKindOf "Snake_random_F" || agent _x isKindOf "Salema_F" || agent _x isKindOf "Ornate_random_F" || agent _x isKindOf "Mackerel_F" || agent _x isKindOf "Tuna_F" || agent _x isKindOf "Mullet_F" ||  agent _x isKindOf "CatShark_F" || agent _x isKindOf "Snake_random_F" || agent _x isKindOf "Turtle_F" || agent _x isKindOf "Hen_random_F" || agent _x isKindOf "Cock_random_F" || agent _x isKindOf "Cock_white_F" || agent _x isKindOf "Fin_sand_F" || agent _x isKindOf "Fin_blackwhite_F" || agent _x isKindOf "Fin_ocherwhite_F" || agent _x isKindOf "Fin_tricolour_F" || agent _x isKindOf "Fin_random_F" || agent _x isKindOf "Alsatian_Sand_F" || agent _x isKindOf "Alsatian_Black_F" || agent _x isKindOf "Alsatian_Sandblack_F" || agent _x isKindOf "Alsatian_Random_F" || agent _x isKindOf "Goat_random_F" || agent _x isKindOf "Sheep_random_F" || agent _x isKindOf "SeaGull" || agent _x isKindOf "Mosquito" || agent _x isKindOf "Insect" || agent _x isKindOf "HouseFly" || agent _x isKindOf "DragonFly" || agent _x isKindOf "Cicada" || agent _x isKindOf "Bird" || agent _x isKindOf "ButterFly_random"} then { 
+            if(agent _x isKindOf "Rabbit_F" || agent _x isKindOf "Snake_random_F" || agent _x isKindOf "Salema_F" || agent _x isKindOf "Ornate_random_F" || agent _x isKindOf "Mackerel_F" || agent _x isKindOf "Tuna_F" || agent _x isKindOf "Mullet_F" ||  agent _x isKindOf "CatShark_F" || agent _x isKindOf "Snake_random_F" || agent _x isKindOf "Turtle_F" || agent _x isKindOf "Hen_random_F" || agent _x isKindOf "Cock_random_F" || agent _x isKindOf "Cock_white_F" || agent _x isKindOf "Fin_sand_F" || agent _x isKindOf "Fin_blackwhite_F" || agent _x isKindOf "Fin_ocherwhite_F" || agent _x isKindOf "Fin_tricolour_F" || agent _x isKindOf "Fin_random_F" || agent _x isKindOf "Alsatian_Sand_F" || agent _x isKindOf "Alsatian_Black_F" || agent _x isKindOf "Alsatian_Sandblack_F" || agent _x isKindOf "Alsatian_Random_F" || agent _x isKindOf "Goat_random_F" || agent _x isKindOf "Sheep_random_F" || agent _x isKindOf "SeaGull" || agent _x isKindOf "Mosquito" || agent _x isKindOf "Insect" || agent _x isKindOf "HouseFly" || agent _x isKindOf "DragonFly" || agent _x isKindOf "Cicada" || agent _x isKindOf "Bird" || agent _x isKindOf "ButterFly_random") then { 
                 deleteVehicle agent _x; 
             }; 
         } forEach agents; 
@@ -146,6 +146,6 @@ if (hasInterface) then {
 			};
 		};
 };
-[] execVM "cache\deleteanimals.sqf";
+[] execVM "cache\DeleteItems.sqf.sqf";
 // Experimental, disabled for now causing login crashing
 if (!isDedicated) then {execFSM "cache\zbe_clientObjectDrawAuto.fsm";};
