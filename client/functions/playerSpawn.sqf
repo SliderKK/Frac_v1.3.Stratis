@@ -101,3 +101,6 @@ player allowDamage true;
 
 playerSpawning = false;
 player setVariable ["playerSpawning", false, true];
+
+setViewDistance 900;
+setObjectViewDistance 900;
