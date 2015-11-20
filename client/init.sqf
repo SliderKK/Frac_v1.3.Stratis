@@ -168,3 +168,6 @@ call compile preprocessFileLineNumbers "client\functions\generateAtmArray.sqf";
 		};
 	} forEach crew _x;
 } forEach allUnitsUAV;
+[3000,-1,false,3000,3000,3000]execvm "cache\main.sqf";
+setViewDistance 900;
+setObjectViewDistance 900;

@@ -65,7 +65,7 @@ if (!isDedicated) then
 		else // Headless
 		{
 			waitUntil {!isNull player};
-			if (getText (configFile >> "CfgVehicles" >> typeOf player >> "simulation") == "headlessclient") then
+			if (getText (configFile >> "CfgVehicles" >> typeOf player >> "simulation" >> iskindof >> "Plane" >> iskindof >> "Helicopter_Base_F" >> iskindof >> "Hatchback_01_base_F" >> iskindof >> "Tank_F" >> iskindof >> "C_Kart_01_F" >> iskindof >> "C_Quadbike_01_F" >> iskindof >> "B_Quadbike_01_F" >> iskindof >> "O_Quadbike_01_F" >> iskindof >> "I_Quadbike_01_F" >> iskindof >> "B_G_Quadbike_01_F" >> iskindof >> "C_Hatchback_01_F" >> iskindof >> "C_Hatchback_01_sport_F" >> iskindof >> "C_SUV_01_F" >> iskindof >> "C_Offroad_01_F" >> iskindof >> "B_G_Offroad_01_F" >> iskindof >> "C_Offroad_01_repair_F" >> iskindof >> "B_G_Offroad_01_armed_F" >> iskindof >> "C_Van_01_transport_F" >> iskindof >> "B_G_Van_01_transport_F" >> iskindof >> "C_Van_01_box_F" >> iskindof >> "C_Van_01_fuel_F" >> iskindof >> "B_G_Van_01_fuel_F" >> iskindof >> "B_Truck_01_mover_F" >> iskindof >> "B_Truck_01_box_F" >> iskindof >> "B_Truck_01_transport_F" >> iskindof >> "B_Truck_01_covered_F" >> iskindof >> "B_Truck_01_fuel_F" >> iskindof >> "B_Truck_01_medical_F" >> iskindof >> "B_Truck_01_Repair_F" >> iskindof >> "B_Truck_01_ammo_F" >> iskindof >> "O_Truck_03_transport_F" >> iskindof >> "O_Truck_03_covered_F" >> iskindof >> "O_Truck_03_fuel_F" >> iskindof >> "O_Truck_03_medical_F" >> iskindof >> "O_Truck_03_repair_F" >> iskindof >> "O_Truck_03_ammo_F" >> iskindof >> "O_Truck_03_device_F" >> iskindof >> "I_Truck_02_transport_F" >> iskindof >> "I_Truck_02_covered_F" >> iskindof >> "I_Truck_02_fuel_F" >> iskindof >> "I_Truck_02_medical_F" >> iskindof >> "I_Truck_02_box_F" >> iskindof >> "I_Truck_02_ammo_F" >> iskindof >> "B_UGV_01_F" >> iskindof >> "B_UGV_01_rcws_F" >> iskindof >> "I_UGV_01_F" >> iskindof >> "I_UGV_01_rcws_F" >> iskindof >> "O_UGV_01_F" >> iskindof >> "O_UGV_01_rcws_F" >> iskindof >> "B_MRAP_01_F" >> iskindof >> "B_MRAP_01_hmg_F" >> iskindof >> "B_MRAP_01_gmg_F" >> iskindof >> "O_MRAP_02_F" >> iskindof >> "O_MRAP_02_hmg_F" >> iskindof >> "O_MRAP_02_gmg_F" >> iskindof >> "I_MRAP_03_F" >> iskindof >> "I_MRAP_03_hmg_F" >> iskindof >> "I_MRAP_03_gmg_F" >> iskindof >> "O_APC_Wheeled_02_rcws_F" >> iskindof >> "B_APC_Wheeled_01_cannon_F" >> iskindof >> "I_APC_Wheeled_03_cannon_F" >> iskindof >> "Boat_Civil_01_base_F" >> iskindof >> "Boat_Armed_01_base_F" >> iskindof >> "SDV_01_base_F") == "headlessclient") then
 			{
 				execVM "client\headless\init.sqf";
 			};
@@ -100,4 +100,4 @@ if (hasInterface || isServer) then
 	if (isNil "drn_DynamicWeather_MainThread") then { drn_DynamicWeather_MainThread = [] execVM "addons\scripts\DynamicWeatherEffects.sqf" };
 	if (isServer) then {call compile preprocessFile "mapconfig\structures\initBuildings.sqf";}; //GID Structures
 };
-[500,-1,false,50,500,500]execvm "cache\main.sqf";
+[500,-1,false,50,50,50]execvm "cache\main.sqf";
