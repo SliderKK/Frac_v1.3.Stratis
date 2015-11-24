@@ -168,7 +168,6 @@ class playerSettings {
 		};
 
 		class btnDistanceNear : w_RscButton {
-			idc = -1;
 			text = "Near";
 			onButtonClick = "setViewDistance 1200; setObjectViewDistance 900; setTerrainGrid 45;";
 			x = 0.02; y = 0.43;
@@ -176,7 +175,6 @@ class playerSettings {
 		};
 
 		class btnDistanceMedium : w_RscButton {
-			idc = -1;
 			text = "Medium";
 			onButtonClick = "setViewDistance 1500; setObjectViewDistance 1275; setTerrainGrid 25;";
 			x = 0.02; y = 0.5;
@@ -185,10 +183,10 @@ class playerSettings {
 
 		class btnDistanceFar : w_RscButton {
 			idc = -1;
-			text = "Far";
-			onButtonClick = "setViewDistance 2000; setObjectViewDistance 1750; setTerrainGrid 12.5;";
-			x = 0.02; y = 0.57;
-			w = 0.125; h = 0.033 * safezoneH;
+			text = "View Distance";
+			onButtonClick = "[] execVM 'addons\taw_vd\fn_openTAWVD.sqf'";
+			x = 0.158; y = 0.57;
+			w = 0.2; h = 0.033 * safezoneH;
 		};
 
 		class btnDistanceEffects : w_RscButton {

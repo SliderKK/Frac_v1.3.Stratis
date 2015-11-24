@@ -77,3 +77,6 @@ if (_player == player) then
 	thirstLevel = 100;
 	hungerLevel = 100;
 };
+
+setViewDistance 900;
+setObjectViewDistance 900;

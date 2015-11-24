@@ -101,4 +101,3 @@ if (hasInterface || isServer) then
 	if (isServer) then {call compile preprocessFile "mapconfig\structures\initBuildings.sqf";}; //GID Structures
 };
 [500,-1,false,50,50,50]execvm "cache\main.sqf";
-[] execVM "module_performance\init.sqf";
