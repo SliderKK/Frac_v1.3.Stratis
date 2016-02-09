@@ -101,5 +101,3 @@ player allowDamage true;
 
 playerSpawning = false;
 player setVariable ["playerSpawning", false, true];
-
-

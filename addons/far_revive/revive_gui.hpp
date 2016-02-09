@@ -17,7 +17,7 @@ class ReviveGUI : IGUIBack
 {
 	idd = ReviveGUI_IDD;
 	movingEnabled = false;
-	controls[] = {RevProgBar, RevBarText, RevSuicideBtn, RevTextBG, RevText};
+	controls[] = {RevProgBar, RevBarText, RevSuicideBtn, RevTextBG, RevText, RevLastResortBtn};
 	controlsBackground[] = {RevBG};
 
 	class RevBG : IGUIBack
@@ -139,7 +139,7 @@ class ReviveGUI : IGUIBack
 		h = RevText_H;
 	};
 
-	/*class RevLastResortBtn : w_RscButton
+	class RevLastResortBtn : w_RscButton
 	{
 		idc = RevLastResortBtn_IDC;
 		action = "execVM 'addons\far_revive\FAR_lastResort.sqf'";
@@ -159,5 +159,5 @@ class ReviveGUI : IGUIBack
 		y = RevLastResortBtn_Y;
 		w = RevLastResortBtn_W;
 		h = RevLastResortBtn_H;
-	};*/
+	};
 };

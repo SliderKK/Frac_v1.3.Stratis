@@ -31,7 +31,7 @@ _player addItem "FirstAidKit"; //Any other stuff that goes in inventory if there
 _player addGoggles "G_Sport_Red"; //Glasses or masks. Overwrites, add as item if you want it a an extra item
 _player addHeadgear "H_HelmetB"; //Hat or helmet. Overwrites, add as item if you want it a an extra item
 
-_player addMagazines ["11Rnd_45ACP_Mag", 4]; //Add handgun magazines first so one gets loaded
+_player addMagazines ["11Rnd_45ACP_Mag", 2]; //Add handgun magazines first so one gets loaded
 _player addWeapon "hgun_Pistol_heavy_01_F"; //Handgun
 _player addhandGunItem "optic_MRD"; //Handgun Attachments
 //_player addhandGunItem ""; //Handgun Attachments
@@ -39,7 +39,7 @@ _player addhandGunItem "optic_MRD"; //Handgun Attachments
 _player addMagazines ["30Rnd_65x39_caseless_mag", 4]; //Add primary weapon magazines first so one gets loaded
 _player addWeapon "arifle_MXM_F"; //Primary Weapon
 _player addPrimaryWeaponItem "optic_Hamr"; //Primary Weapon Attachments
-//_player addPrimaryWeaponItem ""; //Primary Weapon Attachments
+_player addPrimaryWeaponItem "muzzle_snds_H"; //Primary Weapon Attachments
 //_player addPrimaryWeaponItem ""; //Primary Weapon Attachments
 
 _player addMagazines ["RPG32_F", 1]; //Add secondary Weapon magazines first so one gets loaded
@@ -51,7 +51,6 @@ switch (true) do
 {
 	case (["_medic_", typeOf _player] call fn_findString != -1):
 	{
-		_player addItem "ToolKit";
 		_player addItem "MediKit";
 		_player removeItem "";
 	};

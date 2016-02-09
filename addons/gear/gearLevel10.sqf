@@ -19,40 +19,39 @@ removeHeadgear _player;
 
 _player addBackpack "B_Carryall_oli"; //BackPack
 //_player addUniform ""; //Uniform (must be supported by side)
-_player addVest "V_TacVest_oli"; //Vest
+_player addVest "V_PlateCarrierGL_rgr"; //Vest
 _player linkItem "NVGoggles"; //Nightvision, "NVGoggles"
 _player linkItem "ItemGPS"; //GPS, "ItemGPS"
 _player addWeapon "Binocular"; //Binoculars
-_player addMagazines ["HandGrenade", 2]; //Grenades
+_player addMagazines ["HandGrenade", 4]; //Grenades
 _player addItem "FirstAidKit"; //Any other stuff that goes in inventory if there is space
 //_player addItem "Medikit"; //Any other stuff that goes in inventory if there is space
 //_player addItem "ToolKit"; //Any other stuff that goes in inventory if there is space
 //_player addItem ""; //Any other stuff that goes in inventory if there is space
 //_player addItem ""; //Any other stuff that goes in inventory if there is space
 _player addGoggles "G_Sport_Red"; //Glasses or masks. Overwrites, add as item if you want it a an extra item
-_player addHeadgear "H_HelmetB_light"; //Hat or helmet. Overwrites, add as item if you want it a an extra item
+_player addHeadgear "H_HelmetB"; //Hat or helmet. Overwrites, add as item if you want it a an extra item
 
-_player addMagazines ["11Rnd_45ACP_Mag", 4]; //Add handgun magazines first so one gets loaded
+_player addMagazines ["11Rnd_45ACP_Mag", 2]; //Add handgun magazines first so one gets loaded
 _player addWeapon "hgun_Pistol_heavy_01_F"; //Handgun
 _player addhandGunItem "optic_MRD"; //Handgun Attachments
-//_player addhandGunItem ""; //Handgun Attachments
+//_player addhandGunItem "muzzle_snds_acp"; //Handgun Attachments
 
-_player addMagazines ["5Rnd_127x108_Mag", 4]; //Add primary weapon magazines first so one gets loaded
-_player addWeapon "srifle_GM6_LRPS_F"; //Primary Weapon
-//_player addPrimaryWeaponItem ""; //Primary Weapon Attachments
-//_player addPrimaryWeaponItem ""; //Primary Weapon Attachments
+_player addMagazines ["20Rnd_762x51_Mag", 5]; //Add primary weapon magazines first so one gets loaded
+_player addWeapon "srifle_DMR_06_camo_F"; //Primary Weapon
+_player addPrimaryWeaponItem "optic_Hamr"; //Primary Weapon Attachments
+_player addPrimaryWeaponItem "muzzle_snds_B"; //Primary Weapon Attachments
 //_player addPrimaryWeaponItem ""; //Primary Weapon Attachments
 
 _player addMagazines ["RPG32_F", 1]; //Add secondary Weapon magazines first so one gets loaded
 _player addWeapon "launch_RPG32_F"; //Secondary Weapon (Launcher slot)
 
-_player selectWeapon "srifle_GM6_LRPS_F"; //Select Active Weapon
+_player selectWeapon "srifle_DMR_06_camo_F"; //Select Active Weapon
 
 switch (true) do
 {
 	case (["_medic_", typeOf _player] call fn_findString != -1):
 	{
-		_player addItem "ToolKit";
 		_player addItem "MediKit";
 		_player removeItem "";
 	};

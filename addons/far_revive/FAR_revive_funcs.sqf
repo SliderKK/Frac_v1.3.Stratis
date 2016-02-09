@@ -16,7 +16,7 @@ FAR_Player_Actions =
 			["<t color='#00C900'>" + "Revive" + "</t>", "addons\FAR_revive\FAR_handleAction.sqf", ["action_revive"], 100, true, true, "", FAR_Check_Revive],
 			["<t color='#00C900'>" + "Stabilize" + "</t>", "addons\FAR_revive\FAR_handleAction.sqf", ["action_stabilize"], 99, true, true, "", FAR_Check_Stabilize],
 			["<t color='#C9C900'>" + "Drag" + "</t>", "addons\FAR_revive\FAR_handleAction.sqf", ["action_drag"], 98, true, true, "", FAR_Check_Dragging],
-			["<t color='#C90000'>" + "Cut Throat" + "</t>", "addons\FAR_revive\FAR_handleAction.sqf", ["action_gut"], 97, true, true, "", FAR_Check_Gut]
+			["<t color='#C90000'>" + "Gut" + "</t>", "addons\FAR_revive\FAR_handleAction.sqf", ["action_gut"], 97, true, true, "", FAR_Check_Gut]
 			
 		];
 	};
@@ -219,7 +219,7 @@ FAR_public_EH =
 	{
 		_names = _value select 0;
 		_unitName = _names select 0;
-		_killerName = _names param [1, nil];
+		_killerName = [_names, 1] call BIS_fnc_param;
 		_unit = objectFromNetId (_value select 1);
 		_killer = objectFromNetId (_value select 2);
 		if (alive _unit) then
@@ -227,7 +227,7 @@ FAR_public_EH =
 			switch (true) do
 			{
 				case (isNil "_killerName"): { systemChat format ["%1 was injured", toString _unitName]; };
-				case (!isNil "_killerName" && !isPlayer _killer): { systemChat format ["%1 was injured by enemy AI", toString _unitName]; };
+				case (!isNil "_killerName" && !isPlayer _killer): { systemChat format ["%1 was injured by AI", toString _unitName]; };
 				default {
 				systemChat format ["%1 was injured by %2", toString _unitName, toString _killerName]; 
 				};
@@ -239,10 +239,12 @@ FAR_public_EH =
 	{
 		_names = _value select 0;
 		_unitName = _names select 0;
-		_killerName = _names param [1, nil];
+		_killerName = [_names, 1] call BIS_fnc_param;
+		_unit = objectFromNetId (_value select 1);
+		_killer = objectFromNetId (_value select 2);
 		//_unit = objectFromNetId (_value select 1);
 
-		systemChat format ["%1 had his throat cut by %2", toString _unitName, toString _killerName];
+		systemChat format ["%1 was gutted by %2", toString _unitName, toString _killerName];
 
 	};
 }
@@ -340,24 +342,22 @@ FAR_Gut =
 	_names set [1, toArray name _killer];
 	
 	
-	//_medicMove = format ["AinvPercMstpSnonWnonDnon_Putdown_AmovPercMstpSnonWnonDnon", [_target, true] call getMoveWeapon];
-	//player playMove _medicMove;
-	_medicMove = "AinvPercMstpSnonWnonDnon_Putdown_AmovPercMstpSnonWnonDnon";
-	player switchMove _medicMove;
+	_medicMove = format ["AinvPknlMstpSlayW%1Dnon_medic", [_target, true] call getMoveWeapon];
+	player playMove _medicMove;
 
-	//waitUntil {sleep 0.1; animationState player == _medicMove || !CAN_PERFORM};
-	//waitUntil {sleep 0.1; animationState player != _medicMove || !CAN_PERFORM};
+	waitUntil {sleep 0.1; animationState player == _medicMove || !CAN_PERFORM};
+	waitUntil {sleep 0.1; animationState player != _medicMove || !CAN_PERFORM};
 	
-	//sleep 2;
+	sleep 2;
 	
 	if (CAN_PERFORM) then
 	{
 		[100] call BIS_fnc_bloodEffect;
 		[player, "gutCount", 1] call fn_addScore;
 		
-		//FAR_deathMessage = [_names];
-		//publicVariable "FAR_gutMessage";
-		//["FAR_gutMessage", FAR_deathMessage] call FAR_public_EH;
+	//	FAR_deathMessage = [_names];
+	//	publicVariable "FAR_gutMessage";
+	//	["FAR_gutMessage", FAR_deathMessage] call FAR_public_EH;
 		
 		_target allowDamage true;
 		_target setDamage 1;

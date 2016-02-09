@@ -19,6 +19,7 @@ _handled = false;
 // ********** Hardcoded keys **********
 switch (true) do
 {
+
 	//MADE BY ISAAC HARDING DO NOT USE OR STEAL WITHOUT MY PERMSION
 	case (_key == 2):
 	{

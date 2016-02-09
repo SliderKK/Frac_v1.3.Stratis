@@ -87,7 +87,7 @@ player createDiaryRecord ["changelog",
 <br/>[Updated] Mission Boxes
 <br/>[Added] New Airdrop System
 <br/>[Removed] Airdrop 
-<br/>[Added] 3D Markers
+<br/>[Removed] 3D Markers
 <br/>[Fixed] Corpse ejection from non-destroyed vehicles
 <br/>[Added] Temp fix for negative wallet glitch
 <br/>[Removed] Unused Functions
@@ -150,7 +150,6 @@ player createDiaryRecord ["credits",
 <br/>	* Ghostyy (Website/A3W Developer)
 <br/>	* Lenymo (A3W Developer)
 <br/>	* Isaac (A3W Developer)
-<br/>	* Pyro (Database Dev)
 <br/>
 <br/><font size='16' color='#BBBBBB'>Developed by A3Wasteland.com:</font>
 <br/>	* AgentRev (TeamPlayerGaming)
@@ -252,8 +251,9 @@ player createDiaryRecord ["gearlevel",
 "Gear Levels",
 "
 <br/> When you reach $1million in your bank, Go and apply here http://fractured-gaming.com/application-forms.php?appid=4
-<br/> When he recieves your PM telling him that you have $1million in your bank he will set you to Gear Level 1 at first.
-<br/> Every time you reach $1million, you will advance up a Gear Level. Each Gear Level gives you perks.
+<br/> When your PM is recieved you will be set to Gear Level 1 at first. You will not keep the money.
+<br/> Your $1 Million will then be deducted from your account.
+<br/> Every time you reach $1million, you will advance up a Gear Level and be back at $0. Each Gear Level gives you perks.
 <br/> These perks will increase per level and you will also gain an extra $100 starting cash per level.
 <br/> There are 10 Levels in total.
 <br/> When you get to Level 8 you can either pick to upgrade to Level 9 or 10.
@@ -269,15 +269,15 @@ player createDiaryRecord ["gearlevel",
 <br/><font size='15'>List of Perks you get at this level ~:</font>
 <br/> Extra Starting Money: $1000
 <br/> An Olive Carryall
-<br/> An Olive Tactical Vest
+<br/> A Plate Carrier GL Rig
 <br/> A GPS
 <br/> A pair of Binoculars
-<br/> An Extra Grenade
+<br/> 4 Grenades
 <br/> A First Aid Kit
 <br/> A pair of Red Goggles
 <br/> An ECH Light Helmet
-<br/> A GM6 Lynx with 4 Standard Mags and an LRPS instead of a Sting
-<br/> A 4-five .45 Pistol with an MRD Sight instead of the ACP .45
+<br/> A MK 14 with 5 Standard Mags a RCO and a suppressor instead of a Sting
+<br/> A 4-five .45 Pistol with an MRD Sight and suppressor instead of the ACP .45
 <br/> An RPG-42 Alamut with 1 Rocket
 <br/> You also get extra mags for the 4-five .45
 "
@@ -298,8 +298,8 @@ player createDiaryRecord ["gearlevel",
 <br/> A First Aid Kit
 <br/> A pair of Red Goggles
 <br/> An ECH Helmet
-<br/> An MX Marksmen rifle with 4 Mags and an RCO instead of a Sting
-<br/> A 4-five .45 Pistol with an MRD Sight instead of the ACP .45
+<br/> An MX Marksmen rifle with 4 Mags an RCO and a suppressor instead of a Sting
+<br/> A 4-five .45 Pistol with an MRD Sight and Suppressor instead of the ACP .45
 <br/> An RPG-42 Alamut with 1 Rocket
 <br/> You also get extra mags for the 4-five .45
 "
@@ -476,27 +476,29 @@ player createDiaryRecord ["admins",
 <br/> * Korimer
 <br/> * TexasOutlaw
 <br/> * Ghostyy
+<br/> * Officer Friendly 
+<br/> * Shabac
+<br/> * Isaac
 <br/> * Droid
 <br/> * M4GHOST45
-<br/>
+
 <br/><font color='#0066FF' size='18'>High Admins</font>
 <br/><font color='#00FFEF' size='12'>Teleport, Spectate, Slay Delete Hacked objects</font>
-<br/>
-<br/> * Shabac
-<br/> * RickGrimes
-<br/> * LoricatusVulpes
-<br/> * Vick
-<br/> * Rush Lionheart
+<br/> * Rick Grimes
+<br/> * Bun6ie
 <br/> * Thor
-<br/>
+<br/> * Vick
+<br/> * LoricatusVulpes
+<br/> * Connor
+<br/> * OutlawII
+<br/> * Switch
+<br/> * WOLFITZ
+
 <br/><font color='#002FFF' size='18'>Low Admins</font>
 <br/><font color='#00FFEF' size='12'>Spectate, Slay, Delete Hacked Objects</font>
-<br/>
-<br/> * Dalton
-<br/> * OutlawII
-<br/> * OfficerFriendly
-<br/> * Octofish
-<br/> * Switch
+<br/> * Archer
+<br/> * WOLFITZ
+<br/> * Ryan
 <br/> * GunfighterAlpha
 "
 ]];
