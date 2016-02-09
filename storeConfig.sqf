@@ -669,14 +669,12 @@ landArray = compileFinal str
 	["HEMTT Fuel", "B_Truck_01_fuel_F", 9000, "vehicle"],
 	["HEMTT Medical", "B_Truck_01_medical_F", 500, "vehicle"],
 	["HEMTT Repair", "B_Truck_01_Repair_F", 750, "vehicle"],
-	["HEMTT Ammo", "B_Truck_01_ammo_F", 1000, "vehicle"],
 
 	["Tempest Transport", "O_Truck_03_transport_F", 500, "vehicle"],
 	["Tempest Covered", "O_Truck_03_covered_F", 550, "vehicle"],
 	["Tempest Fuel", "O_Truck_03_fuel_F", 550, "vehicle"],
 	["Tempest Medical", "O_Truck_03_medical_F", 1000, "vehicle"],
 	["Tempest Repair", "O_Truck_03_repair_F", 12500, "vehicle"],
-	["Tempest Ammo", "O_Truck_03_ammo_F", 1500, "vehicle"],
 	["Tempest Device", "O_Truck_03_device_F", 2000, "vehicle"],
 	
 	["Zamak Transport", "I_Truck_02_transport_F", 400, "vehicle"],
@@ -684,7 +682,6 @@ landArray = compileFinal str
 	["Zamak Fuel", "I_Truck_02_fuel_F", 750, "vehicle"],
 	["Zamak Medical", "I_Truck_02_medical_F", 900, "vehicle"],
 	["Zamak Repair", "I_Truck_02_box_F", 1000, "vehicle"],
-	["Zamak Ammo", "I_Truck_02_ammo_F", 1500, "vehicle"],
 
 	["UGV Stomper (NATO)", "B_UGV_01_F", 2500, "vehicle"],
 	["UGV Stomper RCWS (NATO)", "B_UGV_01_rcws_F", 10000, "vehicle"],
@@ -742,7 +739,6 @@ helicoptersArray = compileFinal str
 
 	["Mi-290 Taru (Medical) [DLC]", "O_Heli_Transport_04_medevac_F",2000, "vehicle"],
 	["Mi-290 Taru (Repair) [DLC]", "O_Heli_Transport_04_repair_F", 2000, "vehicle"],
-	["Mi-290 Taru (Ammo) [DLC]", "O_Heli_Transport_04_ammo_F", 2000, "vehicle"],
 	
 	["UH-80 Ghost Hawk (Black)", "B_Heli_Transport_01_F", 7500, "vehicle"], // UH-60 Stealth with 2 side miniguns
 	["UH-80 Ghost Hawk (Green)", "B_Heli_Transport_01_camo_F", 7500, "vehicle"], // UH-60 Stealth with 2 side miniguns (green camo)
