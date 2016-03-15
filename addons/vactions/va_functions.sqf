@@ -507,7 +507,7 @@ va_outside_target = {
   if (!isPlayer _player) exitWith {};
   
 
-  def(_target);
+/*  def(_target);
   if (surfaceIsWater (position _player)) then {
    //line intersect does not work well when vehicle is in water
     _target = cursorTarget;
@@ -517,13 +517,17 @@ va_outside_target = {
     def(_pos2);
     _pos1 = (eyePos player);
     _pos2 = ([_pos1, cameraDirDist(_distance)] call vector_add);
-	_objects = (lineIntersectsWith [_pos1,_pos2,objNull,objNull,true]);
-	if (!isARRAY(_objects) || {count _objects == 0}) exitWith {};
-	_target = _objects select 0;
+_objects = (lineIntersectsWith [_pos1,_pos2,objNull,objNull,true]);
+if (!isARRAY(_objects) || {count _objects == 0}) exitWith {};
+_target = _objects select 0;
   };
+*/
 
+  def(_target);
+   _target = cursorObject;
+  
   if (isNil "_target") exitWith {};
-
+  if ((_player distance _target)>4) exitWith{};
   if (({_target isKindOf _x } count ["Helicopter", "Plane", "Ship_F", "Car", "Motorcycle", "Tank"]) == 0) exitWith {};
   
   _target
