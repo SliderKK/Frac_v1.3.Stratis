@@ -20,7 +20,7 @@ if (typeName _this == "ARRAY" && {count _this > 1}) then
 
 		disableUserInput true;
 		setPlayerRespawnTime 1e11;
-		player setDamage 1;
+		if (damage player < 1) then { player setDamage 1 }; // if check required to prevent "Killed" EH from getting triggered twice
 
 		1 fadeSound 0;
 		sleep 1;
@@ -33,6 +33,6 @@ if (typeName _this == "ARRAY" && {count _this > 1}) then
 		sleep 5;
 
 		// baibai hacker
-		preprocessFile "client\functions\quit.sqf";
+		call compile preprocessFile "client\functions\quit.sqf";
 	};
 };
