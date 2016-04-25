@@ -99,7 +99,7 @@ _killer = _unit call FAR_findKiller;
 _unit setVariable ["FAR_killerPrimeSuspect", _killer];
 
 // Injury message
-if (FAR_EnableDeathMessages && difficultyEnabled "deathMessages" && !isNil "_killer") then
+if (FAR_EnableDeathMessages && !isNil "_killer") then
 {
 	[_unit, _killer] spawn
 	{
