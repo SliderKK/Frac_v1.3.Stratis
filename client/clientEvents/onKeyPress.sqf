@@ -17,6 +17,7 @@ _alt = _this select 4;
 _handled = false;
 
 // ********** Hardcoded keys **********
+// keycodes are defined in client\clientEvents\customKeys.sqf
 switch (true) do
 {
 

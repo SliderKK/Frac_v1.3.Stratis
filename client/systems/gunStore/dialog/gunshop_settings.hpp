@@ -34,7 +34,7 @@ class gunshopd
 		class TopBar: IGUIBack
 		{
 			idc = -1;
-			colorBackground[] = {0.275,0.322,0.235,0.8};
+			colorBackground[] = {A3W_UICOLOR_R, A3W_UICOLOR_G, A3W_UICOLOR_B, 0.8};
 
 			#define GunStoreTopBar_H (0.05 * SZ_SCALE)
 
@@ -138,7 +138,6 @@ class gunshopd
 			action = "[0] execVM 'client\systems\gunStore\buyGuns.sqf'";
 			text = "Buy";
 			sizeEx = GunStoreButton_textSize;
-			colorBackground[] = {0.275,0.322,0.235,1};
 
 			x = GunStoreMainBG_X + (0.334 * SZ_SCALE);
 			y = GunStoreMainBG_Y + (0.507 * SZ_SCALE);

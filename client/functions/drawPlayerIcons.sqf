@@ -10,7 +10,10 @@ if (!hasInterface) exitWith {};
 
 #define ICON_fadeDistance 1250
 #define ICON_limitDistance 2000
-#define ICON_sizeScale 0.5
+#define ICON_sizeScale 0.75
+
+#define UNIT_POS(UNIT) (UNIT modelToWorldVisual [0, 0, 1.25]) // Torso height
+#define UAV_UNIT_POS(UNIT) (((vehicle UNIT) modelToWorldVisual [0, 0, 0]) vectorAdd [0, 0, 0.5])
 
 if (isNil "showPlayerNames") then { showPlayerNames = false };
 
@@ -20,7 +23,11 @@ drawPlayerIcons_array = [];
 if (!isNil "drawPlayerIcons_draw3D") then { removeMissionEventHandler ["Draw3D", drawPlayerIcons_draw3D] };
 drawPlayerIcons_draw3D = addMissionEventHandler ["Draw3D",
 {
-	{ drawIcon3D _x } forEach drawPlayerIcons_array;
+	{
+		_x params ["_drawArr", "_unit", "_isUavUnit"];
+		if (alive _unit) then { _drawArr set [2, if (_isUavUnit) then { UAV_UNIT_POS(_unit) } else { UNIT_POS(_unit) }] };
+		drawIcon3D _drawArr;
+	} forEach drawPlayerIcons_array;
 }];
 
 if (!isNil "drawPlayerIcons_thread") then { terminate drawPlayerIcons_thread };
@@ -38,6 +45,8 @@ drawPlayerIcons_thread = [] spawn
 		default      { call currMissionDir + "client\icons\igui_side_indep_ca.paa" };
 	};
 
+	private ["_dist", "_simulation"];
+
 	// Execute every frame
 	waitUntil
 	{
@@ -48,19 +57,23 @@ drawPlayerIcons_thread = [] spawn
 			{
 				_unit = _x;
 
-				if (side group _unit == playerSide && // "side group _unit" instead of "side _unit" is because "setCaptive true" when unconscious changes player side to civ (so AI stops shooting)
+				if (side group _unit isEqualTo playerSide && // "side group _unit" instead of "side _unit" is because "setCaptive true" when unconscious changes player side to civ (so AI stops shooting)
+				   {_dist = _unit distance positionCameraToWorld [0,0,0]; _dist < ICON_limitDistance &&
 				   {alive _unit &&
 				   (_unit != player || cameraOn != vehicle player) &&
 				   {!(_unit getVariable ["playerSpawning", false]) &&
 				   (vehicle _unit != getConnectedUAV player || cameraOn != vehicle _unit) && // do not show UAV AI icons when controlling UAV
-				   {getText (configFile >> "CfgVehicles" >> typeOf _unit >> "simulation") != "headlessclient"}}}) then 
+				   {_simulation = getText (configFile >> "CfgVehicles" >> typeOf _unit >> "simulation"); _simulation != "headlessclient"}}}}) then 
 				{
-					_dist = _unit distance positionCameraToWorld [0,0,0];
-					_pos = _unit modelToWorldVisual [0, 0, 1.35]; // Torso height
+					//_dist = _unit distance positionCameraToWorld [0,0,0];
+					_pos = UNIT_POS(_unit);
 
 					// only draw players inside range and screen
-					if (_dist < ICON_limitDistance && {count worldToScreen _pos > 0}) then
+					if !(worldToScreen _pos isEqualTo []) then
 					{
+						_isUavUnit = (_simulation == "UAVPilot");
+						if (_isUavUnit && {_unit != (crew vehicle _unit) select 0}) exitWith {}; // only one AI per UAV
+
 						_alpha = (ICON_limitDistance - _dist) / (ICON_limitDistance - ICON_fadeDistance);
 						_color = [1,1,1,_alpha];
 						_icon = _teamIcon;
@@ -74,30 +87,27 @@ drawPlayerIcons_thread = [] spawn
 							// Revive icon blinking code
 							if (_unit call A3W_fnc_isBleeding) then
 							{
-								_blink = false;
 								_timestamp = _unit getVariable ["FAR_iconBlinkTimestamp", 0];
 								_time = time;
 
-								if (isNil {_unit getVariable "FAR_iconBlink"} || (_time >= _timestamp && _time < _timestamp + 0.3)) then
+								if !(_unit getVariable ["FAR_iconBlink", false]) then
 								{
-									_blink = true;
-
-									if !(_unit getVariable ["FAR_iconBlink", false]) then
+									if (_time >= _timestamp) then
 									{
 										_unit setVariable ["FAR_iconBlink", true];
-										_unit setVariable ["FAR_iconBlinkTimestamp", _time];
+										_unit setVariable ["FAR_iconBlinkTimestamp", _time + 0.3]; // red duration
 									};
 								}
 								else
 								{
-									if (_unit getVariable ["FAR_iconBlink", false]) then
+									if (_time >= _timestamp) then
 									{
 										_unit setVariable ["FAR_iconBlink", false];
-										_unit setVariable ["FAR_iconBlinkTimestamp", _time + 1.25];
+										_unit setVariable ["FAR_iconBlinkTimestamp", _time + 1.25]; // green duration
 									};
 								};
 
-								if (_blink) then
+								if (_unit getVariable ["FAR_iconBlink", false]) then
 								{
 									_color = [1,0,0,_alpha];
 								};
@@ -115,13 +125,17 @@ drawPlayerIcons_thread = [] spawn
 							_size = (1 - ((_dist / ICON_limitDistance) * 0.7)) * _uiScale;
 						};
 
-						_text = if (showPlayerNames) then {
-							if (isPlayer _unit) then { name _unit } else { "[AI]" }
-						} else {
-							""
-						};
+						_text = if (showPlayerNames) then
+						{
+							if (isPlayer _unit) then { name _unit }
+							else
+							{
+								_uavOwner = (uavControl vehicle _unit) select 0;
+								format ["[AI%1]", if (isPlayer _uavOwner) then { " - " + name _uavOwner } else { "" }]
+							};
+						} else { "" };
 
-						_newArray pushBack [_icon, _color, _pos, _size, _size, 0, _text]; //, 1, 0.03, "PuristaMedium"];
+						_newArray pushBack [[_icon, _color, _pos, _size, _size, 0, _text], _unit, (_isUavUnit && !isPlayer _unit)]; //, 1, 0.03, "PuristaMedium"];
 					};
 				};
 			} forEach (if (playerSide in [BLUFOR,OPFOR]) then { allUnits } else { units player });
