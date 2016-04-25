@@ -6,7 +6,13 @@
 //	@file Author: [404] Deadbeat, [GoT] JoSchaap, AgentRev
 //	@file Description: The main init.
 
+#include "debugFlag.hpp"
+
+#ifdef A3W_DEBUG
+#define DEBUG true
+#else
 #define DEBUG false
+#endif
 
 enableSaving [false, false];
 
@@ -86,14 +92,14 @@ if (hasInterface || isServer) then
 	[] execVM "addons\R3F_ARTY_AND_LOG\init.sqf";
 	[] execVM "addons\proving_ground\init.sqf";
 	[] execVM "addons\JumpMF\init.sqf";
-	[] execVM "addons\lsd_nvg\init.sqf";
 	[] execVM "addons\Grenades\initGrenades.sqf"; // Toxic Gas Grenades
 	//[] execVM "addons\APOC_Airdrop_Assistance\init.sqf";
 	[] execVM "addons\scripts\servercredits.sqf"; //Intro Credits
 	[] execVM "addons\HvT\HvT.sqf"; // High Value Target
 	[] execVM "addons\HvT\HvD.sqf"; // High Value Drugs
 	[] execVM "addons\zlt_fastrope\zlt_fastrope.sqf";     // Fastrope
-	[] execVM "addons\outlw_magRepack\MagRepack_init_sv.sqf";
+	[] execVM "addons\outlw_magRepack\MagRepack_init.sqf";
+	[] execVM "addons\lsd_nvg\init.sqf";
 	//[] execVM "addons\disableThermal\disablethermal.sqf";
 	[] execVM "addons\laptop\init.sqf";
 	[] execVM "addons\vactions\functions.sqf";
