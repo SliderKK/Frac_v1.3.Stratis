@@ -73,7 +73,7 @@ _exclObjectIDs = [];
 			_obj setVectorDirAndUp _dir;
 		};
 
-		[_obj] call vehicleSetup;
+		[_obj, false] call vehicleSetup;
 		[_obj] call basePartSetup;
 
 		if (!isNil "_objectID") then
@@ -181,6 +181,7 @@ _exclObjectIDs = [];
 			if (!isNil "_turretMags" && _staticWeaponSavingOn && {_class call _isStaticWeapon}) then
 			{
 				_obj setVehicleAmmo 0;
+				{ _obj removeMagazineTurret [_x select 0, _x select 1] } forEach magazinesAllTurrets _obj;
 				{ _obj addMagazine _x } forEach _turretMags;
 			};
 
