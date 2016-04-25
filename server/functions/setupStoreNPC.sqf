@@ -46,6 +46,9 @@ if (hasInterface) then
 		case (["VehStore", _npcName] call _startsWith):
 		{
 			_npc addAction ["<img image='client\icons\store.paa'/> Open Vehicle Store", "client\systems\vehicleStore\loadVehicleStore.sqf", [], 1, true, true, "", STORE_ACTION_CONDITION];
+			_npc addAction ["<img image='client\icons\repair.paa'/> Service Vehicle", "client\systems\selling\serviceVehicle.sqf", [], 0.97, false, true, "", STORE_ACTION_CONDITION + " && " + SELL_VEH_CONTENTS_CONDITION];
+			_npc addAction ["<img image='client\icons\r3f_unlock.paa'/> License Vehicle", "client\systems\selling\licenseVehicle.sqf", [], 0.97, false, true, "", STORE_ACTION_CONDITION + " && " + SELL_VEH_CONTENTS_CONDITION];
+			_npc addAction ["<img image='client\icons\money.paa'/> Sell Vehicle", "client\systems\selling\sellVehicle.sqf", [], 0.97, false, true, "", STORE_ACTION_CONDITION + " && " + SELL_VEH_CONTENTS_CONDITION];
 		};
 	};
 
@@ -62,16 +65,24 @@ if (isServer) then
 
 	_npc setVariable ["storeNPC_nearestBuilding", netId _building, true];
 
+	_facesCfg = configFile >> "CfgFaces" >> "Man_A3";
 	_faces = [];
 
+	for "_i" from 0 to (count _facesCfg - 1) do
 	{
-		if (getText (_x >> "DLC") == "" && !(((getText (_x >> "texture")) select [0,1]) in ["","#"])) then
-		{
-			_faces pushBack _x;
-		};
-	} forEach ("true" configClasses (configFile >> "CfgFaces" >> "Man_A3"));
+		_faceCfg = _facesCfg select _i;
 
-	_face = configName (_faces call BIS_fnc_selectRandom);
+		_faceTex = toArray getText (_faceCfg >> "texture");
+		_faceTex resize 1;
+		_faceTex = toString _faceTex;
+
+		if (_faceTex == "\") then
+		{
+			_faces pushBack configName _faceCfg;
+		};
+	};
+
+	_face = _faces call BIS_fnc_selectRandom;
 	_npc setFace _face;
 	_npc setVariable ["storeNPC_face", _face, true];
 }
@@ -102,20 +113,17 @@ _building allowDamage false; // disable building damage
 if (isServer) then
 {
 	removeAllWeapons _npc;
-	_createStoreFurniture = compile preprocessFileLineNumbers "server\functions\createStoreFurniture.sqf";
 
 	waitUntil {!isNil "storeConfigDone"};
 
 	{
 		if (_x select 0 == _npcName) exitWith
 		{
-			private ["_frontOffset", "_bPos"];
+			private "_frontOffset";
 
 			//collect our arguments
 			_npcPos = _x select 1;
 			_deskDirMod = _x select 2;
-
-			if (_npcPos < 0) then { _npcPos = 1e9 }; // fix for buildingPos Arma 3 v1.55 change
 
 			if (typeName _deskDirMod == "ARRAY" && {count _deskDirMod > 0}) then
 			{
@@ -170,7 +178,26 @@ if (isServer) then
 			} forEach _storeOwnerAppearance;
 
 			_pDir = getDir _npc;
+
+			private "_bPos";
+			switch (toUpper typeName _npcPos) do
+			{
+				case "SCALAR":
+				{
+					_bPos = _building buildingPos _npcPos;
+				};
+				case "ARRAY":
+				{
+					_bPos = _npcPos;
+				};
+			};
+
 			_bPos = _building buildingPos _npcPos;
+
+			if (!isNil "_frontOffset") then
+			{
+				_bPos = _bPos vectorAdd ([[0, _frontOffset, 0], -_pDir] call BIS_fnc_rotateVector2D);
+			};
 
 			if (_bPos isEqualTo [0,0,0]) then
 			{
@@ -178,15 +205,10 @@ if (isServer) then
 			}
 			else
 			{
-				if (!isNil "_frontOffset") then
-				{
-					_bPos = _bPos vectorAdd ([[0, _frontOffset, 0], -_pDir] call BIS_fnc_rotateVector2D);
-				};
-
 				_npc setPosATL _bPos;
 			};
 
-			_desk = [_npc, _bPos, _pDir, _deskDirMod] call _createStoreFurniture;
+			_desk = [_npc, _bPos, _pDir, _deskDirMod] call compile preprocessFileLineNumbers "server\functions\createStoreFurniture.sqf";
 			_npc setVariable ["storeNPC_cashDesk", netId _desk, true];
 
 			sleep 1;
@@ -246,33 +268,15 @@ if (hasInterface) then
 
 	if (!isNull _desk) then
 	{
-		[_desk, _npcName] spawn
+		_desk spawn
 		{
-			_desk = _this select 0;
-			_npcName = _this select 1;
-
-			_sellBoxVar = "A3W_sellBox_" + _npcName;
-
+			_desk = _this;
 			_createSellBox =
 			{
 				_deskOffset = (getPosASL _desk) vectorAdd ([[-0.05,-0.6,0], -(getDir _desk)] call BIS_fnc_rotateVector2D);
 
-				missionNamespace setVariable [_sellBoxVar, objNull];
-
-				// Box created outside scheduler to prevent its destruction before allowDamage kicks in
-				[[_deskOffset, _sellBoxVar],
-				{
-					_deskOffset = _this select 0;
-					_sellBoxVar = _this select 1;
-
-					_sellBox = "Box_IND_Ammo_F" createVehicleLocal ASLtoATL _deskOffset;
-					_sellBox allowDamage false;
-
-					missionNamespace setVariable [_sellBoxVar, _sellBox];
-				}] execFSM "call.fsm";
-
-				waitUntil {_sellBox = missionNamespace getVariable _sellBoxVar; !isNull _sellBox};
-
+				_sellBox = "Box_IND_Ammo_F" createVehicleLocal ASLtoATL _deskOffset;
+				_sellBox allowDamage false;
 				_sellBox setVariable ["R3F_LOG_disabled", true];
 				_sellBox setVariable ["A3W_storeSellBox", true];
 				_sellBox setObjectTexture [0, ""]; // remove side marking

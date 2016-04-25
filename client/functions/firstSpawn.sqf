@@ -59,25 +59,7 @@ player addEventHandler ["WeaponAssembled",
 {
 	_player = _this select 0;
 	_obj = _this select 1;
-
-	if (round getNumber (configFile >> "CfgVehicles" >> typeOf _obj >> "isUav") > 0) then
-	{
-		_obj setVariable ["ownerUID", getPlayerUID _player, true];
-
-		if (!alive getConnectedUAV player) then
-		{
-			player connectTerminalToUAV _obj;
-		};
-
-		if ({_obj isKindOf _x} count ["Static_Designator_01_base_F","Static_Designator_02_base_F"] > 0) then
-		{
-			_obj setAutonomous false; // disable autonomous mode by default on static designators so they stay on target after releasing controls
-		};
-
-		{
-			[_x, ["AI","",""]] remoteExec ["A3W_fnc_setName"]; 
-		} forEach crew _obj;
-	};
+	if (_obj isKindOf "UAV_01_base_F") then { _obj setVariable ["ownerUID", getPlayerUID _player, true] };
 }];
 
 player addEventHandler ["InventoryOpened",
@@ -134,7 +116,7 @@ player addEventHandler ["InventoryClosed",
 		_lastVeh = _currVeh;
 
 		// Prevent usage of commander camera
-		if (cameraView == "GROUP" && cameraOn in [player, vehicle player]) then
+		if (cameraView == "GROUP") then
 		{
 			cameraOn switchCamera "EXTERNAL";
 		};
@@ -145,7 +127,7 @@ player addEventHandler ["InventoryClosed",
 
 player addEventHandler ["HandleDamage", unitHandleDamage];
 
-if (["A3W_remoteBombStoreRadius", 0] call getPublicVar > 0) then
+if (["A3W_combatAbortDelay", 0] call getPublicVar > 0) then
 {
 	player addEventHandler ["Fired",
 	{
@@ -154,7 +136,7 @@ if (["A3W_remoteBombStoreRadius", 0] call getPublicVar > 0) then
 		{
 			_ammo = _this select 4;
 
-			if ({_ammo isKindOf _x} count ["PipeBombBase", "ClaymoreDirectionalMine_Remote_Ammo"] > 0) then
+			if ({_ammo isKindOf _x} count ["PipeBombBase", "ClaymoreDirectionalMine_Remote_Ammo", "APERSTripMine_Wire_Ammo", "APERSBoundingMine_Range_Ammo", "APERSMine_Range_Ammo", "SLAMDirectionalMine_Wire_Ammo", "ATMine_Range_Ammo", "SatchelCharge_Remote_Ammo", "DemoCharge_Remote_Ammo", "IEDUrbanBig_Remote_Ammo", "IEDLandBig_Remote_Ammo", "IEDUrbanSmall_Remote_Ammo", "IEDLandSmall_Remote_Ammo"] > 0) then
 			{
 				_mag = _this select 5;
 				_bomb = _this select 6;
@@ -172,10 +154,7 @@ if (["A3W_remoteBombStoreRadius", 0] call getPublicVar > 0) then
 			};
 		};
 	}];
-};
 
-if (["A3W_combatAbortDelay", 0] call getPublicVar > 0) then
-{
 	player addEventHandler ["FiredNear",
 	{
 		// Prevent aborting if event is not for placing an explosive

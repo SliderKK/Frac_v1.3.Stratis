@@ -15,7 +15,7 @@ pvar_teamSwitchUnlock = getPlayerUID player;
 publicVariableServer "pvar_teamSwitchUnlock";
 
 setPlayerRespawnTime 1e11;
-if (damage player < 1) then { player setDamage 1 }; // if check required to prevent "Killed" EH from getting triggered twice
+player setDamage 1;
 sleep 1;
 
 9999 cutText ["", "BLACK", 3];

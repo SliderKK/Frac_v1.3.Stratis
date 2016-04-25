@@ -10,7 +10,7 @@
 #include "dialog\genstoreDefines.sqf";
 disableSerialization;
 
-private ["_dialog", "_itemlisttext", "_itemlist", "_class", "_qty", "_listIndex"];
+private ["_dialog", "_itemlisttext", "_itemlist", "_amount", "_index", "_class", "_qty", "_listIndex"];
 
 // Grab access to the controls
 _dialog = findDisplay genstore_DIALOG;

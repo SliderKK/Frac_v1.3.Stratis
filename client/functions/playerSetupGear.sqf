@@ -4,7 +4,7 @@
 //	@file Name: playerSetupGear.sqf
 //	@file Author: [GoT] JoSchaap, AgentRev
 
-private ["_player", "_uniform", "_vest", "_headgear", "_goggles"];
+private ["_player", "_uniform", "_vest", "_headgear", "_goggles", "_PlayerGearLevel"];
 _player = _this;
 
 // Gear Loadout  

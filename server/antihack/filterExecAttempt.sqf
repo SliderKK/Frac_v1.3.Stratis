@@ -35,6 +35,7 @@ if (_packetName == "BIS_fnc_MP_packet") then
 		[
 			"client\functions\defineServerRules.sqf",
 			"territory\client\updateTerritoryMarkers.sqf",
+			"addons\3D_Markers\3Dmarkers.sqf",
 			"initPlayerServer.sqf"
 		];
 	}
@@ -51,10 +52,10 @@ if (_packetName == "BIS_fnc_MP_packet") then
 			"BIS_fnc_effectKilledAirDestruction",
 			"BIS_fnc_effectKilledAirDestructionStage2",
 			"BIS_fnc_effectKilledSecondaries",
+			"BH_fnc_mkr3D",
+			"BH_fnc_mkr3D_VON",
 			"BIS_fnc_objectVar"/*,
 			"JTS_FNC_SENT"*/ // PM Compact by JTS
-
-			// NOTE: You also need to whitelist individual functions in client\CfgRemoteExec_fnc.hpp
 		];
 
 		if (!_whitelisted) then
@@ -68,7 +69,10 @@ if (_packetName == "BIS_fnc_MP_packet") then
 			forEach
 			[
 				"A3W_fnc_",
-				"mf_remote_"
+				"mf_remote_",
+				"BIS_fnc_spawn",
+				"BH_fnc_",
+				"APOC_srv_"
 			];
 		};
 	};

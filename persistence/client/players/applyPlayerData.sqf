@@ -6,25 +6,17 @@
 
 // This is where you load player status & inventory data which will be wiped upon death, for persistent variables use c_applyPlayerInfo.sqf instead
 
-private ["_data", "_removal", "_name", "_value"];
+private ["_data", "_name", "_value"];
 
 _data = _this;
-_removal = param [1, true];
 
-if (_removal isEqualTo false) then
-{
-	_data = param [0, [], [[]]];
-}
-else
-{
-	removeAllWeapons player;
-	removeAllAssignedItems player;
-	removeUniform player;
-	removeVest player;
-	removeBackpack player;
-	removeGoggles player;
-	removeHeadgear player;
-};
+removeAllWeapons player;
+removeAllAssignedItems player;
+removeUniform player;
+removeVest player;
+removeBackpack player;
+removeGoggles player;
+removeHeadgear player;
 
 {
 	_name = _x select 0;
@@ -33,12 +25,7 @@ else
 	switch (_name) do
 	{
 		case "Damage": { player setDamage _value };
-		case "HitPoints":
-		{
-			player allowDamage true;
-			{ player setHitPointDamage _x } forEach _value;
-			player allowDamage !(player getVariable ["playerSpawning", true]);
-		};
+		case "HitPoints": { { player setHitPointDamage _x } forEach _value };
 		case "Hunger": { hungerLevel = _value };
 		case "Thirst": { thirstLevel = _value };
 		case "Money": { player setVariable ["cmoney", _value, true] };
@@ -54,26 +41,7 @@ else
 		case "Uniform":
 		{
 			// If uniform cannot be worn by player due to different team, try to convert it, else give default instead
-			if (_value != "") then
-			{
-				if (player isUniformAllowed _value) then
-				{
-					player addUniform _value;
-				}
-				else
-				{
-					_newUniform = [player, _value] call uniformConverter;
-
-					if (player isUniformAllowed _newUniform) then
-					{
-						player addUniform _newUniform;
-					}
-					else
-					{
-						player addUniform ([player, "uniform"] call getDefaultClothing);
-					}
-				};
-			};
+			player forceadduniform _value;
 		};
 		case "Vest": { if (_value != "") then { player addVest _value } };
 		case "Backpack":
@@ -132,7 +100,8 @@ else
 			{
 				if ([player, _x] call isAssignableBinocular) then
 				{
-					if (_x select [0,15] == "Laserdesignator" && {{_x == "Laserbatteries"} count magazines player == 0}) then
+					// Temporary fix for http://feedback.arma3.com/view.php?id=21618
+					if (_x == "Laserdesignator" && {{_x == "Laserbatteries"} count magazines player == 0}) then
 					{
 						[player, "Laserbatteries"] call fn_forceAddItem;
 					};

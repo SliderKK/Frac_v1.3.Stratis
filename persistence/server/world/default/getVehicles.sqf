@@ -32,9 +32,9 @@ _vars =
 	[["Magazines", "ARRAY"], "_magazines"],
 	[["Items", "ARRAY"], "_items"],
 	[["Backpacks", "ARRAY"], "_backpacks"],
-	[["TurretMagazines", "ARRAY"], "_turretMags"], // deprecated
+	[["TurretMagazines", "ARRAY"], "_turretMags"],
 	[["TurretMagazines2", "ARRAY"], "_turretMags2"],
-	[["TurretMagazines3", "ARRAY"], "_turretMags3"], // deprecated
+	[["TurretMagazines3", "ARRAY"], "_turretMags3"],
 	[["AmmoCargo", "NUMBER"], "_ammoCargo"],
 	[["FuelCargo", "NUMBER"], "_fuelCargo"],
 	[["RepairCargo", "NUMBER"], "_repairCargo"]

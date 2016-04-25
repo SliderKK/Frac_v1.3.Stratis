@@ -25,11 +25,15 @@ groupManagmentActive = false;
 pvar_PlayerTeamKiller = objNull;
 doCancelAction = false;
 
+//AJ Beacondetector
+BeaconScanInProgress = false;
+
 //Initialization Variables
 playerCompiledScripts = false;
 playerSetupComplete = false;
 
-waitUntil {!isNull player && time > 0};
+waitUntil {!isNull player};
+waitUntil {time > 0.1};
 
 removeAllWeapons player;
 player switchMove "";
@@ -52,8 +56,6 @@ if !(playerSide in [BLUFOR,OPFOR,INDEPENDENT]) exitWith
 if (!isNil "client_initEH") then { player removeEventHandler ["Respawn", client_initEH] };
 player addEventHandler ["Respawn", { _this spawn onRespawn }];
 player addEventHandler ["Killed", { _this spawn onKilled }];
-
-call compile preprocessFileLineNumbers "addons\far_revive\FAR_revive_init.sqf";
 
 A3W_scriptThreads pushBack execVM "client\functions\evalManagedActions.sqf";
 
@@ -109,9 +111,6 @@ if (count (["config_territory_markers", []] call getPublicVar) > 0) then
 //Setup player menu scroll action.
 //[] execVM "client\clientEvents\onMouseWheel.sqf";
 
-// Load custom keys from profile
-call compile preprocessFileLineNumbers "client\clientEvents\customKeys.sqf";
-
 //Setup Key Handler
 waitUntil {!isNull findDisplay 46};
 (findDisplay 46) displayAddEventHandler ["KeyDown", onKeyPress];
@@ -148,8 +147,6 @@ if(hasInterface) then{[] execVM "addons\statusBar\statusbar.sqf"}; //Status Bar
 
 call compile preprocessFileLineNumbers "client\functions\generateAtmArray.sqf";
 [] execVM "client\functions\drawPlayerMarkers.sqf";
-
-{ [_x] call fn_remotePlayerSetup } forEach allPlayers;
 
 // update player's spawn beaoon
 {

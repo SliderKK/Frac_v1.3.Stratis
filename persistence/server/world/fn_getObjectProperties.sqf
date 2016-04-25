@@ -81,12 +81,7 @@ _turretMags = [];
 
 if (_staticWeaponSavingOn && {_class call _isStaticWeapon}) then
 {
-	{
-		if (_x select 0 != "FakeWeapon") then
-		{
-			_turretMags pushBack [_x select 0, _x select 2];
-		};
-	} forEach magazinesAllTurrets _obj;
+	_turretMags = magazinesAmmo _obj;
 };
 
 _ammoCargo = getAmmoCargo _obj;
