@@ -527,7 +527,7 @@ _target = _objects select 0;
    _target = cursorObject;
   
   if (isNil "_target") exitWith {};
-  if ((_player distance _target)>4) exitWith{};
+  if ((_player distance _target)>6) exitWith{};
   if (({_target isKindOf _x } count ["Helicopter", "Plane", "Ship_F", "Car", "Motorcycle", "Tank"]) == 0) exitWith {};
   
   _target
