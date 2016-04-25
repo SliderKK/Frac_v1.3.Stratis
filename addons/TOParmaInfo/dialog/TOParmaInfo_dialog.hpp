@@ -44,7 +44,7 @@ class TOParmaInfoD
 			idc = TOParmaInfo_Server_Info;
 			type = CT_STRUCTURED_TEXT;
 			size = 0.040;
-			text = "TOP #1 Wasteland Chernarus";
+			text = "Fractured Wasteland";
 			x = "18 * (((safezoneW / safezoneH) min 1.2) / 40)";
 			y = "0 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
 			w = "12 * (((safezoneW / safezoneH) min 1.2) / 40)";
