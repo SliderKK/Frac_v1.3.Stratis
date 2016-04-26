@@ -93,6 +93,7 @@ if (hasInterface || isServer) then
 	[] execVM "addons\proving_ground\init.sqf";
 	[] execVM "addons\JumpMF\init.sqf";
 	[] execVM "addons\lsd_nvg\init.sqf";
+	[] execVM "addons\Grenades\initGrenades.sqf"; // Toxic Gas Grenades
 	//[] execVM "addons\APOC_Airdrop_Assistance\init.sqf";
 	[] execVM "addons\scripts\servercredits.sqf"; //Intro Credits
 	[] execVM "addons\HvT\HvT.sqf"; // High Value Target
