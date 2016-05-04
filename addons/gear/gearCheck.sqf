@@ -81,6 +81,13 @@ switch (_gearLevel) do
 		hint "Congrats! Final Gear Level Loaded!";
    };
    
+	case 11:
+   {
+		player execVM "addons\gear\gearLevel11.sqf"; 
+		sleep 5;
+		hint "Congrats! Final Gear Level Loaded!";
+   };
+   
     default
     {
 		hint "Max your Bank account to upgrade Gear Level!";
