@@ -7,6 +7,7 @@ _player = _this;
 
 
 _player setVariable ["cmoney", (_player getVariable "cmoney") + 1000, true];
+_player setVariable A3W_atmMaxBalance "2000000";
 
 _crate = "Box_East_Ammo_F";		
 ["Open",_crate] call BIS_fnc_arsenal;
