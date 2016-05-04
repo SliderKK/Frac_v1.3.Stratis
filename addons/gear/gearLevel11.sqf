@@ -426,7 +426,7 @@ _crate = "Box_East_Ammo_F";
 	  
 ],true] call BIS_fnc_addVirtualItemCargo;
 
-				systemChat format["Welcome %1, Enjoy your Supporter Loadout!", name player];
+				systemChat format["Welcome %1, Enjoy your Virtual Arsenal!", name player];
 		};	
 			
 	};
