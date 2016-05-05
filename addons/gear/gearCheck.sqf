@@ -81,11 +81,39 @@ switch (_gearLevel) do
 		hint "Congrats! Final Gear Level Loaded!";
    };
    
+       case 11:
+   {
+		player execVM "addons\gear\gearLevel11.sqf"; 
+		sleep 5;
+		hint "Congrats! Prestiege Gear Level 1 Loaded!";
+   };
+   
+    case 12:
+   {
+		player execVM "addons\gear\gearLevel12.sqf"; 
+		sleep 5;
+		hint "Congrats! Prestiege Gear Level 2 Loaded!";
+   };
+   
+      case 13:
+   {
+		player execVM "addons\gear\gearLevel3.sqf"; 
+		sleep 5;
+		hint "Congrats! Prestiege Gear Level 3 Loaded!";
+   };
+
+      case 14:
+   {
+		player execVM "addons\gear\gearLevel14.sqf"; 
+		sleep 5;
+		hint "Congrats! Prestiege Gear Level 4 Loaded!";
+   };
+   
 	case 15:
    {
 		player execVM "addons\gear\gearLevel15.sqf"; 
 		sleep 5;
-		hint "Congrats! Final Gear Level Loaded!";
+		hint "Congrats! Virtual Arsenal Loaded!";
    };
    
     default
