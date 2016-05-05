@@ -23,6 +23,7 @@ player createDiaryRecord ["changelog",
 [
 "v1.1",
 "
+<br/>[Changed] Price of Unarmed Helicopters
 <br/>[Changed] Value of Idependent Hack amount to .5%
 <br/>[Changed] Value of Hacker Mission from 1.5% to 1%
 <br/>[Changed] Gear Level Spawn Items
