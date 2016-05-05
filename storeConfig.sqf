@@ -721,21 +721,21 @@ tanksArray = compileFinal str
 
 helicoptersArray = compileFinal str
 [
-	["M-900 Civilian", "C_Heli_Light_01_civil_F", 1000, "vehicle"], // MH-6, no flares
-	["MH-9 Hummingbird", "B_Heli_Light_01_F", 1250, "vehicle"], // MH-6
-	["PO-30 Orca (Black)", "O_Heli_Light_02_unarmed_F", 1750, "vehicle"], // Ka-60
-	["WY-55 Hellcat (Green)", "I_Heli_light_03_unarmed_F", 2000, "vehicle"], // AW159
+	["M-900 Civilian", "C_Heli_Light_01_civil_F", 2000, "vehicle"], // MH-6, no flares
+	["MH-9 Hummingbird", "B_Heli_Light_01_F", 3000, "vehicle"], // MH-6
+	["PO-30 Orca (Black)", "O_Heli_Light_02_unarmed_F", 3500, "vehicle"], // Ka-60
+	["WY-55 Hellcat (Green)", "I_Heli_light_03_unarmed_F", 4000, "vehicle"], // AW159
 
-	["Mi-290 Taru (Crane) [DLC]", "O_Heli_Transport_04_F", 1500, "vehicle"], // CH-54
-	["Mi-290 Taru (Box) [DLC]", "O_Heli_Transport_04_box_F", 1750, "vehicle"],
-	["Mi-290 Taru (Fuel) [DLC]", "O_Heli_Transport_04_fuel_F", 2000, "vehicle"],
-	["Mi-290 Taru (Bench) [DLC]", "O_Heli_Transport_04_bench_F", 1750, "vehicle"],
-	["Mi-290 Taru (Transport) [DLC]", "O_Heli_Transport_04_covered_F", 1750, "vehicle"],
-	["CH-67 Huron (Black) [DLC]", "B_Heli_Transport_03_unarmed_F", 2000, "vehicle"], // CH-47
-	["CH-49 Mohawk", "I_Heli_Transport_02_F", 2000, "vehicle"], // AW101
+	["Mi-290 Taru (Crane) [DLC]", "O_Heli_Transport_04_F", 3000, "vehicle"], // CH-54
+	["Mi-290 Taru (Box) [DLC]", "O_Heli_Transport_04_box_F", 3500, "vehicle"],
+	["Mi-290 Taru (Fuel) [DLC]", "O_Heli_Transport_04_fuel_F", 4000, "vehicle"],
+	["Mi-290 Taru (Bench) [DLC]", "O_Heli_Transport_04_bench_F", 3500, "vehicle"],
+	["Mi-290 Taru (Transport) [DLC]", "O_Heli_Transport_04_covered_F", 3500, "vehicle"],
+	["CH-67 Huron (Black) [DLC]", "B_Heli_Transport_03_unarmed_F", 4000, "vehicle"], // CH-47
+	["CH-49 Mohawk", "I_Heli_Transport_02_F", 4000, "vehicle"], // AW101
 
-	["Mi-290 Taru (Medical) [DLC]", "O_Heli_Transport_04_medevac_F",2000, "vehicle"],
-	["Mi-290 Taru (Repair) [DLC]", "O_Heli_Transport_04_repair_F", 2000, "vehicle"],
+	["Mi-290 Taru (Medical) [DLC]", "O_Heli_Transport_04_medevac_F",4000, "vehicle"],
+	["Mi-290 Taru (Repair) [DLC]", "O_Heli_Transport_04_repair_F", 4000, "vehicle"],
 	
 	["UH-80 Ghost Hawk (Black)", "B_Heli_Transport_01_F", 7500, "vehicle"], // UH-60 Stealth with 2 side miniguns
 	["UH-80 Ghost Hawk (Green)", "B_Heli_Transport_01_camo_F", 7500, "vehicle"], // UH-60 Stealth with 2 side miniguns (green camo)
