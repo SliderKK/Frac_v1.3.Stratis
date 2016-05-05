@@ -47,12 +47,10 @@ switch (true) do
 		_player addWeapon "Binocular"; 
 		_player removeItem "";
 	};
-		case (["_diver_", typeOf _player] call fn_findString != -1):
+	case (["_diver_", typeOf _player] call fn_findString != -1):
 	{
 		_player addVest "V_RebreatherIA";
 		_player removeItem "";
 
 	};
 };
-
-
