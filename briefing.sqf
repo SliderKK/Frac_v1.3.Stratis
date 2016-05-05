@@ -23,6 +23,7 @@ player createDiaryRecord ["changelog",
 [
 "v1.1",
 "
+<br/>[Changed] Gear Level Spawn Items
 <br/>[Removed] Bastground to statusbar
 <br/>[Fixed] TawVD error
 <br/>[Added] Group Size Limit =6

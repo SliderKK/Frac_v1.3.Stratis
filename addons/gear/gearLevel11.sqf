@@ -5,6 +5,7 @@ private ["_player"];
 _player = _this;
 
 _player setVariable ["cmoney", (_player getVariable "cmoney") + 1000, true];
+_player setVariable ["A3W_atmMaxBalance", (_player getVariable "A3W_atmMaxBalance") + 4000000, true];
 
 {_player removeWeapon _x} forEach weapons _player;
 {_player removeMagazine _x} forEach magazines _player;
