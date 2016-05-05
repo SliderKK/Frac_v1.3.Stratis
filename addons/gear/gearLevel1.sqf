@@ -50,28 +50,24 @@ switch (true) do
 {
 	case (["_medic_", typeOf _player] call fn_findString != -1):
 	{
-		_player addItem "ToolKit";
 		_player addItem "MediKit";
 		_player removeItem "";
 	};
 	case (["_engineer_", typeOf _player] call fn_findString != -1):
 	{
 		_player addItem "ToolKit";
-		_player addItem "MediKit";
 		_player removeItem "";
 	};
 	case (["_sniper_", typeOf _player] call fn_findString != -1):
 	{
-		_player addItem "ToolKit";
-		_player addItem "MediKit";
+		_player addWeapon "Binocular"; 
 		_player removeItem "";
 	};
 		case (["_diver_", typeOf _player] call fn_findString != -1):
 	{
-		_player addItem "ToolKit";
-		_player addItem "MediKit";
-		_player removeItem "";
 		_player addVest "V_RebreatherIA";
+		_player removeItem "";
+
 	};
 };
 
