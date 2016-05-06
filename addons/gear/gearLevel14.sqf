@@ -14,9 +14,8 @@ removeBackpack _player;
 removeGoggles _player;
 removeHeadgear _player;
 
-_player addBackpack "G_Bergen"; //BackPack
-_player addItem "FirstAidKit"; //Any other stuff that goes in inventory if there is space
-
+_player addBackpack "G_Bergen";
+_player addItem "FirstAidKit";
 _player addMagazines ["11Rnd_45ACP_Mag", 4];
 _player addWeapon "hgun_Pistol_heavy_01_F";
 

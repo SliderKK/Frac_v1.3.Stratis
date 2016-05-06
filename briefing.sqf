@@ -23,6 +23,10 @@ player createDiaryRecord ["changelog",
 [
 "v1.1",
 "
+<br/>[Added] Added Final Prestiege Gear Level (Virtual Arsenal)
+<br/>[Added] Prestiege Gear Levels 1-4
+<br/>[Changed] Gear Level Spawning items
+<br/>[Changed] Max Bank Amount by 1mil per gear level
 <br/>[Changed] Price of Unarmed Helicopters
 <br/>[Changed] Value of Idependent Hack amount to .5%
 <br/>[Changed] Value of Hacker Mission from 1.5% to 1%
@@ -255,13 +259,79 @@ player createDiaryRecord ["gearlevel",
 "Gear Levels",
 "
 <br/> When you reach $1million in your bank, Go and apply here http://fractured-gaming.com/application-forms.php?appid=4
-<br/> When your PM is recieved you will be set to Gear Level 1 at first. You will not keep the money.
-<br/> Your $1 Million will then be deducted from your account.
-<br/> Every time you reach $1million, you will advance up a Gear Level and be back at $0. Each Gear Level gives you perks.
-<br/> These perks will increase per level and you will also gain an extra $100 starting cash per level.
+<br/> When your application is recieved your gear level will be changed within 48 hours.
+<br/> Your Money will then be deducted from your account.
+<br/> Every time you Max your Bank Account, $1,000,000 per gear level, Fill out a gear level application to upgrade your gear level.
 <br/> There are 10 Levels in total.
-<br/> When you get to Level 8 you can either pick to upgrade to Level 9 or 10.
-<br/> These are the Max Levels.
+<br/> There are 5 Prestiege Levels. (after the 1st 10 levels)
+<br/> Prestiege Gear Levels allow you to spawn with either nothing or the bare minimum. 
+<br/> Prestiege Gear Levels are $5,000,000 per level and Prestiege level 5 is $20,000,000
+<br/> The Final Prestiege level allows you to pick weapons from the VR before spawning. 
+"
+]];
+
+player createDiaryRecord ["gearlevel",
+[
+"Prestiege Level 3",
+"
+<br/><font size='16'>Prestiege Level 3</font>
+<br/><font size='15'>List of Perks you get at this level ~:</font>
+<br/> Extra Starting Money: $1000
+<br/> Virtural Arsenal With almost every weapon in it.
+
+"
+]];
+
+player createDiaryRecord ["gearlevel",
+[
+"Prestiege Level 4",
+"
+<br/><font size='16'>Prestiege Level 3</font>
+<br/><font size='15'>List of Perks you get at this level ~:</font>
+<br/> Extra Starting Money: $1000
+<br/> Bergen Backpack
+<br/> 45 ACP and 4 Magazines
+<br/> 2 Grenades
+
+"
+]];
+
+player createDiaryRecord ["gearlevel",
+[
+"Prestiege Level 3",
+"
+<br/><font size='16'>Prestiege Level 3</font>
+<br/><font size='15'>List of Perks you get at this level ~:</font>
+<br/> Extra Starting Money: $1000
+<br/> Bergen Backpack
+<br/> 45 ACP and 2 Magazines
+<br/> 1 Grenade
+
+"
+]];
+
+player createDiaryRecord ["gearlevel",
+[
+"Prestiege Level 2",
+"
+<br/><font size='16'>Prestiege Level 2</font>
+<br/><font size='15'>List of Perks you get at this level ~:</font>
+<br/> Extra Starting Money: $1000
+<br/> Bergen Backpack
+<br/> 45 ACP and 1 Magazine
+
+"
+]];
+
+player createDiaryRecord ["gearlevel",
+[
+"Prestiege Level 1",
+"
+<br/><font size='16'>Prestiege Level 1</font>
+<br/><font size='15'>List of Perks you get at this level ~:</font>
+<br/> Extra Starting Money: $1000
+<br/> Bergen Backpack
+
 "
 ]];
 

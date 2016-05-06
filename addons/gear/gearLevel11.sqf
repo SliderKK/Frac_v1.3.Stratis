@@ -15,6 +15,7 @@ removeBackpack _player;
 removeGoggles _player;
 removeHeadgear _player;
 
+_player addBackpack "G_Bergen";
 
 switch (true) do
 {

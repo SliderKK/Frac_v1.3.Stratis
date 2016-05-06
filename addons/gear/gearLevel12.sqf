@@ -14,7 +14,8 @@ removeBackpack _player;
 removeGoggles _player;
 removeHeadgear _player;
 
-_player addMagazines ["9Rnd_45ACP_Mag", 4];
+_player addBackpack "G_Bergen";
+_player addMagazines ["9Rnd_45ACP_Mag", 1];
 _player addWeapon "hgun_ACPC2_F"; 
 
 _player selectWeapon "hgun_ACPC2_F";
