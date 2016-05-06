@@ -80,11 +80,7 @@ switch (_gearLevel) do
 		sleep 5;
 		hint "Congrats! Final Gear Level Loaded!";
    };
-   
-@@ -81,39 +81,11 @@ switch (_gearLevel) do
-		hint "Congrats! Final Gear Level Loaded!";
-   };
-   
+ 
        case 11:
    {
 		player execVM "addons\gear\gearLevel11.sqf"; 
