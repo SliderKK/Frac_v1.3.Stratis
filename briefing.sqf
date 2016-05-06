@@ -23,6 +23,7 @@ player createDiaryRecord ["changelog",
 [
 "v1.1",
 "
+<br/>[Removed] Group Size Limit
 <br/>[Added] Added Final Prestiege Gear Level (Virtual Arsenal)
 <br/>[Added] Prestiege Gear Levels 1-4
 <br/>[Changed] Gear Level Spawning items
