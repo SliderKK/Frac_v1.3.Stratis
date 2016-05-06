@@ -23,6 +23,7 @@ player createDiaryRecord ["changelog",
 [
 "v1.1",
 "
+<br/>[Removed] Group Size Limit
 <br/>[Added] Added Final Prestiege Gear Level (Virtual Arsenal)
 <br/>[Added] Prestiege Gear Levels 1-4
 <br/>[Changed] Gear Level Spawning items
@@ -272,9 +273,9 @@ player createDiaryRecord ["gearlevel",
 
 player createDiaryRecord ["gearlevel",
 [
-"Prestiege Level 3",
+"Prestiege Level 5",
 "
-<br/><font size='16'>Prestiege Level 3</font>
+<br/><font size='16'>Prestiege Level 5</font>
 <br/><font size='15'>List of Perks you get at this level ~:</font>
 <br/> Extra Starting Money: $1000
 <br/> Virtural Arsenal With almost every weapon in it.
