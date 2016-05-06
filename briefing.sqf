@@ -23,6 +23,7 @@ player createDiaryRecord ["changelog",
 [
 "v1.1",
 "
+<br/>[Changed] Bank Limit to $25,000,000
 <br/>[Removed] Group Size Limit
 <br/>[Added] Added Final Prestiege Gear Level (Virtual Arsenal)
 <br/>[Added] Prestiege Gear Levels 1-4
@@ -262,11 +263,12 @@ player createDiaryRecord ["gearlevel",
 <br/> When you reach $1million in your bank, Go and apply here http://fractured-gaming.com/application-forms.php?appid=4
 <br/> When your application is recieved your gear level will be changed within 48 hours.
 <br/> Your Money will then be deducted from your account.
-<br/> Every time you Max your Bank Account, $1,000,000 per gear level, Fill out a gear level application to upgrade your gear level.
+<br/> To revieve a gear level, Fill out a gear level application on the forums to upgrade your gear level.
 <br/> There are 10 Levels in total.
 <br/> There are 5 Prestiege Levels. (after the 1st 10 levels)
 <br/> Prestiege Gear Levels allow you to spawn with either nothing or the bare minimum. 
-<br/> Prestiege Gear Levels are $5,000,000 per level and Prestiege level 5 is $20,000,000
+<br/> Prestiege Gear Levels are $10,000,000 per level and Prestiege level 5 is $25,000,000
+<br/> Prestiege Gear Levels are for the hardcore wasteland players with a big payoff at the end.
 <br/> The Final Prestiege level allows you to pick weapons from the VR before spawning. 
 "
 ]];
@@ -276,6 +278,7 @@ player createDiaryRecord ["gearlevel",
 "Prestiege Level 5",
 "
 <br/><font size='16'>Prestiege Level 5</font>
+<br/><font size='15'>Cost: $25,000,000 ~:</font>
 <br/><font size='15'>List of Perks you get at this level ~:</font>
 <br/> Extra Starting Money: $1000
 <br/> Virtural Arsenal With almost every weapon in it.
@@ -288,6 +291,7 @@ player createDiaryRecord ["gearlevel",
 "Prestiege Level 4",
 "
 <br/><font size='16'>Prestiege Level 3</font>
+<br/><font size='15'>Cost: $10,000,000 ~:</font>
 <br/><font size='15'>List of Perks you get at this level ~:</font>
 <br/> Extra Starting Money: $1000
 <br/> Bergen Backpack
@@ -302,6 +306,7 @@ player createDiaryRecord ["gearlevel",
 "Prestiege Level 3",
 "
 <br/><font size='16'>Prestiege Level 3</font>
+<br/><font size='15'>Cost: $10,000,000 ~:</font>
 <br/><font size='15'>List of Perks you get at this level ~:</font>
 <br/> Extra Starting Money: $1000
 <br/> Bergen Backpack
@@ -316,6 +321,7 @@ player createDiaryRecord ["gearlevel",
 "Prestiege Level 2",
 "
 <br/><font size='16'>Prestiege Level 2</font>
+<br/><font size='15'>Cost: $10,000,000 ~:</font>
 <br/><font size='15'>List of Perks you get at this level ~:</font>
 <br/> Extra Starting Money: $1000
 <br/> Bergen Backpack
@@ -329,6 +335,7 @@ player createDiaryRecord ["gearlevel",
 "Prestiege Level 1",
 "
 <br/><font size='16'>Prestiege Level 1</font>
+<br/><font size='15'>Cost: $10,000,000 ~:</font>
 <br/><font size='15'>List of Perks you get at this level ~:</font>
 <br/> Extra Starting Money: $1000
 <br/> Bergen Backpack
@@ -341,6 +348,7 @@ player createDiaryRecord ["gearlevel",
 "Gear Level 10",
 "
 <br/><font size='16'>Gear Level 10</font>
+<br/><font size='15'>Cost: $10,000,000 ~:</font>
 <br/><font size='15'>List of Perks you get at this level ~:</font>
 <br/> Extra Starting Money: $1000
 <br/> An Olive Carryall
@@ -363,6 +371,7 @@ player createDiaryRecord ["gearlevel",
 "Gear Level 9",
 "
 <br/><font size='16'>Gear Level 9</font>
+<br/><font size='15'>Cost: $9,000,000 ~:</font>
 <br/><font size='15'>List of Perks you get at this level ~:</font>
 <br/> Extra Starting Money: $1000
 <br/> An Olive Carryall
@@ -385,6 +394,7 @@ player createDiaryRecord ["gearlevel",
 "Gear Level 8",
 "
 <br/><font size='16'>Gear Level 8</font>
+<br/><font size='15'>Cost: $8,000,000 ~:</font>
 <br/><font size='15'>List of Perks you get at this level ~:</font>
 <br/> Extra Starting Money: $800
 <br/> An Olive Carryall
@@ -407,6 +417,7 @@ player createDiaryRecord ["gearlevel",
 "Gear Level 7",
 "
 <br/><font size='16'>Gear Level 7</font>
+<br/><font size='15'>Cost: $7,000,000 ~:</font>
 <br/><font size='15'>List of Perks you get at this level ~:</font>
 <br/> Extra Starting Money: $700
 <br/> An Olive Carryall
@@ -429,6 +440,7 @@ player createDiaryRecord ["gearlevel",
 "Gear Level 6",
 "
 <br/><font size='16'>Gear Level 6</font>
+<br/><font size='15'>Cost: $6,000,000 ~:</font>
 <br/><font size='15'>List of Perks you get at this level ~:</font>
 <br/> Extra Starting Money: $600
 <br/> An Olive Carryall
@@ -451,6 +463,7 @@ player createDiaryRecord ["gearlevel",
 "Gear Level 5",
 "
 <br/><font size='16'>Gear Level 5</font>
+<br/><font size='15'>Cost: $5,000,000 ~:</font>
 <br/><font size='15'>List of Perks you get at this level ~:</font>
 <br/> Extra Starting Money: $500
 <br/> An Olive Carryall
@@ -471,6 +484,7 @@ player createDiaryRecord ["gearlevel",
 "Gear Level 4",
 "
 <br/><font size='16'>Gear Level 4</font>
+<br/><font size='15'>Cost: $4,000,000 ~:</font>
 <br/><font size='15'>List of Perks you get at this level ~:</font>
 <br/> Extra Starting Money: $400
 <br/> An Olive Carryall
@@ -491,6 +505,7 @@ player createDiaryRecord ["gearlevel",
 "Gear Level 3",
 "
 <br/><font size='16'>Gear Level 3</font>
+<br/><font size='15'>Cost: 3,000,000 ~:</font>
 <br/><font size='15'>List of Perks you get at this level ~:</font>
 <br/> Extra Starting Money: $300
 <br/> An Olive Carryall
@@ -510,6 +525,7 @@ player createDiaryRecord ["gearlevel",
 "Gear Level 2",
 "
 <br/><font size='16'>Gear Level 2</font>
+<br/><font size='15'>Cost: $2,000,000 ~:</font>
 <br/><font size='15'>List of Perks you get at this level ~:</font>
 <br/> Extra Starting Money: $200
 <br/> An Olive Carryall
@@ -528,6 +544,7 @@ player createDiaryRecord ["gearlevel",
 "Gear Level 1",
 "
 <br/><font size='16'>Gear Level 1</font>
+<br/><font size='15'>Cost: $1,000,000 ~:</font>
 <br/><font size='15'>List of Perks you get at this level ~:</font>
 <br/> Extra Starting Money: $100
 <br/> An Olive Carryall
