@@ -260,7 +260,7 @@ player createDiaryRecord ["gearlevel",
 [
 "Gear Levels",
 "
-<br/> When you reach $1million in your bank, Go and apply here http://fractured-gaming.com/application-forms.php?appid=4
+<br/> When you have enough $ for A gear level, Go and apply here http://fractured-gaming.com/application-forms.php?appid=4
 <br/> When your application is recieved your gear level will be changed within 48 hours.
 <br/> Your Money will then be deducted from your account.
 <br/> To revieve a gear level, Fill out a gear level application on the forums to upgrade your gear level.
