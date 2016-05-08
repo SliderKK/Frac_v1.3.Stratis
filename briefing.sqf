@@ -24,6 +24,7 @@ player createDiaryRecord ["changelog",
 "v1.2",
 "
 <br/>[Changed] Drug values/resell values increased.
+<br/>[Changed] Money Mission Values. (50k,100k,150k,200k)
 <br/>[Changed] Territory hold price x10 (Every territory)
 <br/>[Changed] Territory Capture at $10,000
 <br/>[Changed] Bank Limit to $25,000,000
