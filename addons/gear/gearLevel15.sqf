@@ -57,9 +57,9 @@ _crate = "Box_East_Ammo_F";
 
 // Random
 "Rangefinder",
-"Laserdesignator",
-"Laserdesignator_02",
-"Laserdesignator_03",
+//"Laserdesignator",
+//"Laserdesignator_02",
+//"Laserdesignator_03",
 "Binocular"
 
 ],true] call BIS_fnc_addVirtualWeaponCargo;
@@ -77,8 +77,8 @@ _crate = "Box_East_Ammo_F";
 "muzzle_snds_H_MG",
 "muzzle_snds_B",
 "muzzle_snds_338_black",
-"muzzle_snds_93mmg"
-,"muzzle_snds_93mmg_tan",
+"muzzle_snds_93mmg",
+"muzzle_snds_93mmg_tan",
 "bipod_01_F_blk",
 "bipod_02_F_blk",
 "bipod_03_F_blk",
@@ -116,7 +116,7 @@ _crate = "Box_East_Ammo_F";
 "V_HarnessOSpec_gry",
 "V_BandollierB_blk",
 "V_Chestrig_blk",
-"V_TacVest_blk",,
+"V_TacVest_blk",
 "V_TacVestIR_blk",
 "V_PlateCarrierSpec_blk",
 
