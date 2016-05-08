@@ -35,13 +35,13 @@ _objName = getText (configFile >> "CfgVehicles" >> _objClass >> "displayName");
 		playSound "FD_CP_Not_Clear_F";
 		[format [' The "%1" is further away than %2m from the store.', _objname, VEHICLE_MAX_SELLING_DISTANCE], "Error"] call  BIS_fnc_guiMessage;
 	};
-	
+	/*
 		if !(player getVariable ["lastVehicleOwner", false]) exitWith
 	{
 		playSound "FD_CP_Not_Clear_F";
 		[format ['You are not the owner of the "%1"', _objName, VEHICLE_MAX_SELLING_DISTANCE], "Error"] call  BIS_fnc_guiMessage;
 	};
-	
+	*/	
 {	
 	if (_type == _x select 1) then
 	{	
