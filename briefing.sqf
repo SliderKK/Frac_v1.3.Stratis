@@ -21,8 +21,11 @@ player createDiarySubject ["gearlevel", "Gear Level Info"];
 
 player createDiaryRecord ["changelog",
 [
-"v1.1",
+"v1.2",
 "
+<br/>[Changed] Drug values/resell values increased.
+<br/>[Changed] Territory hold price x10 (Every territory)
+<br/>[Changed] Territory Capture at $10,000
 <br/>[Changed] Bank Limit to $25,000,000
 <br/>[Removed] Group Size Limit
 <br/>[Added] Added Final Prestiege Gear Level (Virtual Arsenal)
