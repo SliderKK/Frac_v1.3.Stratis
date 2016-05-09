@@ -680,12 +680,12 @@ landArray = compileFinal str
 	["Zamak Medical", "I_Truck_02_medical_F", 900, "vehicle"],
 	["Zamak Repair", "I_Truck_02_box_F", 1000, "vehicle"],
 
-	["UGV Stomper (NATO)", "B_UGV_01_F", 2500, "vehicle"],
-	["UGV Stomper RCWS (NATO)", "B_UGV_01_rcws_F", 10000, "vehicle"],
-	["UGV Stomper (AAF)", "I_UGV_01_F", 2500, "vehicle"],
-	["UGV Stomper RCWS (AAF)", "I_UGV_01_rcws_F", 10000, "vehicle"],
-	["UGV Saif (CSAT)", "O_UGV_01_F", 2500, "vehicle"],
-	["UGV Saif RCWS (CSAT)", "O_UGV_01_rcws_F", 10000, "vehicle"]
+	["UGV Stomper (NATO)", "B_UGV_01_F", 3500, "vehicle"],
+	["UGV Stomper RCWS (NATO)", "B_UGV_01_rcws_F", 22500, "vehicle"],
+	["UGV Stomper (AAF)", "I_UGV_01_F", 3500, "vehicle"],
+	["UGV Stomper RCWS (AAF)", "I_UGV_01_rcws_F", 22500, "vehicle"],
+	["UGV Saif (CSAT)", "O_UGV_01_F", 3500, "vehicle"],
+	["UGV Saif RCWS (CSAT)", "O_UGV_01_rcws_F", 22500, "vehicle"]
 ];
 
 armoredArray = compileFinal str
