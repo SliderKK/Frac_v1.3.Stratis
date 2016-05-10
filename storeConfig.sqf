@@ -239,7 +239,7 @@ ammoArray = compileFinal str
 	["40mm Flare Round (IR)", "UGL_FlareCIR_F", 25],
 	["40mm 3Rnd Flares (White)", "3Rnd_UGL_FlareWhite_F", 50],
 	["40mm 3Rnd Flares (Green)", "3Rnd_UGL_FlareGreen_F", 50],
-	["40mm 3Rnd Flares (Yellow)", "3Rnd_UGL_FlareYellow_F", 500],
+	["40mm 3Rnd Flares (Yellow)", "3Rnd_UGL_FlareYellow_F", 50],
 	["40mm 3Rnd Flares (Red)", "3Rnd_UGL_FlareRed_F", 50],
 	["40mm 3Rnd Flares (IR)", "3Rnd_UGL_FlareCIR_F", 50]
 ];
