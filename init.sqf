@@ -107,7 +107,7 @@ if (hasInterface || isServer) then
 	if (isServer) then {call compile preprocessFile "mapconfig\structures\initBuildings.sqf";}; //GID Structures
 };
 //[500,-1,false,50,500,500]execvm "cache\main.sqf"; // Caching scripts
-//[] execVM "addons\scripts\cleanup_scripts.sqf"; // Clean up scripts
+[] execVM "addons\scripts\cleanup_scripts.sqf"; // Clean up scripts
 
 0 = [] spawn {
 {while {alive _x} do {scopename "fatigued"; sleep 0.1; waituntil {sleep 0.1; getFatigue _x > 0.1 }; _x setFatigue 0.1}; breakTo "fatigued"} forEach playableUnits+switchableUnits;

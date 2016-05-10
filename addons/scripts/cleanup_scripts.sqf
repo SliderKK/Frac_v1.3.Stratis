@@ -48,7 +48,7 @@ _ttdVehiclesDead = 10; // seconds to delete dead vehicles (0 means don't delete)
 _ttdVehiclesImmobile = 0; // seconds to delete immobile vehicles (0 means don't delete)
 
 GVAR(deleteClassesConfig) = [
-	[5*60, ["WeaponHolder","GroundWeaponHolder","WeaponHolderSimulated"]],
+	[8*60, ["WeaponHolder","GroundWeaponHolder","WeaponHolderSimulated"]],
 	[30*60, ["TimeBombCore"]],
 	[3*60, ["SmokeShell"]],
 	[30, ["CraterLong_small","CraterLong"]],
