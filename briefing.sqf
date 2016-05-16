@@ -588,7 +588,6 @@ player createDiaryRecord ["admins",
 <br/> * Thor
 <br/> * Vick
 <br/> * LoricatusVulpes
-<br/> * Connor
 <br/> * OutlawII
 <br/> * Switch
 <br/> * WOLFITZ
