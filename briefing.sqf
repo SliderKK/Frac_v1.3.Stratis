@@ -571,32 +571,30 @@ player createDiaryRecord ["admins",
 <br/><font color='#00FFEF' size='12'>All Functions Activated (No Player Markers or Invisiblilty)</font>
 <br/> * Mokey
 <br/> * Archangel
-<br/> * Lenymo
-<br/> * Korimer
 <br/> * TexasOutlaw
+<br/> * Korimer
+<br/> * Lenymo
 <br/> * Ghostyy
-<br/> * Officer Friendly 
-<br/> * Shabac
-<br/> * Isaac
-<br/> * Droid
-<br/> * M4GHOST45
+<br/> * OutlawII
+<br/> * WOLFITZ
+<br/> * GeneralNukes
 
 <br/><font color='#0066FF' size='18'>High Admins</font>
 <br/><font color='#00FFEF' size='12'>Teleport, Spectate, Slay Delete Hacked objects</font>
-<br/> * Rick Grimes
-<br/> * Bun6ie
-<br/> * Thor
-<br/> * Vick
 <br/> * LoricatusVulpes
-<br/> * OutlawII
-<br/> * Switch
-<br/> * WOLFITZ
+<br/> * GunFighterAlpha
+<br/> * Pitoucc
+<br/> * Greenmold
+<br/> * requiemanarchy
+<br/> * ExaMpLez
+<br/> * Archer
 
 <br/><font color='#002FFF' size='18'>Low Admins</font>
 <br/><font color='#00FFEF' size='12'>Spectate, Slay, Delete Hacked Objects</font>
-<br/> * Archer
-<br/> * WOLFITZ
-<br/> * Ryan
-<br/> * GunfighterAlpha
+<br/> * Paladin
+<br/> * Harry
+<br/> * Llama
+<br/> * Isaac
+
 "
 ]];
