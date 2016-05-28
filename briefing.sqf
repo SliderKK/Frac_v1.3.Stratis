@@ -23,6 +23,7 @@ player createDiaryRecord ["changelog",
 [
 "v1.2",
 "
+<br/>[Added] Silencer for the 4-five
 <br/>[Changed] Store Prices
 <br/>[Changed] Stomper Prices Upped to $22,500
 <br/>[Changed] HvT Value from $75k to $100k

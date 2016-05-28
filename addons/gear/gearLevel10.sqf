@@ -27,6 +27,7 @@ _player addHeadgear "H_HelmetB";
 _player addMagazines ["11Rnd_45ACP_Mag", 2];
 _player addWeapon "hgun_Pistol_heavy_01_F";
 _player addhandGunItem "optic_MRD";
+_player addhandGunItem "muzzle_snds_acp";
 
 _player addMagazines ["20Rnd_762x51_Mag", 5];
 _player addWeapon "srifle_DMR_06_camo_F";
