@@ -105,9 +105,11 @@ if (hasInterface || isServer) then
 	[] execVM "addons\vactions\functions.sqf";
 	//if (isNil "drn_DynamicWeather_MainThread") then { drn_DynamicWeather_MainThread = [] execVM "addons\scripts\DynamicWeatherEffects.sqf" };
 	if (isServer) then {call compile preprocessFile "mapconfig\structures\initBuildings.sqf";}; //GID Structures
+	[] execVM "server\mapMarkerExtention.sqf"; //detect map markers from players (in RPT LOG)
 };
 //[500,-1,false,50,500,500]execvm "cache\main.sqf"; // Caching scripts
 [] execVM "addons\scripts\cleanup_scripts.sqf"; // Clean up scripts
+
 
 0 = [] spawn {
 {while {alive _x} do {scopename "fatigued"; sleep 0.1; waituntil {sleep 0.1; getFatigue _x > 0.1 }; _x setFatigue 0.1}; breakTo "fatigued"} forEach playableUnits+switchableUnits;
