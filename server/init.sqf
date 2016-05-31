@@ -26,32 +26,23 @@ if (isServer) then
 		_uid = _this select 2;
 		_name = _this select 3;
 
-		diag_log format ["HandleDisconnect - %1 - alive: %2 - local: %3", [_name, _uid], alive _unit, local _unit];		if (alive _unit) then
-		{
-			if (_unit call A3W_fnc_isUnconscious) then
-			{
-				[_unit] spawn dropPlayerItems;
-				[_uid, "deathCount", 1] call fn_addScore;
-				_unit setVariable ["A3W_handleDisconnect_name", _name];
-				_unit setVariable ["A3W_deathCause_local", ["bleedout"]];
-				[_unit, objNull, objNull, true] call A3W_fnc_registerKillScore; // killer retrieved via FAR_killerPrimeSuspectData
-			}
-			else
-			{
-				if (["A3W_playerSaving"] call isConfigOn) then
-				{
-					if (!(_unit getVariable ["playerSpawning", true]) && getText (configFile >> "CfgVehicles" >> typeOf _unit >> "simulation") != "headlessclient") then
-					{
-						[_uid, [], [_unit, false] call fn_getPlayerData] spawn fn_saveAccount;
-					};
+		diag_log format ["HandleDisconnect - %1 - alive: %2 - local: %3", [_name, _uid], alive _unit, local _unit];
 
-					deleteVehicle _unit;
+		if (alive _unit) then
+		{
+			if (!(_unit call A3W_fnc_isUnconscious) && {!isNil "isConfigOn" && {["A3W_playerSaving"] call isConfigOn}}) then
+			{
+				if (!(_unit getVariable ["playerSpawning", false]) && getText (configFile >> "CfgVehicles" >> typeOf _unit >> "simulation") != "headlessclient") then
+				{
+					[_uid, [], [_unit, false] call fn_getPlayerData] spawn fn_saveAccount;
 				};
+
+				deleteVehicle _unit;
 			};
 		}
 		else
 		{
-			if (vehicle _unit != _unit) then
+			if (vehicle _unit != _unit && !isNil "fn_ejectCorpse") then
 			{
 				_unit spawn fn_ejectCorpse;
 			};

@@ -6,13 +6,8 @@
 
 if (!alive player) exitWith {};
 
-if (["Are you sure you want to give up?", "Confirm", "Yes", true] call BIS_fnc_guiMessage) then
+if (["Are you sure you want to suicide?", "Confirm", "Yes", true] call BIS_fnc_guiMessage) then
 {
 	player allowDamage true;
-
-	if (damage player < 1) then // if check required to prevent "Killed" EH from getting triggered twice
-	{
-		player setVariable ["A3W_deathCause_local", ["bleedout",1e11]];
-		player setDamage 1;
-	};
+	player setDamage 1;
 };
