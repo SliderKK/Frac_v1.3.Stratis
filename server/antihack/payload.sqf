@@ -8,7 +8,7 @@
 
 // This file can be moved to "A3Wasteland_settings\antihack" in order to be loaded externally from the server, which removes the need for it to be in the mission PBO
 
-+if (isServer || !hasInterface) exitWith {};
+if (isServer || !hasInterface) exitWith {};
 
 private ["_flagChecksum", "_rscParams", "_cheatFlag", "_cfgPatches", "_escCheck", "_patchClass", "_patchName", "_ctrlCfg", "_memAnomaly", "_minRecoil", "_currentRecoil", "_loopCount"];
 _flagChecksum = _this select 0;
