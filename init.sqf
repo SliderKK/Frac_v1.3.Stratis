@@ -99,13 +99,22 @@ if (hasInterface || isServer) then
 	[] execVM "addons\HvT\HvT.sqf"; // High Value Target
 	[] execVM "addons\HvT\HvD.sqf"; // High Value Drugs
 	[] execVM "addons\zlt_fastrope\zlt_fastrope.sqf";     // Fastrope
-	[] execVM "addons\outlw_magRepack\MagRepack_init_sv.sqf";
+	[] execVM "addons\outlw_magRepack\MagRepack_init.sqf";
 	//[] execVM "addons\disableThermal\disablethermal.sqf";
 	[] execVM "addons\laptop\init.sqf";
 	[] execVM "addons\vactions\functions.sqf";
 	//if (isNil "drn_DynamicWeather_MainThread") then { drn_DynamicWeather_MainThread = [] execVM "addons\scripts\DynamicWeatherEffects.sqf" };
 	if (isServer) then {call compile preprocessFile "mapconfig\structures\initBuildings.sqf";}; //GID Structures
 };
+
+// Remove line drawings from map
+ (createTrigger ["EmptyDetector", [0,0,0], false]) setTriggerStatements
+ [
+ 	"!triggerActivated thisTrigger", 
+ 	"thisTrigger setTriggerTimeout [30,30,30,false]",
+ 	"{if (markerShape _x == 'POLYLINE') then {deleteMarker _x}} forEach allMapMarkers"
+ ];
+ 
 //[500,-1,false,50,500,500]execvm "cache\main.sqf"; // Caching scripts
 [] execVM "addons\scripts\cleanup_scripts.sqf"; // Clean up scripts
 

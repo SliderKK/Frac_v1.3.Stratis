@@ -23,6 +23,8 @@ player createDiaryRecord ["changelog",
 [
 "v1.2",
 "
+<br/>[Updated] Mag Repacker
+<br/>[Added] Map Marker Log for Admins (Admin Menu)
 <br/>[Added] Silencer for the 4-five
 <br/>[Changed] Store Prices
 <br/>[Changed] Stomper Prices Upped to $22,500
