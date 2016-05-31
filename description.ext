@@ -57,7 +57,7 @@ loadScreen = "mapConfig\Loading.jpg";
 #include "addons\proving_ground\PG_config.hpp"
 #include "addons\TOParmaInfo\dialog\TOParmaInfo_dialog.hpp"
 #include "addons\beacondetector\sound\cfgsounds.hpp"
-#include "addons\outlw_magrepack\MagRepack_Config.hpp"
+#include "addons\outlw_magrepack\config.hpp"
 #include "addons\taw_vd\dialog.hpp"
 #include "addons\laptop\downloadData.hpp"
 
