@@ -18,9 +18,8 @@ _unit setCaptive true;
 _unit spawn
 {
 	_unit = _this;
-	a3w_actions_mutex = false; // prevent revive dance
 
-	while {UNCONSCIOUS(_unit) && alive _unit} do
+	while {UNCONSCIOUS(_unit)} do
 	{
 		if (vehicle _unit == _unit) then
 		{
@@ -32,7 +31,7 @@ _unit spawn
 				_unit playMove "";
 			};
 
-			if (((isTouchingGround _unit || getPos _unit select 2 < 0.5) && vectorMagnitude velocity _unit < 5) || {alive _draggedBy && !UNCONSCIOUS(_draggedBy)}) then
+			if ((getPos _unit select 2 < 0.5 && vectorMagnitude velocity _unit < 5) || {alive _draggedBy && !UNCONSCIOUS(_draggedBy)}) then
 			{
 				// Anim is stuck due to stance change in progress during injury
 				if (_anim == "AinjPpneMstpSnonWrflDnon_rolltofront") then
@@ -66,7 +65,7 @@ if (_unit == player) then
 {
 	if (createDialog "ReviveBlankGUI") then
 	{
-		(findDisplay ReviveBlankGUI_IDD) displayAddEventHandler ["KeyDown", "_this select 1 == 1"]; // blocks Esc to prevent closing
+		//(findDisplay ReviveBlankGUI_IDD) displayAddEventHandler ["KeyDown", "_this select 1 == 1"]; // blocks Esc to prevent closing
 	};
 
 	[100] call BIS_fnc_bloodEffect;
@@ -77,43 +76,30 @@ if (_unit == player) then
 _unit spawn
 {
 	_unit = _this;
-	sleep 0.5;
+	sleep 1;
 
-	if (UNCONSCIOUS(_unit) && alive _unit && isNil {_unit getVariable "FAR_killerSuspects"}) then
+	if (UNCONSCIOUS(_unit) && isNil {_unit getVariable "FAR_killerSuspects"}) then
 	{
 		_unit setVariable ["FAR_killerSuspects", []];
-	};
-
-	sleep 0.5;
-
-	if (UNCONSCIOUS(_unit) && alive _unit) then
-	{
-		_unit setVariable ["FAR_headshotHitTimeout", true];
 	};
 };
 
 waitUntil {!isNil {_unit getVariable "FAR_killerSuspects"}};
 
-// Find killer
-_killer = _unit call FAR_findKiller;
-_unit setVariable ["FAR_killerPrimeSuspect", _killer];
-_unit setVariable ["FAR_killerPrimeSuspectData", [getPlayerUID effectiveCommander _killer, group effectiveCommander _killer], true];
-//[_unit, _killer] remoteExecCall ["A3W_fnc_registerKillScore", 2];
-
-diag_log format ["INCAPACITATED by [%1] with [%2]", _killer, _unit getVariable ["FAR_killerAmmo", ""]];
-
+_unit allowDamage true;
 _unit setDamage 0.5;
-_unit setVariable ["FAR_reviveModeReady", true];
-
-//_unit allowDamage true;
 
 if (!isPlayer _unit) then
 {
 	{ _unit disableAI _x } forEach ["MOVE","FSM","TARGET","AUTOTARGET"];
 };
 
+// Find killer
+_killer = _unit call FAR_findKiller;
+_unit setVariable ["FAR_killerPrimeSuspect", _killer];
+
 // Injury message
-if (FAR_EnableDeathMessages && (round difficultyOption "deathMessages" > 0 || ["A3W_customDeathMessages"] call isConfigOn) && !isNil "_killer") then
+if (FAR_EnableDeathMessages && !isNil "_killer") then
 {
 	[_unit, _killer] spawn
 	{
@@ -129,9 +115,7 @@ if (FAR_EnableDeathMessages && (round difficultyOption "deathMessages" > 0 || ["
 				_names set [1, toArray name _killer];
 			};
 
-			if (!alive _unit) exitWith {};
-
-			FAR_deathMessage = [_names, netId _unit, netId _killer];
+			FAR_deathMessage = [_names, netId _unit];
 			publicVariable "FAR_deathMessage";
 			["FAR_deathMessage", FAR_deathMessage] call FAR_public_EH;
 		};
@@ -140,7 +124,7 @@ if (FAR_EnableDeathMessages && (round difficultyOption "deathMessages" > 0 || ["
 
 if (!alive vehicle _unit) exitWith
 {
-	if (damage _unit < 1) then { _unit setDamage 1 }; // if check required to prevent "Killed" EH from getting triggered twice
+	_unit setDamage 1;
 	FAR_cutTextLayer cutText ["", "PLAIN"];
 };
 
@@ -151,7 +135,7 @@ _unit spawn
 
 	sleep 1;
 
-	while {UNCONSCIOUS(_unit) && alive _unit} do
+	while {UNCONSCIOUS(_unit)} do
 	{
 		if (_unit == player && cameraView != "INTERNAL") then
 		{
@@ -218,31 +202,18 @@ _unit spawn
 		};
 	};
 
-	while {UNCONSCIOUS(_unit) && alive _unit} do
+	waitUntil
 	{
+		sleep 0.1;
 		_veh = vehicle _unit;
+		_unconscious = UNCONSCIOUS(_unit);
+		((isTouchingGround _veh || (getPos _veh) select 2 < 1) && {vectorMagnitude velocity _unit < 1}) || !_unconscious
+	};
 
-		if !(_unit getVariable ["FAR_cancelAutoEject", false]) then
-		{
-			if (_veh != _unit && {(isTouchingGround _veh || (getPos _veh) select 2 < 1) && (vectorMagnitude velocity _unit < 1)}) then
-			{
-				moveOut _unit;
-				unassignVehicle _unit;
-			};
-		}
-		else
-		{
-			waitUntil {sleep 0.1; _veh = vehicle _unit; !alive _unit || _veh != _unit || !UNCONSCIOUS(_unit) || STABILIZED(_unit)};
-
-			// Unit was loaded in a medical vehicle, autostabilize
-			if (alive _unit && _veh != _unit && {UNCONSCIOUS(_unit) && !STABILIZED(_unit) && IS_MEDICAL_VEHICLE(_veh)}) then
-			{
-				_unit setVariable ["FAR_isStabilized", 1, true];
-				_unit setVariable ["FAR_handleStabilize", true];
-			};
-		};
-
-		sleep 0.25;
+	if (_unconscious && _veh != _unit) then
+	{
+		unassignVehicle _unit;
+		moveOut _unit;
 	};
 };
 
@@ -255,7 +226,7 @@ if (isPlayer _unit) then
 		FAR_cutTextLayer cutText ["", "BLACK IN"];
 		(findDisplay ReviveBlankGUI_IDD) closeDisplay 0;
 
-		if (createDialog "ReviveGUI" && !FAR_Debugging) then
+		if (createDialog "ReviveGUI") then
 		{
 			(findDisplay ReviveGUI_IDD) displayAddEventHandler ["KeyDown", "_this select 1 == 1"]; // blocks Esc to prevent closing
 		};
@@ -268,7 +239,6 @@ if (isPlayer _unit) then
 _unit spawn
 {
 	_unit = _this;
-	if (_unit != player) exitWith {};
 
 	for "_i" from 1 to FAR_BleedOut step 3 do
 	{
@@ -296,13 +266,8 @@ while {UNCONSCIOUS(_unit) && diag_tickTime < _bleedOut} do
 {
 	if (!alive vehicle _unit || (getPosASL _unit) select 2 < -1.5) exitWith
 	{
-		if (damage _unit < 1) then // if check required to prevent "Killed" EH from getting triggered twice
-		{
-			_unit setVariable ["A3W_deathCause_local", ["drown",1e11]];
-			_unit setDamage 1;
-		};
-
-		if (_unit == player) then { FAR_cutTextLayer cutText ["", "PLAIN"] };
+		_unit setDamage 1;
+		FAR_cutTextLayer cutText ["", "PLAIN"];
 	};
 
 	_dmg = damage _unit;
@@ -316,7 +281,7 @@ while {UNCONSCIOUS(_unit) && diag_tickTime < _bleedOut} do
 	}
 	else
 	{
-		_currentlyTreatedBy = TREATED_BY(_unit);
+		_currentlyTreatedBy = _unit getVariable ["FAR_treatedBy", objNull];
 
 		if (alive _currentlyTreatedBy) then
 		{
@@ -344,7 +309,7 @@ while {UNCONSCIOUS(_unit) && diag_tickTime < _bleedOut} do
 		};
 	};
 
-	if (_dmg <= 0.495) then // assume healing by medic
+	if (ceil (_dmg * 100) < 50) then // assume healing by medic
 	{
 		if (!STABILIZED(_unit)) then
 		{
@@ -371,22 +336,15 @@ while {UNCONSCIOUS(_unit) && diag_tickTime < _bleedOut} do
 		};
 
 		_bleedStart = diag_tickTime;
-	}
-	else
-	{
-		if (STABILIZED(_unit)) then
-		{
-			_unit setVariable ["FAR_isStabilized", 0, true];
-		};
 	};
 
 	_bleedOut = _bleedStart + (FAR_BleedOut * ((1 - (_dmg max 0.5)) / 0.5));
 
 	if (_unit == player) then
 	{
-		if (_dmg > 0.495 && isNil "_treatedBy") then
+		if (_dmg > 0.499 && isNil "_treatedBy") then
 		{
-			_time = ((_bleedOut - diag_tickTime) max 0) call fn_formatTimer;
+			_time = (_bleedOut - diag_tickTime) call fn_formatTimer;
 
 			_progBar progressSetPosition ((_bleedOut - diag_tickTime) / FAR_BleedOut);
 			_progText ctrlSetText _time;
@@ -419,15 +377,13 @@ while {UNCONSCIOUS(_unit) && diag_tickTime < _bleedOut} do
 if (alive _unit && !UNCONSCIOUS(_unit)) then // Player got revived
 {
 	_unit setDamage 0;
-
-	// outside scheduler
-	_resetUnit = [_unit,
-	{
-		_this call FAR_Reset_Killer_Info;
-		_this call FAR_Reset_Unit;
-	}] execFSM "call.fsm";
-
-	waitUntil {completedFSM _resetUnit};
+	_unit setVariable ["FAR_killerPrimeSuspect", nil];
+	_unit setVariable ["FAR_killerVehicle", nil];
+	_unit setVariable ["FAR_killerAmmo", nil];
+	_unit setVariable ["FAR_killerSuspects", nil];
+	_unit setVariable ["FAR_isStabilized", 0, true];
+	_unit setVariable ["FAR_iconBlink", nil, true];
+	_unit setCaptive false;
 
 	if (isPlayer _unit) then
 	{
@@ -435,6 +391,9 @@ if (alive _unit && !UNCONSCIOUS(_unit)) then // Player got revived
 		{
 			[] spawn fn_savePlayerData;
 		};
+
+		// Unmute ACRE
+		_unit setVariable ["ace_sys_wounds_uncon", false];
 	}
 	else
 	{
@@ -445,15 +404,13 @@ if (alive _unit && !UNCONSCIOUS(_unit)) then // Player got revived
 }
 else // Player bled out
 {
-	if (damage _unit < 1) then // if check required to prevent "Killed" EH from getting triggered twice
-	{
-		_unit setVariable ["A3W_deathCause_local", ["bleedout",1e11]];
-		_unit setDamage 1;
-	};
+	_unit setDamage 1;
 
 	if (!isPlayer _unit) then
 	{
-		_unit call FAR_Reset_Unit;
+		_unit setVariable ["FAR_isUnconscious", 0, true];
+		_unit setVariable ["FAR_draggedBy", nil, true];
+		_unit setVariable ["FAR_treatedBy", nil, true];
 	};
 };
 
