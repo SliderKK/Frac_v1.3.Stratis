@@ -97,7 +97,7 @@ switch (_gearLevel) do
    
       case 13:
    {
-		player execVM "addons\gear\gearLevel3.sqf"; 
+		player execVM "addons\gear\gearLevel13.sqf"; 
 		sleep 5;
 		hint "Congrats! Prestiege Gear Level 3 Loaded!";
    };
