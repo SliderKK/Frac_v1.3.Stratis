@@ -153,7 +153,7 @@ launcherArray = compileFinal str
 	["Titan MPRL AA (Desert)", "launch_Titan_F", 7000],
 	["Titan MPRL AA (Hex)", "launch_O_Titan_F", 7000],
 	["Titan MPRL AA (Digi)", "launch_I_Titan_F", 7000],
-		["Titan MPRL AA (Tropic)", "launch_B_Titan_tna_F", 7000, "noDLC"],
+	["Titan MPRL AA (Tropic)", "launch_B_Titan_tna_F", 7000, "noDLC"],
 	["Titan MPRL AA (G Hex)", "launch_O_Titan_ghex_F", 7000, "noDLC"]
 ];
 
@@ -640,8 +640,8 @@ backpackArray = compileFinal str
 	["Carryall (Khaki)", "B_Carryall_khk", 750, "backpack"],
 	["Carryall (MTP)", "B_Carryall_mcamo", 750, "backpack"],
 	["Carryall (Olive)", "B_Carryall_oli", 750, "backpack"],
-	["Carryall (Urban)", "B_Carryall_oucamo", 750, "backpack"]
-	["Carryall (G Hex)", "B_Carryall_ghex_F", 750, "backpack", "noDLC"],
+	["Carryall (Urban)", "B_Carryall_oucamo", 750, "backpack"],
+	["Carryall (G Hex)", "B_Carryall_ghex_F", 750, "backpack", "noDLC"]
 
 ];
 
@@ -668,12 +668,12 @@ genItemArray = compileFinal str
 	["Chemlight (Blue)", "Chemlight_blue", 25, "mag"],
 	["Chemlight (Green)", "Chemlight_green", 25, "mag"],
 	["Chemlight (Yellow)", "Chemlight_yellow", 25, "mag"],
-	["Chemlight (Red)", "Chemlight_red", 25, "mag"]
+	["Chemlight (Red)", "Chemlight_red", 25, "mag"],
 	
 	["Stealth Balaclava (Black)", "G_Balaclava_TI_blk_F", 200, "gogg"],
 	["Stealth Balaclava (Black, Goggles)", "G_Balaclava_TI_G_blk_F", 250, "gogg"],
 	["Stealth Balaclava (Green)", "G_Balaclava_TI_tna_F", 200, "gogg"],
-	["Stealth Balaclava (Green, Goggles)", "G_Balaclava_TI_G_tna_F", 250, "gogg"],
+	["Stealth Balaclava (Green, Goggles)", "G_Balaclava_TI_G_tna_F", 250, "gogg"]
 ];
 
 allStoreMagazines = compileFinal str (call ammoArray + call throwputArray + call genItemArray);
@@ -801,7 +801,7 @@ armoredArray = compileFinal str
 	["Strider GMG", "I_MRAP_03_gmg_F", 24000, "vehicle"],
 	["MSE-3 Marid", "O_APC_Wheeled_02_rcws_F", 45000, "vehicle"],
 	["AMV-7 Marshall", "B_APC_Wheeled_01_cannon_F", 50000, "vehicle"],
-	["AFV-4 Gorgon", "I_APC_Wheeled_03_cannon_F", 60000, "vehicle"],
+	["AFV-4 Gorgon", "I_APC_Wheeled_03_cannon_F", 60000, "vehicle"]
 
 ];
 
