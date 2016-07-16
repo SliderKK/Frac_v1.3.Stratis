@@ -91,6 +91,7 @@ _crate = "Box_East_Ammo_F";
 
 // Launchers
 "launch_RPG32_F",
+"launch_RPG7_F",
 
 // Random
 "Rangefinder",
@@ -164,6 +165,13 @@ _crate = "Box_East_Ammo_F";
 "V_TacVest_blk",
 "V_TacVestIR_blk",
 "V_PlateCarrierSpec_blk",
+"V_PlateCarrierIAGL_oli",
+"V_PlateCarrierIAGL_dgtl",
+"V_PlateCarrierIA2_dgtl",
+"V_PlateCarrierIA1_dgtl",
+"V_PlateCarrierSpec_mtp",
+"V_PlateCarrierSpec_blk",
+"V_PlateCarrierSpec_rgr",
 
 // Items
 "Medikit",
@@ -223,7 +231,8 @@ _crate = "Box_East_Ammo_F";
 "U_B_FullGhillie_lsh",
 "U_O_FullGhillie_lsh",
 "U_I_FullGhillie_lsh",
-"U_B_FullGhillie_sard","U_O_FullGhillie_sard",
+"U_B_FullGhillie_sard",
+"U_O_FullGhillie_sard",
 "U_I_FullGhillie_sard",
 "U_B_Wetsuit",
 "U_O_Wetsuit",
@@ -331,7 +340,7 @@ _crate = "Box_East_Ammo_F";
 "U_C_Man_casual_6_F",
 "U_B_CTRG_Soldier_urb_1_F",
 "U_B_CTRG_Soldier_urb_2_F",
-"U_B_CTRG_Soldier_urb_3_F"
+"U_B_CTRG_Soldier_urb_3_F",
 
 // All Headgear
 "H_HelmetB",
@@ -378,7 +387,7 @@ _crate = "Box_East_Ammo_F";
 "H_MilCap_gry",
 "H_MilCap_oucamo",
 "H_MilCap_rucamo",
-",H_MilCap_mcamo",
+"H_MilCap_mcamo",
 "H_MilCap_ocamo",
 "H_MilCap_dgtl",
 "H_Cap_headphones",
