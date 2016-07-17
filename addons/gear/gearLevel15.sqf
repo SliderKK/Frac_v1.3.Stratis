@@ -172,6 +172,7 @@ _crate = "Box_East_Ammo_F";
 "V_PlateCarrierSpec_mtp",
 "V_PlateCarrierSpec_blk",
 "V_PlateCarrierSpec_rgr",
+"V_PlateCarrierSpec_tna_F",
 
 // Items
 "Medikit",
@@ -451,7 +452,9 @@ _crate = "Box_East_Ammo_F";
 "H_BandMask_blk",
 "H_BandMask_demon",
 "H_BandMask_khk",
-"H_BandMask_reaper"	
+"H_BandMask_reaper",
+"H_HelmetO_ViperSP_ghex_F",
+"H_HelmetO_ViperSP_hex_F"
 	  
 ],true] call BIS_fnc_addVirtualItemCargo;
 
