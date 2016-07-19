@@ -147,6 +147,9 @@ _crate = "Box_East_Ammo_F";
 "optic_KHS_blk",
 "optic_LRPS",
 "optic_NVS",
+"optic_ERCO_blk_F",
+"optic_ERCO_khk_F",
+"optic_ERCO_snd_F",
 
 // Vests
 "V_RebreatherB",
