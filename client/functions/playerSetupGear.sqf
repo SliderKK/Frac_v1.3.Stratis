@@ -69,6 +69,7 @@ switch (true) do
 };
 
 if (_gearsEnabled && _gearLevel > 0) then
+	
 	{ 
 		execVM "addons\gear\gearCheck.sqf" ;
 	};
