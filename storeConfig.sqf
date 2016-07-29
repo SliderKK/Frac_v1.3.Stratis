@@ -385,7 +385,7 @@ headArray = compileFinal str
 	["Gas Mask (NATO)", "H_CrewHelmetHeli_B", 1000, "hat"],
 	["Gas Mask (CSAT)", "H_CrewHelmetHeli_O", 1000, "hat"],
 	["Gas Mask (AAF)", "H_CrewHelmetHeli_I", 1000, "hat"],
-	["Viper SP Helmet (Green Hex)", "H_HelmetO_ViperSP_ghex_F", 15000, "hat"],
+	["Viper SP Helmet (Green Hex)", "H_HelmetO_ViperSP_ghex_F", 45000, "hat"],
 	["ECH", "H_HelmetB", 100, "hat"],
 	["ECH (Ghillie)", "H_HelmetB_camo", 100, "hat"],
 	["ECH (Light)", "H_HelmetB_light", 100, "hat"],
