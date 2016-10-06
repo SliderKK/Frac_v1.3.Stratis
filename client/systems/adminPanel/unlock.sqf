@@ -1,5 +1,5 @@
 // ******************************************************************************************
-// * This project is licensed under the GNU Affero GPL v3. Copyright ? 2014 A3Wasteland.com *
+// * This project is licensed under the GNU Affero GPL v3. Copyright © 2014 A3Wasteland.com *
 // ******************************************************************************************
 //	@file Version: 1.0
 //	@file Name: unLock.sqf
@@ -8,9 +8,9 @@
 
 #define RADIUS 30
 _objects = nearestObjects [position player, ["thingX", "Building", "ReammoBox_F"], RADIUS];
-_ownedObjects = {typeName _x == "OBJECT" && {_x getVariable ["objectLocked",false]}} count _objects;
+_lockedObjects = {typeName _x == "OBJECT" && {!(isNil {_x getVariable "ownerUID"})} && {_x getVariable "objectLocked"}} count _objects;
 
-_confirmMsg = format ["This will unlock %1 base objects within %2m<br/>", _ownedObjects, RADIUS];
+_confirmMsg = format ["This will unlock %1 base objects within %2m.<br/>(Doesn't always return true amount of objects)<br/>", _lockedObjects, RADIUS];
 _confirmMsg = _confirmMsg + format ["<br/>Unlock Objects?"];
 
 if ([parseText _confirmMsg, "Confirm", "CONFIRM", true] call BIS_fnc_guiMessage) then

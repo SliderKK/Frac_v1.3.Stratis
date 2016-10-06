@@ -1,4 +1,4 @@
- // ******************************************************************************************
+// ******************************************************************************************
 // * This project is licensed under the GNU Affero GPL v3. Copyright © 2014 A3Wasteland.com *
 // ******************************************************************************************
 //	@file Version: 1.0
@@ -20,9 +20,8 @@ if ([_uid, 2] call isAdmin) then {
 
 	_panelOptions = ["Player Management",
 					"Vehicle Management",
-					"Map Markers Log",
-					"Unstuck Player",
-					"Teleport"
+					"Unstuck player",
+					"Group Leader Markers"
 	];
 
 	{

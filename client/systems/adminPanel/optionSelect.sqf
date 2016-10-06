@@ -39,23 +39,16 @@ if (_uid call isAdmin) then
 					execVM "client\systems\adminPanel\vehicleManagement.sqf";
 					if (!isNil "notifyAdminMenu") then { ["VehicleManagement", "Opened"] call notifyAdminMenu };
 				};
-				/*case 2: //Tags
-				{
-					execVM "client\systems\adminPanel\playerTags.sqf";
-					//Is logged from inside target script
-				};*/
-				
-				case 2: //Markers log
- 				{
- 					closeDialog 0;
- 					createDialog "MarkerLog";
- 				};
- 
-				case 3: //Unstuck player
+				case 2: //Unstuck player
 				{
 					closeDialog 0;
 					execVM "client\systems\adminPanel\unstuck.sqf";
 					if (!isNil "notifyAdminMenu") then { ["UnstuckPlayer", "Used"] call notifyAdminMenu };
+				};
+				case 3: //Tags
+				{
+					execVM "client\systems\adminPanel\playerTags.sqf";
+					//Is logged from inside target script
 				};
 				case 4: //Teleport
 				{
@@ -150,7 +143,8 @@ if (_uid call isAdmin) then
 				case 5: //Access Proving Grounds
 				{
 					closeDialog 0;
-					createDialog "balca_debug_main";
+					hint "This feature is disabled.";
+					//createDialog "balca_debug_main";
 					if (!isNil "notifyAdminMenu") then { ["ProvingGrounds", "Opened"] call notifyAdminMenu };
 				};
 				case 6: //Show server FPS function
@@ -158,22 +152,27 @@ if (_uid call isAdmin) then
 					hint format["Server FPS: %1",serverFPS];
 					if (!isNil "notifyAdminMenu") then { ["ServerFPS", "Used"] call notifyAdminMenu };
 				};
-				case 7: //Unlock Base Objects within 15m
+				case 7: //Lock Base Objects within 15m
+				{
+					execVM "client\systems\adminPanel\Lock.sqf";
+					if (!isNil "notifyAdminMenu") then { ["LockObjects", "Opened"] call notifyAdminMenu };
+				};
+				case 8: //Unlock Base Objects within 15m
 				{
 					execVM "client\systems\adminPanel\unLock.sqf";
 					if (!isNil "notifyAdminMenu") then { ["UnlockObjects", "Opened"] call notifyAdminMenu };
 				};
-				case 8: //Delete Unlocked Base Objects within 15m
+				case 9: //Delete Unlocked Base Objects within 15m
 				{
 					execVM "client\systems\adminPanel\deleteUnlocked.sqf";
 					if (!isNil "notifyAdminMenu") then { ["DeleteUnlockedObjects", "Opened"] call notifyAdminMenu };
 				};
-				case 9: //Relock objects within 30m
+				case 10: //Relock objects within 30m
 				{
 					execVM "client\systems\adminPanel\reLock.sqf";
 					if (!isNil "notifyAdminMenu") then { ["RelockObjects", "Opened"] call notifyAdminMenu };
 				};
-				case 10: //Access TOParma News
+				case 11: //Access TOParma News
 				{
 					[] call loadTOParmaInfo;
 					if (!isNil "notifyAdminMenu") then { ["News", "Opened"] call notifyAdminMenu };
