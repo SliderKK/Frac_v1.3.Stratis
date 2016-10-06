@@ -28,8 +28,9 @@ X_Server = false;
 X_Client = false;
 X_JIP = false;
 
-//disable TAW grass Option 'None'
-tawvd_disablenone = true;
+CHVD_allowTerrain = true;
+CHVD_maxView = 3000; // Set maximum view distance (default: 12000)
+CHVD_maxObj = 3000; // Set maximimum object view distance (default: 12000)
 
 // versionName = ""; // Set in STR_WL_WelcomeToWasteland in stringtable.xml
 
@@ -89,34 +90,34 @@ if (isServer) then
 if (hasInterface || isServer) then
 {
 	//init 3rd Party Scripts
+	[] execVM "addons\parking\functions.sqf";
+	[] execVM "addons\storage\functions.sqf";
+	[] execVM "addons\vactions\functions.sqf";
 	[] execVM "addons\R3F_ARTY_AND_LOG\init.sqf";
 	[] execVM "addons\proving_ground\init.sqf";
 	[] execVM "addons\JumpMF\init.sqf";
+	[] execVM "addons\outlw_magrepack\MagRepack_init.sqf";
 	[] execVM "addons\lsd_nvg\init.sqf";
-	[] execVM "addons\Grenades\initGrenades.sqf"; // Toxic Gas Grenades
-	//[] execVM "addons\APOC_Airdrop_Assistance\init.sqf";
+	[] execVM "addons\stickyCharges\init.sqf";
+	if (isNil "drn_DynamicWeather_MainThread") then { drn_DynamicWeather_MainThread = [] execVM "addons\scripts\DynamicWeatherEffects.sqf" };
 	[] execVM "addons\scripts\servercredits.sqf"; //Intro Credits
 	[] execVM "addons\HvT\HvT.sqf"; // High Value Target
 	[] execVM "addons\HvT\HvD.sqf"; // High Value Drugs
 	[] execVM "addons\zlt_fastrope\zlt_fastrope.sqf";     // Fastrope
-	[] execVM "addons\outlw_magRepack\MagRepack_init.sqf";
-	//[] execVM "addons\disableThermal\disablethermal.sqf";
+	[] execVM "addons\disableThermal\disablethermal.sqf";
 	[] execVM "addons\laptop\init.sqf";
-	[] execVM "addons\vactions\functions.sqf";
-	//if (isNil "drn_DynamicWeather_MainThread") then { drn_DynamicWeather_MainThread = [] execVM "addons\scripts\DynamicWeatherEffects.sqf" };
+	[] execVM "addons\Grenades\initGrenades.sqf"; // Toxic Gas Grenades
 	if (isServer) then {call compile preprocessFile "mapconfig\structures\initBuildings.sqf";}; //GID Structures
+	
 };
 
 // Remove line drawings from map
- (createTrigger ["EmptyDetector", [0,0,0], false]) setTriggerStatements
- [
- 	"!triggerActivated thisTrigger", 
- 	"thisTrigger setTriggerTimeout [30,30,30,false]",
- 	"{if (markerShape _x == 'POLYLINE') then {deleteMarker _x}} forEach allMapMarkers"
- ];
- 
-//[500,-1,false,50,500,500]execvm "cache\main.sqf"; // Caching scripts
-[] execVM "addons\scripts\cleanup_scripts.sqf"; // Clean up scripts
+(createTrigger ["EmptyDetector", [0,0,0], false]) setTriggerStatements
+[
+	"!triggerActivated thisTrigger", 
+	"thisTrigger setTriggerTimeout [30,30,30,false]",
+	"{if (markerShape _x == 'POLYLINE') then {deleteMarker _x}} forEach allMapMarkers"
+];
 
 0 = [] spawn {
 {while {alive _x} do {scopename "fatigued"; sleep 0.1; waituntil {sleep 0.1; getFatigue _x > 0.1 }; _x setFatigue 0.1}; breakTo "fatigued"} forEach playableUnits+switchableUnits;

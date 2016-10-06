@@ -33,11 +33,12 @@ switch (true) do
 	case (["_engineer_", typeOf _player] call fn_findString != -1):
 	{
 		_player addItem "ToolKit";
+		_Player addItem "MineDetector";
 		_player removeItem "";
 	};
 	case (["_sniper_", typeOf _player] call fn_findString != -1):
 	{
-		_player addWeapon "Binocular"; 
+		_player addWeapon "Rangefinder"; 
 		_player removeItem "";
 	};
 		case (["_diver_", typeOf _player] call fn_findString != -1):

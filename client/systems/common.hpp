@@ -259,9 +259,9 @@ class w_RscButtonBase {
 	w = 0.183825;
 	h = 0.104575;
 
-	color[] = {0.95,0.95,0.95,1};
+	color[] = {0.95, 0.95, 0.95, 1};
 	color2[] = {1, 1, 1, 0.4};
-	colorBackground[] = {0.75,0.75,0.75,0.8};
+	colorBackground[] = {0.75, 0.75, 0.75, 0.8};
 	colorbackground2[] = {1, 1, 1, 0.4};
 	colorDisabled[] = {1, 1, 1, 0.25};
 
@@ -334,6 +334,65 @@ class w_RscButtonBase {
 	};
 };
 
+class RscHTML
+{
+	idc = -1;
+	type = CT_HTML;
+	style = ST_LEFT;
+	colorText[] = {Dlg_Color_White, 1};
+    colorLink[] = {0.05, 0.2, 0.05, 1};
+    colorBold[] = {0, 1, 1, 1};
+    colorBackground[] = {0, 0, 0, 0};
+    colorLinkActive[] = {0, 0, 0.2, 1};
+    colorPicture[] = {Dlg_Color_Black, 1};
+    colorPictureLink[] = {Dlg_Color_Black, 1};
+    colorPictureSelected[] = {Dlg_Color_Black, 1};
+    colorPictureBorder[] = {Dlg_Color_Black, 1};
+	x = 0;
+	y = 0;
+	w = 1;
+	h = 1;
+	filename = "";
+	prevPage = "\ca\ui\data\arrow_left_ca.paa";
+    nextPage = "\ca\ui\data\arrow_right_ca.paa";
+
+    
+    class HeadingStyle {
+        font = "PuristaBold";
+        fontBold = "TahomaB";
+        sizeEx = Dlg_TEXTHGT;
+    };
+    
+    class H1: HeadingStyle {
+        sizeEx = Dlg_TEXTHGT * 1.5;
+    };
+    
+    class H2: HeadingStyle {
+        sizeEx = Dlg_TEXTHGT * 1.4;
+    };
+    
+    class H3: HeadingStyle {
+        sizeEx = Dlg_TEXTHGT * 1.3;
+    };
+    
+    class H4: HeadingStyle {
+        sizeEx = Dlg_TEXTHGT * 1.2;
+    };
+    
+    class H5: HeadingStyle {
+        sizeEx = Dlg_TEXTHGT * 1.1;
+    };
+    
+    class H6: HeadingStyle {
+        sizeEx = Dlg_TEXTHGT;
+    };
+    
+    class P: HeadingStyle {
+       sizeEx = Dlg_TEXTHGT;
+    };
+};
+
+
 class w_RscButton
 {
    access = 0;
@@ -341,9 +400,9 @@ class w_RscButton
 	text = "";
 	colorText[] = {1,1,1,.9};
 	colorDisabled[] = {0,0,0,1};
-	colorBackground[] = {0.275,0.322,0.235,1}; // normal
-	colorFocused[] = {0.196,0.231,0.169,1}; // pulse
-	colorBackgroundActive[] = {0.392,0.459,0.341,1}; // hover
+	colorBackground[] = {A3W_UICOLOR_R * 0.275, A3W_UICOLOR_G * 0.322, A3W_UICOLOR_B * 0.235, 1}; // normal
+	colorFocused[] = {A3W_UICOLOR_R * 0.275, A3W_UICOLOR_G * 0.322, A3W_UICOLOR_B * 0.235, 1}; // pulse
+	colorBackgroundActive[] = {A3W_UICOLOR_R * 0.275, A3W_UICOLOR_G * 0.235, A3W_UICOLOR_B, 1}; // hover
 	colorBackgroundDisabled[] = {0.3,0.3,0.3,1};
 	colorShadow[] = {0,0,0,1};
 	colorBorder[] = {0,0,0,1};
@@ -390,7 +449,7 @@ class w_RscCombo {
 	colorText[] = {0, 0, 0, 1};
 	colorBackground[] = {1, 1, 1, 1};
 	colorSelect[] = {1, 0, 0, 1};
-	colorSelectBackground[] = {0.275,0.322,0.235,0.5};
+	colorSelectBackground[] = {A3W_UICOLOR_R, A3W_UICOLOR_G, A3W_UICOLOR_B, 1};
 	soundSelect[] = {"", 0.000000, 1};
 	soundExpand[] = {"", 0.000000, 1};
 	soundCollapse[] = {"", 0.000000, 1};
@@ -483,65 +542,6 @@ class w_RscXListBox
 	sizeEx = 0.035;
 };
 
-class RscHTML
-{
-	idc = -1;
-	type = CT_HTML;
-	style = ST_LEFT;
-	colorText[] = {Dlg_Color_White, 1};
-    colorLink[] = {0.05, 0.2, 0.05, 1};
-    colorBold[] = {0, 1, 1, 1};
-    colorBackground[] = {0, 0, 0, 0};
-    colorLinkActive[] = {0, 0, 0.2, 1};
-    colorPicture[] = {Dlg_Color_Black, 1};
-    colorPictureLink[] = {Dlg_Color_Black, 1};
-    colorPictureSelected[] = {Dlg_Color_Black, 1};
-    colorPictureBorder[] = {Dlg_Color_Black, 1};
-	x = 0;
-	y = 0;
-	w = 1;
-	h = 1;
-	filename = "";
-	prevPage = "\ca\ui\data\arrow_left_ca.paa";
-    nextPage = "\ca\ui\data\arrow_right_ca.paa";
-
-    
-class HeadingStyle 
-{
-        font = "PuristaBold";
-        fontBold = "TahomaB";
-        sizeEx = Dlg_TEXTHGT;
-    };
-    
-    class H1: HeadingStyle {
-        sizeEx = Dlg_TEXTHGT * 1.5;
-    };
-    
-    class H2: HeadingStyle {
-        sizeEx = Dlg_TEXTHGT * 1.4;
-    };
-    
-    class H3: HeadingStyle {
-        sizeEx = Dlg_TEXTHGT * 1.3;
-    };
-    
-    class H4: HeadingStyle {
-        sizeEx = Dlg_TEXTHGT * 1.2;
-    };
-    
-    class H5: HeadingStyle {
-        sizeEx = Dlg_TEXTHGT * 1.1;
-    };
-    
-    class H6: HeadingStyle {
-        sizeEx = Dlg_TEXTHGT;
-    };
-    
-    class P: HeadingStyle {
-       sizeEx = Dlg_TEXTHGT;
-    };
-};
-
 class w_RscMapControl
 {
 	type = CT_MAP_MAIN;
@@ -598,7 +598,9 @@ class w_RscMapControl
 	maxSatelliteAlpha = 0.85;
 	alphaFadeStartScale = 2;
 	alphaFadeEndScale = 2;
-	fontLabel = "PuristaMedium";
+	colorTrails[] = {0.84, 0.76, 0.65, 0.15};
+	colorTrailsFill[] = {0.84, 0.76, 0.65, 0.65};
+	fontLabel = "RobotoCondensed";
 	sizeExLabel = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.8)";
 	fontGrid = "TahomaB";
 	sizeExGrid = 0.02;
@@ -606,7 +608,7 @@ class w_RscMapControl
 	sizeExUnits = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.8)";
 	fontNames = "EtelkaNarrowMediumPro";
 	sizeExNames = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.8) * 2";
-	fontInfo = "PuristaMedium";
+	fontInfo = "RobotoCondensed";
 	sizeExInfo = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.8)";
 	fontLevel = "TahomaB";
 	sizeExLevel = 0.02;
@@ -619,7 +621,7 @@ class w_RscMapControl
 		y = "SafeZoneY + safezoneH - 4.5 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
 		w = "10 * (((safezoneW / safezoneH) min 1.2) / 40)";
 		h = "3.5 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
-		font = "PuristaMedium";
+		font = "RobotoCondensed";
 		sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.8)";
 	};
 	class ActiveMarker {
@@ -635,6 +637,12 @@ class w_RscMapControl
 		coefMax = 1;
 	};
 	class Task {
+		taskNone = "#(argb,8,8,3)color(0,0,0,0)";
+		taskCreated = "#(argb,8,8,3)color(0,0,0,1)";
+		taskAssigned = "#(argb,8,8,3)color(1,1,1,1)";
+		taskSucceeded = "#(argb,8,8,3)color(0,1,0,1)";
+		taskFailed = "#(argb,8,8,3)color(1,0,0,1)";
+		taskCanceled = "#(argb,8,8,3)color(1,0.5,0,1)";
 		colorCreated[] = {1, 1, 1, 1};
 		colorCanceled[] = {0.7, 0.7, 0.7, 1};
 		colorDone[] = {0.7, 1, 0.3, 1};
@@ -651,9 +659,9 @@ class w_RscMapControl
 		coefMax = 1;
 	};
 	class CustomMark {
-		color[] = {0, 0, 0, 1};
+		color[] = {1, 1, 1, 1};
 		icon = "\A3\ui_f\data\map\mapcontrol\custommark_ca.paa";
-		size = 24;
+		size = 18;
 		importance = 1;
 		coefMin = 1;
 		coefMax = 1;
@@ -786,6 +794,13 @@ class w_RscMapControl
 		coefMin = 0.85;
 		coefMax = 1;
 	};
+	class LineMarker {
+		textureComboBoxColor = "#(argb,8,8,3)color(1,1,1,1)";
+		lineWidthThin = 0.008;
+		lineWidthThick = 0.014;
+		lineDistanceMin = 3e-005;
+		lineLengthMin = 5;
+	};
 	class Transmitter {
 		color[] = {1, 1, 1, 1};
 		icon = "\A3\ui_f\data\map\mapcontrol\transmitter_CA.paa";
@@ -827,20 +842,20 @@ class w_RscMapControl
 		coefMax = 1;
 	};
 	class Waypoint {
-		color[] = {0, 0, 0, 1};
-		size = 24;
+		color[] = {1, 1, 1, 1};
 		importance = 1;
 		coefMin = 1;
 		coefMax = 1;
 		icon = "\A3\ui_f\data\map\mapcontrol\waypoint_ca.paa";
+		size = 18;
 	};
 	class WaypointCompleted {
-		color[] = {0, 0, 0, 1};
-		size = 24;
+		color[] = {1, 1, 1, 1};
 		importance = 1;
 		coefMin = 1;
 		coefMax = 1;
-		icon = "\A3\ui_f\data\map\mapcontrol\waypointCompleted_ca.paa";
+		icon = "\A3\ui_f\data\map\mapcontrol\waypointcompleted_ca.paa";
+		size = 18;
 	};
 	class power {
 		icon = "\A3\ui_f\data\map\mapcontrol\power_CA.paa";

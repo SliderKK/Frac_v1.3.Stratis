@@ -88,6 +88,7 @@ _displayTerritoryActivity =
 _survivalSystem = ["A3W_survivalSystem"] call isConfigOn;
 _unlimitedStamina = ["A3W_unlimitedStamina"] call isConfigOn;
 _atmEnabled = ["A3W_atmEnabled"] call isConfigOn;
+_disableUavFeed = ["A3W_disableUavFeed"] call isConfigOn;
 
 private ["_mapCtrls", "_mapCtrl"];
 _ui = displayNull;
@@ -124,6 +125,7 @@ while {true} do
 		{
 			// Gone up. Green flash
 			_healthTextColor = "#17FF17";
+			if (!isNil "BIS_HitCC" && {ppEffectEnabled BIS_HitCC}) then { BIS_HitCC ppEffectEnable false }; // fix for permanent red borders due to fire damage
 		};
 	};
 
@@ -134,23 +136,25 @@ while {true} do
 
 	_strArray = [];
 
-	//if (_atmEnabled) then {
-	//	_strArray pushBack format ["%1 <img size='0.7' image='client\icons\suatmm_icon.paa'/>", [player getVariable ["bmoney", 0]] call fn_numbersText];
-	//};
+/*	Default Wasteland HUD Disabled | CRE4MPIE
+	if (_atmEnabled) then {
+		_strArray pushBack format ["%1 <img size='0.7' image='client\icons\suatmm_icon.paa'/>", [player getVariable ["bmoney", 0]] call fn_numbersText];
+	};
 
-	//_strArray pushBack format ["%1 <img size='0.7' image='client\icons\money.paa'/>", [player getVariable ["cmoney", 0]] call fn_numbersText];
+	_strArray pushBack format ["%1 <img size='0.7' image='client\icons\money.paa'/>", [player getVariable ["cmoney", 0]] call fn_numbersText];
 
-	//if (_survivalSystem) then {
-	//	_strArray pushBack format ["%1 <img size='0.7' image='client\icons\water.paa'/>", ceil (thirstLevel max 0)];
-	//	_strArray pushBack format ["%1 <img size='0.7' image='client\icons\food.paa'/>", ceil (hungerLevel max 0)];
-	//};
+	if (_survivalSystem) then {
+		_strArray pushBack format ["%1 <img size='0.7' image='client\icons\water.paa'/>", ceil (thirstLevel max 0)];
+		_strArray pushBack format ["%1 <img size='0.7' image='client\icons\food.paa'/>", ceil (hungerLevel max 0)];
+	};
 
-	//if (!_unlimitedStamina) then {
-	//	_strArray pushBack format ["%1 <img size='0.7' image='client\icons\running_man.paa'/>", 100 - ceil ((getFatigue player) * 100)];
-	//};
+	if (!_unlimitedStamina) then {
+		_strArray pushBack format ["%1 <img size='0.7' image='client\icons\running_man.paa'/>", 100 - ceil ((getFatigue player) * 100)];
+	};
 
-	//_strArray pushBack format ["<t color='%1'>%2</t> <img size='0.7' image='client\icons\health.paa'/>", _healthTextColor, _health];
+	_strArray pushBack format ["<t color='%1'>%2</t> <img size='0.7' image='client\icons\health.paa'/>", _healthTextColor, _health];
 
+	*/
 	_str = "";
 
 	{ _str = format ["%1%2<br/>", _str, _x] } forEach _strArray;
@@ -178,18 +182,21 @@ while {true} do
 	{
 		if (player != vehicle player) then
 		{
-			_vehicle = assignedVehicle player;
+			_vehicle = vehicle player;
 
 			{
-				_icon = switch (true) do
+				if (alive _x) then
 				{
-					case (driver _vehicle == _x): { "client\icons\driver.paa" };
-					case (gunner _vehicle == _x): { "client\icons\gunner.paa" };
-					default                       { "client\icons\cargo.paa" };
-				};
+					_icon = switch (true) do
+					{
+						case (driver _vehicle == _x): { "client\icons\driver.paa" };
+						case (gunner _vehicle == _x): { "client\icons\gunner.paa" };
+						default                       { "client\icons\cargo.paa" };
+					};
 
-				_tempString = format ["%1 %2 <img image='%3'/><br/>", _tempString, name _x, _icon];
-				_yOffset = _yOffset + 0.04;
+					_tempString = format ["%1 %2 <img image='%3'/><br/>", _tempString, name _x, _icon];
+					_yOffset = _yOffset + 0.04;
+				};
 			} forEach crew _vehicle;
 		};
 	};
@@ -309,5 +316,44 @@ while {true} do
 		} forEach _mapCtrls;
 	};
 
+	// Improve revealing and aimlocking of targetted vehicles
+	{
+		if (!isNull _x) then
+		{
+			if ((group player) knowsAbout _x < 4) then
+			{
+				(group player) reveal [_x, 4];
+			};
+		};
+	} forEach [cursorTarget, cursorObject];
+
+	if (_disableUavFeed && shownUavFeed) then
+	{
+		showUavFeed false;
+	};
+
+	if (isNil "A3W_missingMarkersNotice" && visibleMap) then
+	{
+		_cbMarkerColors = findDisplay 12 displayCtrl 1090;
+
+		if (!isNull _cbMarkerColors && !ctrlEnabled _cbMarkerColors) then
+		{
+			[parseText (
+			[
+				"It appears you are affected by the missing markers bug from the apex and dev branches. In order to solve the problem temporarily, try the following:<br/>",
+				" 1. Go back to main menu",
+				" 2. Open the editor on Tanoa",
+				" 3. Press ""Play Scenario"" in the bottom right",
+				" 4. Once loaded, leave the editor and join back the server<br/>",
+				"If that doesn't work, try again. If it still doesn't work, restart your game and keep trying again.<br/>",
+				"Bohemia are investigating the bug."
+			]
+			joinString "<br/>"),"Notice"] spawn BIS_fnc_guiMessage;
+
+			A3W_missingMarkersNotice = true;
+		};
+	};
+
+	enableEnvironment true;
 	uiSleep 1;
 };

@@ -25,11 +25,10 @@ _player addGoggles "G_Sport_Red";
 _player addMagazines ["9Rnd_45ACP_Mag", 4];
 _player addWeapon "hgun_ACPC2_F";
 
-_player addMagazines ["30Rnd_9x21_Mag", 3];
-_player addWeapon "SMG_02_F";
-_player addPrimaryWeaponItem "optic_Holosight_smg";
+_player addMagazines ["30Rnd_45ACP_Mag_SMG_01", 3];
+_player addWeapon "SMG_01_F";
 
-_player selectWeapon "SMG_02_F";
+_player selectWeapon "SMG_01_F";
 switch (true) do
 {
 	case (["_medic_", typeOf _player] call fn_findString != -1):
@@ -40,11 +39,12 @@ switch (true) do
 	case (["_engineer_", typeOf _player] call fn_findString != -1):
 	{
 		_player addItem "ToolKit";
+		_Player addItem "MineDetector";
 		_player removeItem "";
 	};
 	case (["_sniper_", typeOf _player] call fn_findString != -1):
 	{
-		_player addWeapon "Binocular"; 
+		_player addWeapon "Rangefinder"; 
 		_player removeItem "";
 	};
 		case (["_diver_", typeOf _player] call fn_findString != -1):

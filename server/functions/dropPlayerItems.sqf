@@ -4,13 +4,11 @@
 //	@file Name: dropPlayerItems.sqf
 //	@file Author: AgentRev
 
-private ["_corpse", "_money", "_items", "_veh", "_targetPos"];
-_corpse = param [0, objNull, [objNull]];
-_money = param [1, 0, [0]];
-_items = param [2, [], [[]]];
+params [["_corpse",objNull,[objNull]], ["_money",0,[0]], ["_items",[],[[]]]];
 
-if (isNull _corpse || alive _corpse || (_money < 1 && count _items == 0)) exitWith {};
+if (isNull _corpse) exitWith {};
 
+private "_veh";
 waitUntil
 {
 	sleep 0.1;
@@ -24,7 +22,7 @@ waitUntil
 
 if (isNull _corpse) exitWith {};
 
-_targetPos = getPosWorld _veh;
+private _targetPos = getPosWorld _veh;
 _targetPos set [2, (getPosATL _corpse) select 2];
 
 if (_veh != _corpse && damage _veh > 0.99) then
@@ -33,24 +31,33 @@ if (_veh != _corpse && damage _veh > 0.99) then
 	_targetPos = _targetPos vectorAdd ([[0, _veh call fn_vehSafeDistance, 1], -([_veh, _corpse] call BIS_fnc_dirTo)] call BIS_fnc_rotateVector2D);
 };
 
+if (_money <= 0) then
+{
+	_money = _corpse getVariable ["cmoney", 0];
+};
+
 if (_money > 0) then
 {
 	_m = createVehicle ["Land_Money_F", _targetPos, [], 1, "CAN_COLLIDE"];
 	_m setDir random 360;
 	_m setVariable ["cmoney", _money, true];
 	_m setVariable ["owner", "world", true];
+	_m call A3W_fnc_setItemCleanup;
+};
+
+if (_items isEqualTo []) then
+{
+	_items = _corpse getVariable ["mf_inventory_list", []];
 };
 
 {
-	_id = _x select 0;
-	_qty = _x select 1;
-	_type = _x select 2;
+	_x params [["_id","",[""]], ["_qty",0,[0]], ["_type","",[""]]];
 
 	for "_i" from 1 to _qty do
 	{
 		_obj = createVehicle [_type, _targetPos, [], 1, "CAN_COLLIDE"];
 		_obj setDir random 360;
 		_obj setVariable ["mf_item_id", _id, true];
-		_obj setVariable ["processedDeath", diag_tickTime];
+		_obj call A3W_fnc_setItemCleanup;
 	};
 } forEach _items;

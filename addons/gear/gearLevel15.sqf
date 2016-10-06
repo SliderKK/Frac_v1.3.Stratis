@@ -27,6 +27,7 @@ _crate = "Box_East_Ammo_F";
 
 // Rifles
 "srifle_DMR_04_F",
+"srifle_DMR_04_Tan_F",
 "arifle_AK12_F",
 "arifle_AK12_GL_F",
 "arifle_AKM_F",
@@ -160,6 +161,7 @@ _crate = "Box_East_Ammo_F";
 "V_PlateCarrierIA1_dgtl",
 "V_PlateCarrierIA2_dgtl",
 "V_PlateCarrierIAGL_oli",
+"V_PlateCarrierH_CTRG",
 "V_HarnessO_gry",
 "V_HarnessOGL_gry",
 "V_HarnessOSpec_gry",
@@ -181,7 +183,7 @@ _crate = "Box_East_Ammo_F";
 "Medikit",
 "ToolKit",
 "MineDetector",
-"GPS",
+"ItemGPS",
 
 
 // Goggles
@@ -455,9 +457,7 @@ _crate = "Box_East_Ammo_F";
 "H_BandMask_blk",
 "H_BandMask_demon",
 "H_BandMask_khk",
-"H_BandMask_reaper",
-"H_HelmetO_ViperSP_ghex_F",
-"H_HelmetO_ViperSP_hex_F"
+"H_BandMask_reaper"
 	  
 ],true] call BIS_fnc_addVirtualItemCargo;
 

@@ -12,22 +12,21 @@ class playerSettings {
 
 	class controlsBackground {
 
-		class MainBG : w_RscPicture {
+		class MainBG : IGUIBack {
 			idc = -1;
 			colorText[] = {1, 1, 1, 1};
-			colorBackground[] = {0,0,0,0};
-			text = "#(argb,8,8,3)color(0,0,0,0.6)";
+			colorBackground[] = {0,0,0,0.6};
+
 			moving = true;
 			x = 0.0; y = 0.1;
 			w = .745; h = 0.65;
 		};
 
-		class TopBar: w_RscPicture
+		class TopBar: IGUIBack
 		{
 			idc = -1;
 			colorText[] = {1, 1, 1, 1};
-			colorBackground[] = {0,0,0,0};
-			text = "#(argb,8,8,3)color(0.275,0.322,0.235,0.8)";
+			colorBackground[] = {A3W_UICOLOR_R, A3W_UICOLOR_G, A3W_UICOLOR_B, 1};
 
 			x = 0;
 			y = 0.1;
@@ -65,13 +64,6 @@ class playerSettings {
 			w = 0.04 / (4/3); h = 0.04;
 		};
 
-		class serverLogo : w_RscPicture {
-			idc = -1;
-			text = "mapconfig\Fractured.paa";
-			x = 0.225; y = 0.20;
-			w = 0.32 / (4/3); h = 0.32;
-		};	
-		
 		class waterText : w_RscText {
 			idc = water_text;
 			text = "";
@@ -96,13 +88,13 @@ class playerSettings {
 			w = 0.3; h = 0.05;
 		};
 
-		class distanceText : w_RscText {
+		/*class distanceText : w_RscText {
 			idc = view_range_text;
 			text = "View range:";
 			sizeEx = 0.025;
 			x = 0.03; y = 0.40;
 			w = 0.3; h = 0.02;
-		};
+		};*/
 
 		class uptimeText : w_RscText {
 			idc = uptime_text;
@@ -165,53 +157,6 @@ class playerSettings {
 			onButtonClick = "[] execVM 'client\systems\groups\loadGroupManagement.sqf'";
 			x = 0.158; y = 0.66;
 			w = 0.225; h = 0.033 * safezoneH;
-		};
-
-		class btnDistanceNear : w_RscButton {
-			idc = -1;
-			text = "Near";
-			onButtonClick = "setViewDistance 1200; setObjectViewDistance 900; setTerrainGrid 1;";
-			x = 0.02; y = 0.43;
-			w = 0.125; h = 0.033 * safezoneH;
-		};
-
-		class btnDistanceMedium : w_RscButton {
-			idc = -1;
-			text = "Medium";
-			onButtonClick = "setViewDistance 1500; setObjectViewDistance 1275; setTerrainGrid 1;";
-			x = 0.02; y = 0.5;
-			w = 0.125; h = 0.033 * safezoneH;
-		};
-
-		class btnDistanceFar : w_RscButton {
-			idc = -1;
-			text = "Far";
-			onButtonClick = "setViewDistance 2000; setObjectViewDistance 1750; setTerrainGrid 1;";
-			x = 0.02; y = 0.57;
-			w = 0.125; h = 0.033 * safezoneH;
-		};
-
-		class btnDistanceEffects : w_RscButton {
-			idc = -1;
-			text = "Effects";
-			onButtonClick = "[] execVM 'addons\disableEnvironment\disableEnvironment.sqf'";
-			x = 0.158; y = 0.5;
-			w = 0.125; h = 0.033 * safezoneH;
-		};
-		
-			class TOParmaInfoButton : w_RscButton {
-			idc = -1;
-			text = "Fractured-Gaming Info";
-			onButtonClick = "[] execVM 'addons\TOParmaInfo\loadTOParmaInfo.sqf'";
-			x = 0.225; y = 0.2;
-			w = 0.225; h = 0.033 * safezoneH;
-		};
-		
-		class btnDistanceInsane : w_RscButton {
-			text = "Insane";
-			onButtonClick = "setViewDistance 3000;";
-			x = 0.02; y = 0.60;
-			w = 0.125; h = 0.033 * safezoneH;
 		};
 	};
 };

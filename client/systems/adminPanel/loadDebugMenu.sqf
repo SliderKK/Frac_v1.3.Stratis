@@ -28,8 +28,7 @@ if (_uid call isAdmin) then
 					"Show Server FPS",
 					"Unlock Objects around you",
 					"Delete Unlocked Objects around you",
-					"Relock Objects around you",
-					"Access FG News"
+					"Relock Objects around you"
 	];
 
 	{

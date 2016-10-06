@@ -20,10 +20,33 @@ _handled = false;
 // keycodes are defined in client\clientEvents\customKeys.sqf
 switch (true) do
 {
-
 	//MADE BY ISAAC HARDING DO NOT USE OR STEAL WITHOUT MY PERMSION
 	case (_key == 2):
 	{
+		player SelectWeapon "arifle_ARX_blk_F";
+		player SelectWeapon "arifle_ARX_hex_F";
+		player SelectWeapon "arifle_ARX_ghex_F";
+		player SelectWeapon "arifle_SPAR_02_blk_F";
+		player SelectWeapon "arifle_SPAR_02_khk_F";
+		player SelectWeapon "arifle_SPAR_02_snd_F";
+		player SelectWeapon "arifle_CTARS_blk_F";
+		player SelectWeapon "LMG_03_F";
+		player SelectWeapon "arifle_SPAR_03_blk_F";
+		player SelectWeapon "srifle_DMR_07_ghex_F";
+		player SelectWeapon "srifle_DMR_07_hex_F";
+		player SelectWeapon "srifle_DMR_07_blk_F";
+		player SelectWeapon "arifle_AK12_GL_F";
+		player SelectWeapon "arifle_AK12_F";
+		player SelectWeapon "arifle_AKM_F";
+		player SelectWeapon "arifle_AKS_F";
+		player SelectWeapon "arifle_CTAR_GL_blk_F";
+		player SelectWeapon "arifle_CTAR_blk_F";
+		player SelectWeapon "arifle_SPAR_01_GL_snd_F";
+		player SelectWeapon "arifle_SPAR_01_GL_khk_F";
+		player SelectWeapon "arifle_SPAR_01_GL_blk_F";
+		player SelectWeapon "arifle_SPAR_01_snd_F";
+		player SelectWeapon "arifle_SPAR_01_khk_F";
+		player SelectWeapon "arifle_SPAR_01_blk_F";
 		player SelectWeapon "hgun_PDW2000_F";
 		player SelectWeapon "SMG_02_F";
 		player SelectWeapon "SMG_01_F";
@@ -77,6 +100,10 @@ switch (true) do
 		player SelectWeapon "MMG_02_sand_F";
 		player SelectWeapon "MMG_02_camo_F";
 		player SelectWeapon "MMG_02_black_F";
+		player SelectWeapon "srifle_GM6_ghex_LRPS_F";
+		player SelectWeapon "srifle_LRR_tna_LRPS_F";
+		player SelectWeapon "arifle_SPAR_03_snd_F";
+		player SelectWeapon "arifle_SPAR_03_khk_F";
 	};
 	case (_key == 3):
 	{
@@ -85,10 +112,14 @@ switch (true) do
 		player SelectWeapon "hgun_ACPC2_F";
 		player SelectWeapon "hgun_Pistol_heavy_02_F";
 		player SelectWeapon "hgun_Pistol_heavy_01_F";
+		player SelectWeapon "hgun_Pistol_01_F";
+		player SelectWeapon "hgun_P07_khk_F";
 	};
 	case (_key == 4):
 	{
 		player SelectWeapon "launch_RPG32_F";
+		player SelectWeapon "launch_RPG32_ghex_F";
+		player SelectWeapon "launch_RPG7_F";
 		player SelectWeapon "launch_NLAW_F";
 		player SelectWeapon "launch_Titan_short_F";
 		player SelectWeapon "launch_O_Titan_short_F";
@@ -96,6 +127,15 @@ switch (true) do
 		player SelectWeapon "launch_Titan_F";
 		player SelectWeapon "launch_O_Titan_F";
 		player SelectWeapon "launch_I_Titan_F";
+		player SelectWeapon "launch_B_Titan_short_tna_F";
+		player SelectWeapon "launch_B_Titan_tna_F";
+		player SelectWeapon "launch_O_Titan_ghex_F";
+		player SelectWeapon "launch_O_Titan_short_ghex_F";
+	};
+	// Emergency Eject - Del Key
+	case (_key == 211):
+	{	
+		[-9, false, true, ""] execVM "client\actions\forceEject.sqf";
 	};
 	//MADE BY ISAAC HARDING DO NOT USE OR STEAL WITHOUT MY PERMSION
 	// U key
@@ -154,33 +194,28 @@ if (!_handled && _key == 35) then
 // Parachute
 if (!_handled && _key in actionKeys "GetOver") then
 {
-	if (alive player) then
-	{
-		_veh = vehicle player;
+	if (!alive player) exitWith {};
 
-		if (_veh == player) then
+	_veh = vehicle player;
+
+	if (_veh == player) exitWith
+	{
+		// allow opening parachute only above 2.5m
+		if ((getPos player) select 2 > 2.5) then
 		{
-			if ((getPos player) select 2 > 2.5) then
-			{
-				true call fn_openParachute;
-				_handled = true;
-			};
-		}
-		else
+			true call A3W_fnc_openParachute;
+			_handled = true;
+		};
+	};
+
+	// 1 sec cooldown after parachute is deployed so you don't start falling again if you double-tap the key
+	if (_veh isKindOf "ParachuteBase" && (isNil "A3W_openParachuteTimestamp" || {diag_tickTime - A3W_openParachuteTimestamp >= 1})) then
+	{
+		moveOut player;
+		_veh spawn
 		{
-			if (_veh isKindOf "ParachuteBase") then
-			{
-				// 1s cooldown after parachute is deployed so you don't start falling again if you double-tap the key
-				if (isNil "openParachuteTimestamp" || {diag_tickTime - openParachuteTimestamp >= 1}) then
-				{
-					moveOut player;
-					_veh spawn
-					{
-						sleep 1;
-						deleteVehicle _this;
-					};
-				};
-			};
+			sleep 1;
+			deleteVehicle _this;
 		};
 	};
 };
@@ -220,9 +255,28 @@ if (!_handled && _key in actionKeys "NetworkStats") then
 };
 
 // Push-to-talk
-if (!_handled && _key in (actionKeys "PushToTalk" + actionKeys "PushToTalkAll")) then
+if (!_handled && _key in call A3W_allVoiceChatKeys) then
 {
 	[true] call fn_voiceChatControl;
+};
+
+// UAV feed
+if (!_handled && _key in (actionKeys "UavView" + actionKeys "UavViewToggle")) then
+{
+	if (["A3W_disableUavFeed"] call isConfigOn) then
+	{
+		_handled = true;
+	};
+};
+
+// Override prone reload freeze (ffs BIS)
+if (!_handled && _key in (actionKeys "MoveDown" + actionKeys "MoveUp")) then
+{
+	if ((toLower animationState player) find "reloadprone" != -1) then
+	{
+		[player, format ["AmovPknlMstpSrasW%1Dnon", [player, true] call getMoveWeapon]] call switchMoveGlobal;
+		reload player;
+	};
 };
 
 _handled

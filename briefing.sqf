@@ -21,131 +21,164 @@ player createDiarySubject ["gearlevel", "Gear Level Info"];
 
 player createDiaryRecord ["changelog",
 [
+"FRACTURED Logs",
+"
+<br/>[Changed] NPCs now drop cash
+<br/>[Changed] Status bar
+<br/>[Removed] Some missions due to insta-popping
+<br/>[Changed] Changed vehicle prices
+<br/>[ADDED] Mine Detectors to Engineer Kits, Gear Levels ONLY!
+<br/>[FIXED] Gear going missing or spawning naked WILL not happen anymore!!!!!!!
+<br/>[Changed] Unstuck player function only throws players in the air for the ground height plus 20 meters so that they cannot abuse this as a relocate tactic.
+<br/>[Fixed] Gearlevel 0 or defult spawn is fixed
+<br/>[INFO] Laser designators will not have thermals until AgentRev FIXES his code on the matter, as of right now we CANNOT true thermals on because the code will not allow it.
+<br/>[FIXED] Double tap works
+<br/>[ADDED] Gearlevels on map again after 1.3 update
+<br/>[FIXED] UAV's will no longer being able to use thermals what so ever not even for a small ammount of time because it kills off instantly now.
+<br/>[FIXED] Sway or aiming is the SAME as it was on 1.2 version of the server.
+<br/>[FIXED] View distance is fixed now and the ground across the board is set to 1
+<br/>[FIXED] Stealth uniform can be bought as indie.
+
+"
+]];
+
+
+player createDiaryRecord ["changelog",
+[
+"v1.3b",
+"
+<br/>[Added] Private parking
+<br/>[Added] Private storage
+<br/>[Added] Vehicle ownership
+<br/>[Added] Vehicle locking
+<br/>[Added] Vehicle selling
+<br/>[Added] Mine saving
+<br/>[Added] Resupply trucks
+<br/>[Added] CH View Distance
+<br/>[Added] Map legend
+<br/>[Added] UAV side persistence
+<br/>[Added] headless server cleanup
+<br/>[Changed] Static designators now available to indies
+<br/>[Changed] Some store prices
+<br/>[Fixed] Many other minor changes and fixes
+"
+]];
+
+player createDiaryRecord ["changelog",
+[
+"v1.3",
+"
+<br/>[Added] Tanoa version
+<br/>[Added] Apex content on dev/preview branches
+<br/>[Added] Sticky explosive charges
+br/> [Added] Heavy towing and airlifting
+<br/>[Added] Load dragged injured friendly in vehicles
+<br/>[Added] Eject loaded injured friendly from vehicles
+<br/>[Added] Autostabilize when loaded in medical vehicle
+<br/>[Added] 'Finish off' action to slay injured enemies
+<br/>[Added] Improved injured unit detection
+<br/>[Added] Scoreboard persistence option for servers
+<br/>[Added] Fatal PvP headshots option for servers
+<br/>[Added] Custom death messages option for servers
+<br/>[ADded] Auto-center heli turret on manual fire
+<br/>[Added] UAV side persistence
+<br/>[Added] More textures for some vehicles in store
+<br/>[Added] Abandoned quadcopter cleanup
+<br/>[Added] More admin menu logging
+<br/>[Changed] Reduced heli missile damage
+<br/>[Changed] Improved mission crate loot
+<br/>[Changed] Vest armor values in general store
+<br/>[Changed] Increased Mag Repack flexibility
+<br/>[Changed] Toggled off autonomous on static designators
+<br/>[Changed] Disabled rain due to weather desync
+<br/>[Fixed] Engineer with toolkit can now always repair
+<br/>[Fixed] Improved missile lock-on
+<br/>[Fixed] Improvements to kill tracking system
+<br/>[Fixed] Items and money not dropping on injured logout
+<br/>[Fixed] Combat log timer not resetting on death
+<br/>[Fixed] Player not always ejected on injury
+<br/>[Fixed] Double kill/death count
+<br/>[Fixed] Spawn cooldowns resetting on rejoin
+<br/>[Fixed] Striders spawning without laser batteries
+<br/>[Fixed] Disabled rain due to syncing issues
+<br/>[Fixed] Various minor bugfixes and optimizations
+"
+]];
+
+player createDiaryRecord ["changelog",
+[
+"v1.2b",
+"
+<br/>[Added] Scoreboard scrolling via mousewheel
+<br/>[Added] New paintjobs for Kajman, Strider, Gorgon, Hatchback
+<br/>[Changed] Hostile Heli (single) crates now spawn on touchdown
+<br/>[Changed] Lowered Ifrit center of mass to reduce rollovers
+<br/>[Changed] Updated antihack database
+<br/>[Fixed] Saved grenades not throwable on rejoin
+<br/>[Fixed] Corpses not ejecting from vehicle wrecks
+<br/>[Fixed] Items not dropping from vehicle wreck corpses
+<br/>[Fixed] Revive not triggering properly on fatal shot
+<br/>[Fixed] Vehicle turret ammo saving issues
+<br/>[Fixed] Too low damage resistance during revive mode
+<br/>[Fixed] UGVs not airliftable via R3F
+<br/>[Fixed] Revive broken after getting run over by vehicles
+<br/>[Fixed] Veh respawn not being delayed when owner is within 1km
+<br/>[Fixed] All armor values showing 0 in general store
+<br/>[Fixed] Supplies category in general store sometimes empty
+<br/>[Fixed] Server rules not showing anymore in map menu
+<br/>[Fixed] Territory info overlapping with vehicle HUD
+<br/>[Fixed] Vehicle contents selling money exploit
+<br/>[Fixed] Antihack kicks not always working properly
+<br/>[Fixed] Various minor bugfixes and optimizations
+"
+]];
+
+player createDiaryRecord ["changelog",
+[
 "v1.2",
 "
-<br/>[Updated] Mag Repacker
-<br/>[Added] Map Marker Log for Admins (Admin Menu)
-<br/>[Added] Silencer for the 4-five
-<br/>[Changed] Store Prices
-<br/>[Changed] Stomper Prices Upped to $22,500
-<br/>[Changed] HvT Value from $75k to $100k
-<br/>[Changed] Drug values/resell values increased.
-<br/>[Changed] Money Mission Values. (50k,100k,150k,200k)
-<br/>[Changed] Territory hold price x10 (Every territory)
-<br/>[Changed] Territory Capture at $10,000
-<br/>[Changed] Bank Limit to $25,000,000
-<br/>[Removed] Group Size Limit
-<br/>[Added] Added Final Prestiege Gear Level (Virtual Arsenal)
-<br/>[Added] Prestiege Gear Levels 1-4
-<br/>[Changed] Gear Level Spawning items
-<br/>[Changed] Max Bank Amount by 1mil per gear level
-<br/>[Changed] Price of Unarmed Helicopters
-<br/>[Changed] Value of Idependent Hack amount to .5%
-<br/>[Changed] Value of Hacker Mission from 1.5% to 1%
-<br/>[Changed] Gear Level Spawn Items
-<br/>[Removed] Bastground to statusbar
-<br/>[Fixed] TawVD error
-<br/>[Added] Group Size Limit =6
-<br/>[Fixed] Gas GL Ammo
-<br/>[Changed] Admin List in map menu
-<br/>[Added] TAW_VD (Original View Distance UI) 
-<br/>[Removed] CHVD (View Distance) Due to Exploiting
-<br/>[Changed] Clean up Script to be more aggressive
-<br/>[Fixed] Admin List
-<br/>[Changed] CoolDown Timer on Airdrops from 15 to 5
-<br/>[Fixed] Explosive Placements near Gunstores
-<br/>[Fixed] Briefing
-<br/>[Added] Boats to AirDrops
-<br/>[Removed] Break Lock Alarm Sound
-<br/>[Changed] Break Lock Timer
-<br/>[Removed] cctv (cause of desync issues)
-<br/>[Added] Server Loading Screen  
-<br/>[Implemented] v1.2 With New Stuff
-<br/>
-<br/>[Fixed] server Optimization
-<br/>[Updated] Anti-hack
-<br/>[Added] Side-specific laser designators and IR grenades
-<br/>[Fixed] Bug with MagRepacker
-<br/>[Added] Script Injection Protection
-<br/>[Added] Supported Mods to Credits
-<br/>[Removed] Last Resort
-<br/>[Changed] OpFor and Independant Uniforms
-<br/>[Fixed] Stores
-<br/>[Fixed] Server Optimization 
-<br/>[Fixed] Item Descriptions 
-<br/>[Fixed] GunStore Logic
-<br/>[Added] (Shift + H) Holster Weapon 
-<br/>[Added] Allow anyone to fly DLC choppers
-<br/>[Added] Gut
-<br/>[Removed] Slit Throat
-<br/>[Added] Explosives to Vehicles and Buildings
-<br/>[Added] Drugs to Town Invasion
-<br/>[Added] Drugs to RoadBlocks
-<br/>[Added] Drugs to Stores
-<br/>[Added] HvD(High Value Drugs)
-<br/>[Added] DrugRunner Mission
-<br/>[Added] Drugs
-<br/>[Changed] Decreased Time for Airdrops
-<br/>[Fixed] Wrong Ammo type in Gear Level
-<br/>[Added] GL Toxic Gas Grenades
-<br/>[Changed] Money Mission Rewards
-<br/>[Fix] for exploding vehicles
-<br/>[Removed] Thermal limit on scoped and Laser Des
-<br/>[Fixed] UAV control Restricted to group
-<br/>[Added] Beacon Detector
-<br/>[Changed] Weather Effects
-<br/>[Changed] Teammate Icon Size
-<br/>[Added] Beacon Detector
-<br/>[Changed] Settings on Airdrop
-<br/>[Added] More Structures
-<br/>[Changed] Stores across map 
-<br/>[Added] Bank Money to Spectator for admins
-<br/>[Changed] Airdrop Prices
-<br/>[Changed] Store Prices
-<br/>[Added] Limited Thermals
-<br/>[Fixed] TeamKiller Glitch
-<br/>[Updated] Mission Boxes
-<br/>[Added] New Airdrop System
-<br/>[Removed] Airdrop 
-<br/>[Removed] 3D Markers
-<br/>[Fixed] Corpse ejection from non-destroyed vehicles
-<br/>[Added] Temp fix for negative wallet glitch
-<br/>[Removed] Unused Functions
-<br/>[Added] GID structured to map
-<br/>[Changed] Mission weight for diving missions
-<br/>[Fixed] Briefing
-<br/>[Changed] Admin List
-<br/>[Added] Masks for Toxic Gas. Shemag=Lesser effect / Pilot helmet=0 effect.
-<br/>[Added] Toxic Gas (yellow smoke now kills within radius)
-<br/>[Removed] Some Plane and helicopters from stores.
-<br/>[Added] Old disabled missions
-<br/>[Added] Road Block Mission
-<br/>[Added] Sniper Nest Mission
-<br/>[Added] HVT Mission (steals from bank accounts of online players)
-<br/>[Changed] HUD to Status bar
-<br/>[Added] Fast Roping
-<br/>[Added] More UAV_Control (group only)
-<br/>[Added] Mag Repacker
-<br/>[Changed] Texture sizes to lower PBO size
-<br/>[Removed] Original Welcome Screen
-<br/>[Added] Server Credits as welcome message
-<br/>[Added] Sting SMG as starting weapon
-<br/>[Removed] Tron Suits from store
-<br/>[Changed] Starting Backpack
-<br/>[Added] GeoCache Mission 
-<br/>[Added] Teleport Player to me for admins
-<br/>[Added] Teleport to player for admins
-<br/>[Removed] Player Markers from admins 
-<br/>[Added] Air Drops
-<br/>[Fixed] Player Gear Being removed after restart
-<br/>[Updated] Antihack
-<br/>[Changed] Only admins can use global voice
-<br/>[Added] More UAV_Control (group only)
-<br/>[Fixed] Warchest Duping glitch
-<br/>[Changed] Made Clean up More aggressive (10min)
-<br/>[Changed] Weapon Crate Loadouts. TWS, Nightstalker, OP items moved to them.
-<br/>[Added] Vehicles stay locked after restart
-<br/>[Added]1.42 patch update
+<br/>[Added] Mag Repack by Outlawled (Ctrl + " + NKEYNAME(19) + ")
+<br/>[Added] Adjustable NV by xx-LSD-xx (Shift + PageUp/Down)
+<br/>[Added] New vehicle store paintjobs
+<br/>[Added] Town spawn cooldown
+<br/>[Added] Ghosting timer
+<br/>[Added] Object lock restriction near stores and missions
+<br/>[Added] Headless client object saving
+<br/>[Added] Time and weather saving
+<br/>[Changed] Expanded UAV control restriction to quadcopters
+<br/>[Changed] Injured players no longer count as town enemies
+<br/>[Changed] Upgraded extDB to extDB2 by Torndeco
+<br/>[Changed] Updated antihack
+<br/>[Fixed] Old spawn beacons no longer shown on spawn menu
+<br/>[Fixed] Multiple money duping exploits
+<br/>[Fixed] Vehicles and objects sometimes disappearing from DB
+<br/>[Fixed] Severe injuries caused by jumping over small ledges
+<br/>[Fixed] Antihack kicks due to RHS, MCC, AGM, ACE3, ALiVE
+<br/>[Fixed] Various minor bugfixes and optimizations
+"
+]];
+
+player createDiaryRecord ["changelog",
+[
+"v1.1b",
+"
+<br/>[Added] Marksmen DLC content
+<br/>[Added] Prevent usage of commander camera
+<br/>[Added] Emergency eject hotkey (Ctrl + " + AKEYNAME("GetOut") + ")
+<br/>[Added] Restricted UAV connection to owner's group
+<br/>[Changed] Improved purchased vehicle setup time
+<br/>[Changed] Admins can now use global voice chat
+<br/>[Changed] Updated antihack
+<br/>[Fixed] Corpses not being ejected from vehicles
+<br/>[Fixed] Thermal imaging not working for UAVs
+<br/>[Fixed] Various minor bugfixes and optimizations
+"
+]];
+
+player createDiaryRecord ["changelog",
+[
+"v1.1",
+"
 <br/>[Added] ATMs
 <br/>[Added] Union Jack vehicle color
 <br/>[Added] Skins hidden in gamefiles for MH-9, Mohawk, and Taru
@@ -161,16 +194,238 @@ player createDiaryRecord ["changelog",
 "
 ]];
 
+player createDiaryRecord ["changelog",
+[
+"v1.0c",
+"
+<br/>[Added] MySQL support via extDB extension
+<br/>[Added] Town Invasion mission
+<br/>[Added] Chain-reaction player kill tracking
+<br/>[Added] Force Save action for purchased and captured vehicles
+<br/>[Added] Autokick players previously detected by antihack
+<br/>[Added] Entity caching script for headless client
+<br/>[Added] Tron suits to general store
+<br/>[Added] Red lines on map for AIs wandering away from missions
+<br/>[Changed] Mission timeout gets extended on AI kill
+<br/>[Changed] Transport Heli mission Taru variant to Bench
+<br/>[Changed] Spawn beacon item drop to sleeping bag
+<br/>[Fixed] More money exploits
+<br/>[Fixed] Scoreboard ordering
+<br/>[Fixed] Vehicle repair and refuel sometimes not working
+<br/>[Fixed] Injured players' corpses being deleted on disconnect
+<br/>[Fixed] Static weapon disassembly prevention
+<br/>[Fixed] Excess bought rockets ending up in uniform or vest
+<br/>[Fixed] Various other minor bugfixes and optimizations
+"
+]];
+
+player createDiaryRecord ["changelog",
+[
+"v1.0b",
+"
+<br/>[Added] Helicopters DLC content
+<br/>[Added] Revamped respawn menu
+<br/>[Added] 250m altitude limit for territory capture
+<br/>[Added] HALO insertion on spawn beacons
+<br/>[Added] New vehicle store textures
+<br/>[Changed] Increased damage done to planes by 50%
+<br/>[Changed] Plane engines shutdown when above 90% damage
+<br/>[Changed] Player names can also be toggled with Home key
+<br/>[Changed] Increased ATGM UAV price
+<br/>[Changed] Increased prices from thermal scopes again
+<br/>[Changed] Minor edits to spawn loadouts
+<br/>[Fixed] FPS drop that began in v0.9h
+<br/>[Fixed] Saved UAVs not being connectable
+<br/>[Fixed] Indies unable to get in UGVs
+<br/>[Fixed] Blinking fog
+<br/>[Fixed] Clipped numbers on scoreboard
+<br/>[Fixed] Minor other optimizations and fixes
+"
+]];
+
+player createDiaryRecord ["changelog",
+[
+"v1.0",
+"
+<br/>[Added] Custom scoreboard
+<br/>[Added] Mission and store vehicle saving
+<br/>[Added] Player markers on GPS and UAV Terminal
+<br/>[Added] Holster actions
+<br/>[Changed] Full rewrite of side mission system
+<br/>[Changed] Windows key toggles player marker names too
+<br/>[Changed] New loading picture by Gameaholic.se
+<br/>[Fixed] Weapon sometimes disppearing when moving objects
+<br/>[Fixed] More money duping exploits
+<br/>[Fixed] Store menu sizes on smaller aspect ratios
+<br/>[Fixed] Hunger and thirst reset on rejoin
+<br/>[Fixed] Other minor optimizations and fixes
+"
+]];
+
+player createDiaryRecord ["changelog",
+[
+"v0.9h",
+"
+<br/>[Added] Custom revive system based on Farooq's Revive
+<br/>[Added] Territory payroll at regular intervals
+<br/>[Added] Emergency eject and free parachutes (jump key)
+<br/>[Added] Player names toggled with Windows key
+<br/>[Added] Increased missile damage against tanks and helis
+<br/>[Added] Ability to stash money in weapon crates
+<br/>[Added] Ability to sell vehicle inventory at stores
+<br/>[Added] More money shipment mission variants
+<br/>[Added] Reduced wheel damage from collisions
+<br/>[Added] Wreck salvaging
+<br/>[Added] Selling bin in stores
+<br/>[Added] Karts DLC content in stores
+<br/>[Added] Camo sniper rifles in gunstore
+<br/>[Added] Repair Offroad in vehicle store
+<br/>[Added] Team players on map as server option
+<br/>[Added] Unlimited stamina server option
+<br/>[Added] Static weapon saving server option
+<br/>[Added] More push vehicle actions
+<br/>[Added] Paradrop option for airlifted vehicles
+<br/>[Added] Preload checkbox on respawn menu
+<br/>[Added] Remote explosives store distance restriction
+<br/>[Added] Server time multipliers for day and night
+<br/>[Added] Addon-less profileNamespace server persistence
+<br/>[Added] Linux server compatibility
+<br/>[Added] Basic support for headless client
+<br/>[Changed] Independent territory capture is now group-based
+<br/>[Changed] Towns blocked if more enemies than friendlies
+<br/>[Changed] Increased ammo/fuel/repair cargo for resupply trucks
+<br/>[Changed] Increased territory capture rewards for Altis
+<br/>[Changed] Increased money mission rewards
+<br/>[Changed] Weapon loot in buildings now disabled by default
+<br/>[Changed] Mission crates loot was made more random
+<br/>[Changed] Thermal imaging is now available on UAVs
+<br/>[Changed] Increased vehicle store prices
+<br/>[Changed] Increased prices for thermal optics
+<br/>[Changed] Increased player icons up to 2000m
+<br/>[Changed] Improved antihack
+<br/>[Changed] Improved FPS
+<br/>[Fixed] Vehicle store purchase errors due to server lag
+<br/>[Fixed] Corpse created when leaving with player saving
+<br/>[Fixed] Custom vehicle damage handling not working
+<br/>[Fixed] Indie-indie spawn beacon stealing
+<br/>[Fixed] Repair kit and jerrycan distance limit
+<br/>[Fixed] Spawn beacon packing and stealing restrictions
+<br/>[Fixed] Not able to lock static weapons
+<br/>[Fixed] Unbreakable store windows
+<br/>[Fixed] Stratis airbase gunstore desk glitches
+<br/>[Fixed] Missions sometimes completing instantaneously
+<br/>[Fixed] Object ammo/fuel/repair cargo not saving
+<br/>[Fixed] Respawn menu aspect ratio on some resolutions
+<br/>[Fixed] Minor bugs with group system
+<br/>[Fixed] Minor bugs with player items
+<br/>[Fixed] Various other minor bugfixes and optimizations
+"
+]];
+
+player createDiaryRecord ["changelog",
+[
+"v0.9g",
+"
+<br/>[Added] - Vehicle stores
+<br/>[Added] - New lootspawner by Na_Palm, stuff in ALL buildings
+<br/>[Added] - New jets and truck added in A3 v1.14
+<br/>[Added] - New AAF vehicles added in A3 v1.08
+<br/>[Added] - New camos for Mk20 and MX in gunstores
+<br/>[Added] - Ability to push plane backwards
+<br/>[Added] - Ability to sell quadbike contents like crates
+<br/>[Added] - Abort delay during combat when player saving on
+<br/>[Changed] - Improved respawn menu
+<br/>[Changed] - Respawn now longer to preload destination
+<br/>[Changed] - Optimized player icons
+<br/>[Changed] - Optimized FPS fix
+<br/>[Changed] - Improved server persistence (requires iniDBI v1.4+)
+<br/>[Changed] - Improved player saving (server-specific)
+<br/>[Changed] - Improved base saving (server-specific)
+<br/>[Changed] - Reduced starting gear
+<br/>[Changed] - Modified some store prices
+<br/>[Changed] - Reduced initial fuel in cars and helis
+<br/>[Changed] - Removed Buzzard jet from too short runways
+<br/>[Changed] - Removed Kavala castle territory for use as base
+<br/>[Changed] - Increased vehicle repair time to 20 sec.
+<br/>[Changed] - Increased owner unlocking time to 10 sec.
+<br/>[Changed] - Toggling spawn beacon perms is now instant
+<br/>[Changed] - Improved Take option for player items
+<br/>[Changed] - Added option to cancel towing selection
+<br/>[Changed] - Added machine gunner to main mission NPCs
+<br/>[Changed] - Added grenadier to side mission NPCs
+<br/>[Fixed] - Error messages in various menus
+<br/>[Fixed] - Crash when toggling spawn beacon perms
+<br/>[Fixed] - Error when hacking warchests
+<br/>[Fixed] - Vehicle towing and lifting positions
+<br/>[Fixed] - Repair Vehicle option showing for brand new vehicles
+<br/>[Fixed] - Vest purchase price
+<br/>[Fixed] - Vest and helmet armor value
+<br/>[Fixed] - NPC leader now has launcher ammo
+"
+]];
+
+player createDiaryRecord ["changelog",
+[
+"v0.9f",
+"
+<br/>[Added] - Money missions
+<br/>[Added] - Sell Crate Items option at stores when moving crate
+<br/>[Changed] - Reorganized loots for crates and trucks
+<br/>[Fixed] - Broken Warchest menu
+<br/>[Fixed] - Spawn beacons not working for Independent groups
+<br/>[Fixed] - Player icons position inside buildings
+<br/>[Fixed] - MRAPs and quadbikes not spawning
+<br/>[Fixed] - Broken money rewards for territories
+"
+]];
+
+player createDiaryRecord ["changelog",
+[
+"v0.9e",
+"
+<br/>[Added] - Territory system
+<br/>[Added] - Jumping option (step over while running)
+<br/>[Added] - New weapons from v1.04 update
+<br/>[Changed] - Water and food now use water bottles and baked beans
+<br/>[Fixed] - Store object purchases not operating as intended
+<br/>[Fixed] - Objects purchased from stores not saving properly
+<br/>[Fixed] - Minor server-side memory leak
+"
+]];
+
+player createDiaryRecord ["changelog",
+[
+"v0.9d",
+"
+<br/>[Added] - Store object purchases
+<br/>[Changed] - New UI by KoS
+"
+]];
+
+player createDiaryRecord ["changelog",
+[
+"v0.9c",
+"
+<br/>[Changed] - Instant money pickup and drop
+<br/>[Changed] - Increased plane and heli spawning odds
+<br/>[Fixed] - FPS fix improvements
+<br/>[Fixed] - Vehicles disappearing when untowed or airdropped
+"
+]];
+
+player createDiaryRecord ["changelog",
+[
+"v0.9b",
+"
+<br/>[Initial release] - Welcome to Altis!
+"
+]];
+
+
 player createDiaryRecord ["credits",
 [
 "Credits",
 "
-<br/><font size='16' color='#BBBBBB'>Fractured Developers for Wasteland:</font>
-<br/>   * Mokey (Lead Developer)
-<br/>	* Ghostyy (Website/A3W Developer)
-<br/>	* Lenymo (A3W Developer)
-<br/>	* Isaac (A3W Developer)
-<br/>
 <br/><font size='16' color='#BBBBBB'>Developed by A3Wasteland.com:</font>
 <br/>	* AgentRev (TeamPlayerGaming)
 <br/>	* JoSchaap (GoT/Tweakers.net)
@@ -197,19 +452,24 @@ player createDiaryRecord ["credits",
 <br/>	* Austerror (GitHub)
 <br/>	* AWA (OpenDayZ)
 <br/>	* bodybag (Gameaholic.se)
+<br/>	* Champ-1 (CHVD)
 <br/>	* code34 (iniDBI)
 <br/>	* Das Attorney (Jump MF)
 <br/>	* Ed! (404Games forums)
 <br/>	* Farooq (GitHub)
+<br/>	* gtoddc (A3W forums)
 <br/>	* HatchetHarry (GitHub)
 <br/>	* Hub (TeamPlayerGaming)
 <br/>	* k4n30 (GitHub)
+<br/>	* Killzone_Kid (KillzoneKid.com)
 <br/>	* Krunch (GitHub)
+<br/>	* LouDnl (GitHub)
 <br/>	* madbull (R3F)
 <br/>	* Mainfrezzer (Magnon)
 <br/>	* meat147 (GitHub)
 <br/>	* micovery (GitHub)
 <br/>	* Na_Palm (BIS forums)
+<br/>	* Outlawled (Armaholic)
 <br/>	* red281gt (GitHub)
 <br/>	* RockHound (BierAG)
 <br/>	* s3kShUn61 (GitHub)
@@ -222,12 +482,54 @@ player createDiaryRecord ["credits",
 <br/>	* spunFIN (BIS forums)
 <br/>	* Tonic (BIS forums)
 <br/>	* wiking.at (A3W forums)
+<br/>	* xx-LSD-xx (Armaholic)
 <br/>	* Zenophon (BIS Forums)
 <br/>
 <br/><font size='16'>Thanks A LOT to everyone involved for the help and inspiration!</font>
 "
 ]];
 
+
+_WASD = AKEYNAME("MoveForward") + "," + AKEYNAME("MoveBack") + "," + AKEYNAME("TurnLeft") + "," + AKEYNAME("TurnRight");
+
+player createDiaryRecord ["infos",
+[
+"Admin Spectate keys",
+"
+<br/>Admin menu Spectate camera controls:
+<br/>
+<br/>Shift + " + AKEYNAME("NextChannel") + " (next player)
+<br/>Shift + " + AKEYNAME("PrevChannel") + " (previous player)
+<br/>Ctrl + " + NKEYNAME(18) + " (exit camera)
+<br/>Ctrl + " + AKEYNAME("Chat") + " (attach/detach camera from target)
+<br/>Ctrl + " + NKEYNAME(35) + " (toggle target HUD)
+<br/>" + AKEYNAME("NightVision") + " (nightvision, thermal)
+<br/>" + _WASD + " (move camera around)
+<br/>" + NKEYNAME(16) + " (move camera up)
+<br/>" + NKEYNAME(44) + " (move camera down)
+<br/>Mouse Move (rotate camera)
+<br/>Mouse Wheel Up (increase camera speed)
+<br/>Mouse Wheel Down (decrease camera speed)
+<br/>Shift + " + _WASD + " (move camera around faster)
+<br/>" + AKEYNAME("ShowMap") + " (open/close map - click on map to teleport camera)
+"
+]];
+
+player createDiaryRecord ["infos",
+[
+"Player hotkeys",
+"
+<br/>List of default player hotkeys:
+<br/>
+<br/>" + NKEYNAME(41) + " (open player menu)
+<br/>" + NKEYNAME(207) + " (toggle earplugs)
+<br/>" + NKEYNAME(199) + ", " + NKEYNAME(219) + ", " + NKEYNAME(220) + " (toggle player names)
+<br/>Ctrl + " + AKEYNAME("GetOut") + " (emergency eject)
+<br/>" + AKEYNAME("GetOver") + " (open parachute)
+<br/>Shift + " + NKEYNAME(201) + " / " + NKEYNAME(209) + " (adjust nightvision)
+<br/>" + NKEYNAME(22) + " (admin menu)
+"
+]];
 
 player createDiaryRecord ["infos",
 [
@@ -251,18 +553,32 @@ player createDiaryRecord ["infos",
 
 player createDiaryRecord ["infos",
 [
-"About Fractured",
+"About Wasteland",
 "
-<br/><font size='16'>Teamspeak and Website</font>
-<br/>Teamspeak 3 IP: ts.fractured-gaming.com
+<br/>Wasteland is a team versus team versus team sandbox survival experience. The objective of this mission is to rally your faction, scavenge supplies, weapons, and vehicles, and destroy the other factions. It is survival at its best! Keep in mind this is a work in progress, please direct your reports to http://forums.a3wasteland.com/
 <br/>
-<br/>Website: http://www.fractured-gaming.com
+<br/>FAQ:
 <br/>
-<br/> If you would like to join please Register and Sign up on our website, use the Join Fractured Link.
-<br/> If you are on our website, use the Join TS Link to join Teamspeak straight from your browser!
+<br/>Q. What am I supposed to do here?
+<br/>A. See the above description
 <br/>
-<br/><font size='16'>Ban Appeal</font>
-<br/> If you would like to appeal a ban please go to our website and use the Ban Appeal Link at the top of our website.
+<br/>Q. Where can I get a gun?
+<br/>A. Weapons are found in one of three places, first in ammo crates that come as rewards from missions, inside and outside buildings, and second, in the gear section of the vehicles, which also randomly spawn around the map. The last place to find a gun would be at the gunshops located throughout the map. You can also find them on dead players whose bodies have not yet been looted.
+<br/>
+<br/>Q. What are the blue circles on the map?
+<br/>A. The circles represent town limits. If friendly soldiers are in a town, you can spawn there from the re-spawn menu; however if there is an enemy presence, you will not be able to spawn there.
+<br/>
+<br/>Q. Why is it so dark, I cant see.
+<br/>A. The server has a day/night cycle just like in the real world, and as such, night time is a factor in your survival. It is recommended that you find sources of light or use your Nightvision Goggles as the darkness sets in.
+<br/>
+<br/>Q. Is it ok for me to shoot my team mates?
+<br/>A. If you are member of BLUFOR or OPFOR teams, then you are NOT allowed to shoot or steal items and vehicles from other players. If you play as Independent, you are free to engage anyone as well as team up with anyone you want.
+<br/>
+<br/>Q. Whats with the canisters, baskets and big bags?
+<br/>A. This game has a food and water system that you must stay on top of if you hope to survive. You can collect food and water from food sacks and wells, or baskets and plastic canisters dropped by dead players. Food and water will also randomly spawn around the map.
+<br/>
+<br/>Q. I saw someone breaking a rule, what do I do?
+<br/>A. Simply go into global chat and get the attention of one of the admins or visit our forums, and make a report if the offense is serious.
 "
 ]];
 
@@ -579,25 +895,24 @@ player createDiaryRecord ["admins",
 <br/> * Lenymo
 <br/> * Ghostyy
 <br/> * OutlawII
-<br/> * WOLFITZ
+<br/> * RequiemAnarchy
 <br/> * GeneralNukes
 
 <br/><font color='#0066FF' size='18'>High Admins</font>
 <br/><font color='#00FFEF' size='12'>Teleport, Spectate, Slay Delete Hacked objects</font>
-<br/> * LoricatusVulpes
-<br/> * GunFighterAlpha
-<br/> * Pitoucc
 <br/> * Greenmold
-<br/> * requiemanarchy
 <br/> * ExaMpLez
-<br/> * Archer
+<br/> * Harry
+<br/> * Downey
+<br/> * StinkySneeze
+<br/> * Doc Whiskey
 
 <br/><font color='#002FFF' size='18'>Low Admins</font>
 <br/><font color='#00FFEF' size='12'>Spectate, Slay, Delete Hacked Objects</font>
-<br/> * Paladin
-<br/> * Harry
+<br/> * Magmalation
 <br/> * Llama
-<br/> * Isaac
+<br/> * Shine_Dwarf
+<br/> * Sugar
 
 "
 ]];

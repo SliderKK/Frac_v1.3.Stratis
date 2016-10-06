@@ -1,17 +1,18 @@
 respawn="BASE";
-respawnDelay=15;
+respawnDelay=3;
 disabledAI=1;
-disableChannels[] = {2}; // {0} to disable global, {2} for command channel
+disableChannels[] = {{0,false,true}, {2,true,true}}; // 0 = global, 1 = side, 2 = command // new syntax: {{channel<number>, disableText<bool>, disableVoice<bool>}, ...};
+// side chat is disabled for indies in client\preInit.sqf
 joinUnassigned = 0;
 enableItemsDropping = 0;
 forceRotorLibSimulation = 0; // if you set this to 1, you deny freedom of choice to the players, which is the very principle this mission is built upon
 weaponPool = 0;
 corpseManagerMode = 1;
-corpseRemovalMinTime = 5*60;
-corpseRemovalMaxTime = 5*60;
+corpseRemovalMinTime = 8*60;
+corpseRemovalMaxTime = 8*60;
 wreckManagerMode = 1;
-wreckRemovalMinTime = 30;
-wreckRemovalMaxTime = 30;
+wreckRemovalMinTime = 10;
+wreckRemovalMaxTime = 10;
 enableDebugConsole = 0;
 respawnDialog = 0; // do not enable this, otherwise the default scoreboard will overlap with the new one
 onPauseScript = "client\clientEvents\onPause.sqf";
@@ -19,15 +20,24 @@ class Header
 {
 	gameType=Sandbox;
 	minPlayers=1;
-	maxPlayers=71; // 144 players, 1 headless client
+	maxPlayers=146; // 144 players, 2 headless clients
 };
-author="Mokey - Fractured-Gaming.com - A3Wasteland.com"; // it would be if you could keep "A3Wasteland.com" in the name, like "YourName and A3Wasteland.com" :)
+author="Mokey - Fractured-Gaming.com - A3Wasteland.com"; // it would be great if you could keep "A3Wasteland.com" in the name, like "YourName and A3Wasteland.com" :)
 onLoadName = "Fractured - A3W Stratis"; // it would be great if you could keep "A3" in the name, like "ABC A3Wasteland" instead of "ABC Wasteland" :)
 onLoadMission = "Wasteland is a harsh survival sandbox where two teams and independent players fight for survival.";
 overviewText = "Wasteland is a harsh survival sandbox where two teams and independent players fight for survival.";
 overviewTextLocked = "Wasteland is a harsh survival sandbox where two teams and independent players fight for survival.";
 overviewPicture = "mapConfig\Loading.jpg";
 loadScreen = "mapConfig\Loading.jpg";
+briefing = 0; // if 0, skip Continue button
+
+#include "debugFlag.hpp"
+
+// A3W UI color (default = sky blue)
+
+#define A3W_UICOLOR_R  0.275 // default = 0.25
+#define A3W_UICOLOR_G  0.322 // default = 0.51
+#define A3W_UICOLOR_B  0.235 // default = 0.96
 
 //Dialog includes
 
@@ -55,11 +65,13 @@ loadScreen = "mapConfig\Loading.jpg";
 #include "client\systems\playerMenu\dialog\respawn_dialog.hpp"
 #include "client\systems\playerMenu\dialog\teamkill_dialog.hpp"
 #include "addons\proving_ground\PG_config.hpp"
-#include "addons\TOParmaInfo\dialog\TOParmaInfo_dialog.hpp"
 #include "addons\beacondetector\sound\cfgsounds.hpp"
 #include "addons\outlw_magrepack\config.hpp"
+#include "addons\gui\gui.hpp"
+#include "addons\parking\list_simple_menu.hpp"
 #include "addons\taw_vd\dialog.hpp"
 #include "addons\laptop\downloadData.hpp"
+#include "addons\TOParmaInfo\dialog\TOParmaInfo_dialog.hpp"
 
 class RscTitles
 {
@@ -68,6 +80,7 @@ class RscTitles
 	#include "client\systems\hud\dialog\hud.hpp"
 	#include "client\systems\playerMenu\dialog\welcome.hpp"
 	#include "client\systems\scoreboard\score_gui.hpp"
+	//#include "addons\far_revive\revive_gui.hpp"
 	#include "addons\statusBar\statusBar.hpp"
 };
 
@@ -86,3 +99,24 @@ class CfgNotifications
 	#include "client\CfgNotifications.hpp"
 };
 
+class CfgRemoteExec // applies only to clients
+{
+	class Functions
+	{
+		#ifndef A3W_DEBUG
+		mode = 1; // 0 = block all, 1 = whitelist, 2 = allow all
+		#else
+		mode = 2; // debug mode, don't touch
+		#endif
+
+		#include "client\CfgRemoteExec_fnc.hpp"
+	};
+	class Commands
+	{
+		#ifndef A3W_DEBUG
+		mode = 1; // 0 = block all, 1 = whitelist, 2 = allow all
+		#else
+		mode = 2; // debug mode, don't touch
+		#endif
+	};
+};

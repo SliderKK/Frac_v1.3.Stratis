@@ -1,4 +1,4 @@
- // ******************************************************************************************
+// ******************************************************************************************
 // * This project is licensed under the GNU Affero GPL v3. Copyright © 2014 A3Wasteland.com *
 // ******************************************************************************************
 //	@file Version: 1.0
@@ -18,11 +18,13 @@ if ([_uid, 2] call isAdmin) then {
 	_displayAdmin = uiNamespace getVariable "AdminMenu";
 	_adminSelect = _displayAdmin displayCtrl adminMenu_option;
 
-	_panelOptions = ["Player Management",
+	_panelOptions = [
+					"Player Management",
 					"Vehicle Management",
 					"Map Markers Log",
-					"Unstuck Player",
-					"Teleport"
+					"Group Leader Markers",
+					"Teleport",
+					"Unstuck Player"
 	];
 
 	{

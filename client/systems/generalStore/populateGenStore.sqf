@@ -97,15 +97,16 @@ _playerSideNum = switch (playerSide) do
 {
 	_weaponClass = _x select 1;
 
-	switch (true) do
+	_parentCfg = switch (true) do
 	{
-		case (isClass (configFile >> "CfgVehicles" >> _weaponClass)):  { _parentCfg = configFile >> "CfgVehicles" };
-		case (isClass (configFile >> "CfgWeapons" >> _weaponClass)):   { _parentCfg = configFile >> "CfgWeapons" };
-		case (isClass (configFile >> "CfgMagazines" >> _weaponClass)): { _parentCfg = configFile >> "CfgMagazines" };
-		case (isClass (configFile >> "CfgGlasses" >> _weaponClass)):   { _parentCfg = configFile >> "CfgGlasses" };
+		case (isClass (configFile >> "CfgVehicles" >> _weaponClass)):  { configFile >> "CfgVehicles" };
+		case (isClass (configFile >> "CfgWeapons" >> _weaponClass)):   { configFile >> "CfgWeapons" };
+		case (isClass (configFile >> "CfgMagazines" >> _weaponClass)): { configFile >> "CfgMagazines" };
+		case (isClass (configFile >> "CfgGlasses" >> _weaponClass)):   { configFile >> "CfgGlasses" };
+		default { nil };
 	};
 
-	_showItem = true;
+	_showItem = !("HIDDEN" in (_x select [3,999]));
 
 	// Side-based filtering
 	if (!isNil "_parentCfg") then
@@ -114,6 +115,8 @@ _playerSideNum = switch (playerSide) do
 		{
 			case "CfgVehicles":
 			{
+				if ({_weaponClass isKindOf _x} count ["B_Static_Designator_01_weapon_F","O_Static_Designator_02_weapon_F"] > 0) exitWith {}; // allow everyone to buy all static designators
+
 				{
 					_sideCfg = call _x;
 
@@ -142,7 +145,8 @@ _playerSideNum = switch (playerSide) do
 				{
 					case (_isUniform):
 					{
-						if !(player isUniformAllowed _weaponClass) then
+						if !(player isUniformAllowed _weaponClass || // indie exception for NATO jungle ghillie & thermal suit due to BIS not giving a damn
+						     (playerSide == INDEPENDENT && {{_weaponClass == _x} count ["U_B_CTRG_Soldier_F","U_B_T_FullGhillie_tna_F"] > 0})) then
 						{
 							_showItem = false;
 						};
@@ -165,7 +169,7 @@ _playerSideNum = switch (playerSide) do
 
 	if !(_side isEqualType "") then { _side = "" };
 
-	if !(_side in [str playerSide, ""]) then
+	if (!(_side in [str playerSide, ""]) && _side in ["WEST","EAST","GUER","CIV"]) then
 	{
 		_showItem = false;
 	};
@@ -196,6 +200,8 @@ _playerSideNum = switch (playerSide) do
 			{
 				_itemlist lbSetPicture [_listIndex, _picture];
 			};
+
+			[_x, _parentCfg, _itemlist, _listIndex] call fn_checkStoreItemDLC;
 		};
 
 		_itemlist lbSetData [_listIndex, _weaponClass];

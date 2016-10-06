@@ -37,7 +37,7 @@ _player addWeapon "hgun_ACPC2_F"; //Handgun
 
 _player addMagazines ["30Rnd_9x21_Mag", 3]; //Add primary weapon magazines first so one gets loaded
 _player addWeapon "SMG_02_F"; //Primary Weapon
-//_player addPrimaryWeaponItem ""; //Primary Weapon Attachments
+_player addPrimaryWeaponItem "optic_Holosight_smg"; //Primary Weapon Attachments
 //_player addPrimaryWeaponItem ""; //Primary Weapon Attachments
 //_player addPrimaryWeaponItem ""; //Primary Weapon Attachments
 
@@ -56,11 +56,12 @@ switch (true) do
 	case (["_engineer_", typeOf _player] call fn_findString != -1):
 	{
 		_player addItem "ToolKit";
+		_Player addItem "MineDetector";
 		_player removeItem "";
 	};
 	case (["_sniper_", typeOf _player] call fn_findString != -1):
 	{
-		_player addWeapon "Binocular"; 
+		_player addWeapon "Rangefinder"; 
 		_player removeItem "";
 	};
 		case (["_diver_", typeOf _player] call fn_findString != -1):

@@ -1,4 +1,4 @@
-﻿// ******************************************************************************************
+// ******************************************************************************************
 // * This project is licensed under the GNU Affero GPL v3. Copyright © 2014 A3Wasteland.com *
 // ******************************************************************************************
 //	@file Version: 1.0
@@ -10,7 +10,6 @@
 // For SERVER CONFIG, values are in server\init.sqf
 
 // Towns and cities array
-// Marker Name, Diameter, City Name
 cityList = compileFinal preprocessFileLineNumbers "mapConfig\towns.sqf";
 
 config_items_jerrycans_max = compileFinal "1";
@@ -31,6 +30,6 @@ config_refuel_amounts = compileFinal str
 // config_player_saving_enabled = compileFinal "0";
 
 // How much do players spawn with?
-// config_initial_spawn_money = compileFinal "5000";
+// config_initial_spawn_money = compileFinal "100";
 
 config_territory_markers = compileFinal preprocessFileLineNumbers "mapConfig\territories.sqf";

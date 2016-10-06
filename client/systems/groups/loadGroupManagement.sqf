@@ -70,8 +70,6 @@ while{groupManagmentActive} do
 		_groupDisband ctrlShow false;
 		_groupLeaveButton ctrlShow false;
 	};
-	
-
 
 	//Sort Invite Controls
 	if(_hasInvite) then

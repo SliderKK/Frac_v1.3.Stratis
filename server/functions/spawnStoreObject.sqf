@@ -25,7 +25,8 @@ if (_key != "" && isPlayer _player && {_isGenStore || _isGunStore || _isVehStore
 {
 	_timeoutKey = _key + "_timeout";
 	_objectID = "";
-	_playerSide = side group _player;
+	private _playerGroup = group _player;
+	_playerSide = side _playerGroup;
 
 	if (_isGenStore || _isGunStore) then
 	{
@@ -98,9 +99,10 @@ if (_key != "" && isPlayer _player && {_isGenStore || _isGunStore || _isVehStore
 		};
 	};
 
-	if (!isNil "_itemEntry" && {{_x == _marker} count allMapMarkers > 0}) then
+	if (!isNil "_itemEntry" && markerShape _marker != "") then
 	{
 		_itemPrice = _itemEntry select 2;
+		_skipSave = "SKIPSAVE" in (_itemEntry select [3,999]);
 
 		/*if (_class isKindOf "Box_NATO_Ammo_F") then
 		{
@@ -129,26 +131,39 @@ if (_key != "" && isPlayer _player && {_isGenStore || _isGunStore || _isVehStore
 			_objectID = netId _object;
 			_object setVariable ["A3W_purchasedStoreObject", true];
 			_object setVariable ["ownerUID", getPlayerUID _player, true];
-			_object lock 2;
+			_object setVariable ["ownerName", name _player, true];
 
-			if (getNumber (configFile >> "CfgVehicles" >> _class >> "isUav") > 0) then
+			private _isUAV = (round getNumber (configFile >> "CfgVehicles" >> _class >> "isUav") > 0);
+
+			if (_isUAV) then
 			{
 				//assign AI to the vehicle so it can actually be used
 				createVehicleCrew _object;
 
-				[_object, _playerSide] spawn
+				[_object, _playerSide, _playerGroup] spawn
 				{
-					_veh = _this select 0;
-					_side = _this select 1;
+					params ["_uav", "_playerSide", "_playerGroup"];
+					private "_grp";
 
-					waitUntil {!isNull driver _veh};
+					waitUntil {_grp = group _uav; !isNull _grp};
 
 					//assign AI to player's side to allow terminal connection
-					(crew _veh) joinSilent createGroup _side;
+					if (side _uav != _playerSide) then
+					{
+						_grp = createGroup _playerSide;
+						(crew _uav) joinSilent _grp;
+					};
+
+					_grp setCombatMode "BLUE"; // hold fire
+
+					if (isNull (_uav getVariable ["ownerGroupUAV", grpNull])) then
+					{
+						_uav setVariable ["ownerGroupUAV", _playerGroup, true]; // not currently used
+					};
 
 					{
-						[[_x, ["AI","",""]], "A3W_fnc_setName", true] call A3W_fnc_MP;
-					} forEach crew _veh;
+						[_x, ["UAV","",""]] remoteExec ["A3W_fnc_setName", 0, _x];
+					} forEach crew _uav;
 				};
 			};
 
@@ -168,17 +183,25 @@ if (_key != "" && isPlayer _player && {_isGenStore || _isGunStore || _isVehStore
 				_object setVelocity [0,0,0.01];
 				// _object spawn cleanVehicleWreck;
 				_object setVariable ["A3W_purchasedVehicle", true, true];
+
+				if (["A3W_vehicleLocking"] call isConfigOn && !_isUAV) then
+				{
+					[_object, 2] call A3W_fnc_setLockState; // Lock
+				};
 			};
 
 			_object setDir (if (_object isKindOf "Plane") then { markerDir _marker } else { random 360 });
 
 			_isDamageable = !(_object isKindOf "ReammoBox_F"); // ({_object isKindOf _x} count ["AllVehicles", "Lamps_base_F", "Cargo_Patrol_base_F", "Cargo_Tower_base_F"] > 0);
 
-			[_object, false] call vehicleSetup;
+			[_object] call vehicleSetup;
 			_object allowDamage _isDamageable;
-			_object setVariable ["allowDamage", _isDamageable];
+			_object setVariable ["allowDamage", _isDamageable, true];
 
-			switch (true) do
+			clearBackpackCargoGlobal _object;
+
+			// don't need this anymore at all
+			/*switch (true) do
 			{
 				case ({_object isKindOf _x} count ["Box_NATO_AmmoVeh_F", "Box_East_AmmoVeh_F", "Box_IND_AmmoVeh_F"] > 0):
 				{
@@ -219,11 +242,30 @@ if (_key != "" && isPlayer _player && {_isGenStore || _isGunStore || _isVehStore
 				{
 					_object setRepairCargo 25;
 				};
+			};*/
+
+			if (_skipSave) then
+			{
+				_object setVariable ["A3W_skipAutoSave", true, true];
+			}
+			else
+			{
+				if (_object getVariable ["A3W_purchasedVehicle", false] && !isNil "fn_manualVehicleSave") then
+				{
+					_object call fn_manualVehicleSave;
+				};
 			};
 
-			if (_object getVariable ["A3W_purchasedVehicle", false] && !isNil "fn_manualVehicleSave") then
+			if (_object isKindOf "AllVehicles") then
 			{
-				_object call fn_manualVehicleSave;
+				if (isNull group _object) then
+				{
+					_object setOwner owner _player; // tentative workaround for exploding vehicles
+				}
+				else
+				{
+					(group _object) setGroupOwner owner _player;
+				};
 			};
 		};
 	};

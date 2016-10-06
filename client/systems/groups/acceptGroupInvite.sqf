@@ -44,15 +44,6 @@ if (!isNil "_sender" && {side _newGroup == playerSide}) then
 
 	_newGroup setVariable ["currentTerritories", _newTerritories, true];
 
-	//New Group limit Case Added (Starts line 48)****************************
-	if((count units group _sender) > 5) then
-	{
-		pvar_processGroupInvite = ["decline", _senderUID, _playerUID];
-		publicVariableServer "pvar_processGroupInvite";
-		player globalChat "Group sizes currently set to 6 per squad";
-	};
-	// Finish group size limit ********************************
-	
 	if (_newGroup == group _sender) then
 	{
 		pvar_processGroupInvite = ["accept", _playerUID];
