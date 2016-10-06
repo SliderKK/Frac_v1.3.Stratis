@@ -102,7 +102,7 @@ if (hasInterface || isServer) then
 	if (isNil "drn_DynamicWeather_MainThread") then { drn_DynamicWeather_MainThread = [] execVM "addons\scripts\DynamicWeatherEffects.sqf" };
 	[] execVM "addons\scripts\servercredits.sqf"; //Intro Credits
 	[] execVM "addons\HvT\HvT.sqf"; // High Value Target
-	[] execVM "addons\HvT\HvD.sqf"; // High Value Drugs
+	//[] execVM "addons\HvT\HvD.sqf"; // High Value Drugs
 	[] execVM "addons\zlt_fastrope\zlt_fastrope.sqf";     // Fastrope
 	[] execVM "addons\disableThermal\disablethermal.sqf";
 	[] execVM "addons\laptop\init.sqf";
