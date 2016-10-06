@@ -34,17 +34,13 @@ while { true } do
 			{
 				if (alive _unit && !isPlayer _unit && {getText (configFile >> "CfgVehicles" >> typeOf _unit >> "simulation") != "UAVPilot"}) then
 				{
-					_clientPlayer = [owner _unit] call findClientPlayer;
-
-					if (getText (configFile >> "CfgVehicles" >> typeOf _clientPlayer >> "simulation") == "headlessclient") exitWith {};
-
-					/*if (isNil "_cheatFlag") then
+					if (isNil "_cheatFlag") then
 					{
 						_cheatFlag = [];
 					};
 
-					_cheatFlag pushBack ["hacked unit", typeOf _unit, _clientPlayer];*/
-					
+					_cheatFlag pushBack ["hacked unit", typeOf _unit, [owner _unit] call findClientPlayer];
+
 					for [{_i = 0}, {_i < 10 && vehicle _unit != _unit}, {_i = _i + 1}] do
 					{
 						moveOut _unit;
@@ -54,7 +50,7 @@ while { true } do
 					deleteVehicle _unit;
 				};
 			};
-		} forEach (allUnits - allPlayers);
+		} forEach (allUnits - playableUnits);
 	};
 
 	if (!isNil "_cheatFlag") then
