@@ -23,24 +23,23 @@ class VehicleManagement {
 
 	class controlsBackground {
 
-		class MainBackground: w_RscPicture
+		class MainBackground: IGUIBack
 		{
 			idc = -1;
 			colorText[] = {1, 1, 1, 1};
-			colorBackground[] = {0,0,0,0};
-			text = "#(argb,8,8,3)color(0,0,0,0.6)";
+			colorBackground[] = {0,0,0,0.6};
+
 			x = 0.295 * safezoneW + safezoneX;
 			y = 0.228 * safezoneH + safezoneY;
 			w = 0.35 * safezoneW;
 			h = 0.543 * safezoneH;
 		};
 
-		class TopBar: w_RscPicture
+		class TopBar: IGUIBack
 		{
 			idc = -1;
 			colorText[] = {1, 1, 1, 1};
-			colorBackground[] = {0,0,0,0};
-			text = "#(argb,8,8,3)color(0.275,0.322,0.235,0.8)";
+			colorBackground[] = {A3W_UICOLOR_R, A3W_UICOLOR_G, A3W_UICOLOR_B, 0.8};
 
 			x = 0.295 * safezoneW + safezoneX;
 			y = 0.228 * safezoneH + safezoneY;
@@ -120,7 +119,7 @@ class VehicleManagement {
 		class vehicleListBox: w_RscList
 		{
 			idc = vehicleManagementListBox;
-			onLBSelChanged="[1,_this select 1] execVM ""client\systems\adminPanel\importvalues.sqf"";";
+			onLBSelChanged = "[1,_this select 1] 'execVM client\systems\adminPanel\importvalues.sqf'";
 			x = 0.305 * safezoneW + safezoneX;
 			y = 0.324 * safezoneH + safezoneY;
 			w = 0.32875 * safezoneW;

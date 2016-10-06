@@ -12,7 +12,7 @@
 
 disableSerialization;
 
-private ["_switch","_vehicleType","_vehicleSummary","_vehicle","_selectedItem","_selectedItemData"];
+private ["_switch","_vehicleType","_vehicleSummary","_vehicle","_selectedItem","_selectedItemText","_selectedItemData"];
 _uid = getPlayerUID player;
 if (_uid call isAdmin) then
 {
