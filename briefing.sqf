@@ -23,6 +23,9 @@ player createDiaryRecord ["changelog",
 [
 "FRACTURED Logs",
 "
+<br/>[CHANGE] Lowered Chances of Optics in Mission Crates.
+<br/>[ADDED] Night Stalker, TWS, TWS MG to Mission Crates.
+<br/>[FIX] All vest now sell for 50% of value.
 <br/>[CHANGE] Increased Sunken Treasure Mission Reward Amount.
 <br/>[CHANGE] Balanced Tank and Launcher Prices.
 <br/>[CHANGE] Raised Money Shipment Reward Amounts.
