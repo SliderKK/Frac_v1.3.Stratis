@@ -129,7 +129,7 @@ class Mission
 	randomSeed=14957468;
 	class Intel
 	{
-		briefingName="FRACTURED-GAMING Stratis";
+		briefingName="A3Wasteland Stratis FRAC_v1.3";
 		overviewText="Wasteland survival sandbox by Team Wasteland - visit A3Wasteland.com for more details";
 		resistanceWest=0;
 		timeOfChanges=3e+038;
