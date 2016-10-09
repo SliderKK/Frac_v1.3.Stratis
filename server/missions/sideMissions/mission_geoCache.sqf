@@ -21,7 +21,7 @@ _setupObjects =
 {
 	_missionPos = markerPos _missionLocation;
 	_geoPos = _missionPos vectorAdd ([[25 + random 20, 0, 0], random 360] call BIS_fnc_rotateVector2D);	
-	_geoCache = createVehicle ["Land_SatellitePhone_F",[(_geoPos select 0), (_geoPos select 1),0],[], 0, "NONE"];
+	_geoCache = createVehicle ["Land_SurvivalRadio_F",[(_geoPos select 0), (_geoPos select 1),0],[], 0, "NONE"];
 
 	_missionHintText = "a GeoCache has been marked on the map. There is a small object hidden near the marker. Find it and a reward will be delivered by air!";
 };
@@ -43,11 +43,12 @@ _successExec =
 	// Mission completed
 	{ deleteVehicle _x } forEach [_GeoCache];
 	
+	_randomBox = ["mission_USLaunchers","mission_USSpecial","mission_Main_A3snipers"] call BIS_fnc_selectRandom;
 	_randomCase = ["Box_FIA_Support_F","Box_FIA_Wps_F","Box_FIA_Ammo_F"] call BIS_fnc_selectRandom;
 	
 	_box1 = createVehicle [_randomCase,[(_geoPos select 0), (_geoPos select 1),200],[], 0, "NONE"];
 	_box1 setDir random 360;
-	_box1 call randomCrateLoadOut;
+	[_box1, _randomBox] call fn_refillbox;
 	{ _x setVariable ["R3F_LOG_disabled", false, true] } forEach [_box1];
 
 	playSound3D ["A3\data_f_curator\sound\cfgsounds\air_raid.wss", _box1, false, _box1, 15, 1, 1500];

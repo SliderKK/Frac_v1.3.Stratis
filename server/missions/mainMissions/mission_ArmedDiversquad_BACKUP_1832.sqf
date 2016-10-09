@@ -26,7 +26,11 @@ _setupObjects =
 
 	_box2 = createVehicle ["Box_NATO_WpsSpecial_F", _missionPos, [], 5, "None"];
 	_box2 setDir random 360;
+<<<<<<< HEAD
+	[_box2, call randomCrateLoadOut]
+=======
 	[_box2, "mission_USSpecial2"] call fn_refillbox;
+>>>>>>> parent of afbab4f... Randomize all Items in Crates
 
 	{
 		_boxPos = getPosASL _x;

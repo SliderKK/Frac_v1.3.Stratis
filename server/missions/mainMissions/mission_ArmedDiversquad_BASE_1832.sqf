@@ -22,11 +22,11 @@ _setupObjects =
 
 	_box1 = createVehicle ["Box_IND_WpsSpecial_F", _missionPos, [], 5, "None"];
 	_box1 setDir random 360;
-	[_box1, "mission_Main_A3snipers"] call fn_refillbox;
+	_box1 call randomCrateLoadOut;
 
 	_box2 = createVehicle ["Box_NATO_WpsSpecial_F", _missionPos, [], 5, "None"];
 	_box2 setDir random 360;
-	[_box2, "mission_USSpecial2"] call fn_refillbox;
+	[_box2 call randomCrateLoadOut;
 
 	{
 		_boxPos = getPosASL _x;
