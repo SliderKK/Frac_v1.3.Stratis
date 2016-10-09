@@ -20,9 +20,6 @@ MoneyMissions = [MoneyMissions, [["A3W_underWaterMissions", ["mission_SunkenTrea
 { _x set [2, false] } forEach SideMissions;
 { _x set [2, false] } forEach MoneyMissions;
 
-_mapMarkerIntercept = [] execVM "server\functions\mapMarkerIntercept.sqf";
-waitUntil {scriptDone _mapMarkerIntercept};
-
 MissionSpawnMarkers = [];
 SunkenMissionMarkers = [];
 RoadblockMissionMarkers =[];
