@@ -21,14 +21,14 @@ _veh = createVehicle [_class, _pos, [], 0, _special];
 
 [_veh] call vehicleSetup;
 
-_veh setPosATL [_pos select 0, _pos select 1, 0.1];
+_veh setPosATL [_pos select 0, _pos select 1, 0.5];
 _veh setVelocity [0,0,0.01];
 
 if (_fuel != 1) then { _veh setFuel _fuel };
 if (_ammo != 1) then { _veh setVehicleAmmo _ammo };
 _veh setDamage _damage;
 
-[_veh, 2] call A3W_fnc_setLockState; // Lock
-_veh setVariable ["A3W_lockpickDisabled", true, true];
+_veh lock 2;
+_veh setVariable ["R3F_LOG_disabled", true, true];
 
 _veh
