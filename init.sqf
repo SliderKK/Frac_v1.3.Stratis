@@ -90,8 +90,6 @@ if (isServer) then
 if (hasInterface || isServer) then
 {
 	//init 3rd Party Scripts
-	if (isServer) then {call compile preprocessFile "mapconfig\structures\initBuildings.sqf";}; //GID Structures
-	if (isNil "drn_DynamicWeather_MainThread") then { drn_DynamicWeather_MainThread = [] execVM "addons\scripts\DynamicWeatherEffects.sqf" };
 	[] execVM "addons\parking\functions.sqf";
 	[] execVM "addons\storage\functions.sqf";
 	[] execVM "addons\vactions\functions.sqf";
@@ -101,6 +99,7 @@ if (hasInterface || isServer) then
 	[] execVM "addons\outlw_magrepack\MagRepack_init.sqf";
 	[] execVM "addons\lsd_nvg\init.sqf";
 	[] execVM "addons\stickyCharges\init.sqf";
+	if (isNil "drn_DynamicWeather_MainThread") then { drn_DynamicWeather_MainThread = [] execVM "addons\scripts\DynamicWeatherEffects.sqf" };
 	[] execVM "addons\scripts\servercredits.sqf"; //Intro Credits
 	[] execVM "addons\HvT\HvT.sqf"; // High Value Target
 	//[] execVM "addons\HvT\HvD.sqf"; // High Value Drugs
@@ -108,7 +107,7 @@ if (hasInterface || isServer) then
 	[] execVM "addons\disableThermal\disablethermal.sqf";
 	[] execVM "addons\laptop\init.sqf";
 	[] execVM "addons\Grenades\initGrenades.sqf"; // Toxic Gas Grenades
-	[] ExecVM "addons\cleanStores\cleanStores.sqf";
+	if (isServer) then {call compile preprocessFile "mapconfig\structures\initBuildings.sqf";}; //GID Structures
 	
 };
 
