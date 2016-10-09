@@ -23,6 +23,8 @@ player createDiaryRecord ["changelog",
 [
 "FRACTURED Logs",
 "
+<br/>[Changed] Loot is now Randomized in Most Mission Crates
+<br/>[Fixed] Most Missions
 <br/>[Changed] NPCs now drop cash
 <br/>[Changed] Status bar
 <br/>[Removed] Some missions due to insta-popping
