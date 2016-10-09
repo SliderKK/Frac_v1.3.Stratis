@@ -26,7 +26,7 @@ _setupObjects =
 
 	_box2 = createVehicle ["Box_NATO_WpsSpecial_F", _missionPos, [], 5, "None"];
 	_box2 setDir random 360;
-	[_box2 call randomCrateLoadOut;
+	[_box2, call randomCrateLoadOut]
 
 	{
 		_boxPos = getPosASL _x;
