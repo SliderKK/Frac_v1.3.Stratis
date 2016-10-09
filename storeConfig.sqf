@@ -146,20 +146,20 @@ lmgArray = compileFinal str
 
 launcherArray = compileFinal str
 [
-	["RPG-7", "launch_RPG7_F", 1000],
-	["RPG-42 Alamut", "launch_RPG32_F", 1000],
-	["RPG-42 Alamut (G Hex)", "launch_RPG32_ghex_F", 1000, "noDLC"],
-	["PCML", "launch_NLAW_F", 1200],
-	["Titan MPRL Compact (Sand)", "launch_Titan_short_F", 2000],
-	["Titan MPRL Compact (Coyote)", "launch_O_Titan_short_F", 2000],
-	["Titan MPRL Compact (Olive)", "launch_I_Titan_short_F", 2000],
-	["Titan MPRL Compact (Tropic)", "launch_B_Titan_short_tna_F", 2000, "noDLC"],
-	["Titan MPRL Compact (G Hex)", "launch_O_Titan_short_ghex_F", 2000, "noDLC"],
-	["Titan MPRL AA (Sand)", "launch_Titan_F", 2000],
-	["Titan MPRL AA (Hex)", "launch_O_Titan_F", 2000],
-	["Titan MPRL AA (Digi)", "launch_I_Titan_F", 2000],
-	["Titan MPRL AA (Tropic)", "launch_B_Titan_tna_F", 2000, "noDLC"],
-	["Titan MPRL AA (G Hex)", "launch_O_Titan_ghex_F", 2000, "noDLC"]
+	["RPG-7", "launch_RPG7_F", 750],
+	["RPG-42 Alamut", "launch_RPG32_F", 800],
+	["RPG-42 Alamut (G Hex)", "launch_RPG32_ghex_F", 800, "noDLC"],
+	["PCML", "launch_NLAW_F", 850],
+	["Titan MPRL Compact (Sand)", "launch_Titan_short_F", 1000],
+	["Titan MPRL Compact (Coyote)", "launch_O_Titan_short_F", 1000],
+	["Titan MPRL Compact (Olive)", "launch_I_Titan_short_F", 1000],
+	["Titan MPRL Compact (Tropic)", "launch_B_Titan_short_tna_F", 1000, "noDLC"],
+	["Titan MPRL Compact (G Hex)", "launch_O_Titan_short_ghex_F", 1000, "noDLC"],
+	["Titan MPRL AA (Sand)", "launch_Titan_F", 1000],
+	["Titan MPRL AA (Hex)", "launch_O_Titan_F", 1000],
+	["Titan MPRL AA (Digi)", "launch_I_Titan_F", 1000],
+	["Titan MPRL AA (Tropic)", "launch_B_Titan_tna_F", 1000, "noDLC"],
+	["Titan MPRL AA (G Hex)", "launch_O_Titan_ghex_F", 1000, "noDLC"]
 ];
 
 allGunStoreFirearms = compileFinal str (call pistolArray + call smgArray + call rifleArray + call lmgArray + call launcherArray);
