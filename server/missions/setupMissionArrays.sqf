@@ -6,6 +6,64 @@
 
 if (!isServer) exitWith {};
 
+MainMissions = MainMissions;
+
+SideMissions = SideMissions;
+
+MoneyMissions = MoneyMissions;
+
+MainMissions = [MainMissions, [["A3W_heliPatrolMissions", ["mission_Coastal_Convoy", "mission_HostileHeliFormation", "mission_HostileJetFormation"]], ["A3W_underWaterMissions", ["mission_ArmedDiversquad"]]]] call removeDisabledMissions;
+SideMissions = [SideMissions, [["A3W_heliPatrolMissions", ["mission_HostileHelicopter", "mission_HostileJet"]], ["A3W_underWaterMissions", ["mission_SunkenSupplies"]]]] call removeDisabledMissions;
+MoneyMissions = [MoneyMissions, [["A3W_underWaterMissions", ["mission_SunkenTreasure"]]]] call removeDisabledMissions;
+
+{ _x set [2, false] } forEach MainMissions;
+{ _x set [2, false] } forEach SideMissions;
+{ _x set [2, false] } forEach MoneyMissions;
+
+MissionSpawnMarkers = [];
+SunkenMissionMarkers = [];
+RoadblockMissionMarkers =[];
+SniperMissionMarkers =[];
+{
+	switch (true) do
+	{
+		case (["Mission_", _x] call fn_startsWith):
+		{
+			MissionSpawnMarkers pushBack [_x, false];
+		};
+		case (["SunkenMission_", _x] call fn_startsWith):
+		{
+			SunkenMissionMarkers pushBack [_x, false];
+		};
+		case (["RoadBlock_", _x] call fn_startsWith):
+		{
+			RoadblockMissionMarkers pushBack [_x, false];
+		};
+		case (["Sniper_", _x] call fn_startsWith):
+		{
+			SniperMissionMarkers pushBack [_x, false];
+		};
+	};
+} forEach allMapMarkers;
+
+LandConvoyPaths = [];
+{
+	LandConvoyPaths pushBack [_x, false];
+} forEach (call compile preprocessFileLineNumbers "mapConfig\convoys\landConvoysList.sqf");
+
+CoastalConvoyPaths = [];
+{
+	CoastalConvoyPaths pushBack [_x, false];
+} forEach (call compile preprocessFileLineNumbers "mapConfig\convoys\coastalConvoysList.sqf");
+
+PatrolConvoyPaths = [];
+{
+	PatrolConvoyPaths pushBack [_x, false];
+} forEach (call compile preprocessFileLineNumbers "mapConfig\convoys\patrolConvoysList.sqf");
+
+//-------------------------------------------------------OLD MISSION ARRAYS-------------------------------------------------------//
+/* if (!isServer) exitWith {};
+
 MainMissions =
 [
 	// Mission filename, weight
@@ -62,8 +120,8 @@ if !(ForestMissionMarkers isEqualTo []) then
 LandConvoyPaths = (call compile preprocessFileLineNumbers "mapConfig\convoys\landConvoysList.sqf") apply {[_x, false]};
 CoastalConvoyPaths = (call compile preprocessFileLineNumbers "mapConfig\convoys\coastalConvoysList.sqf") apply {[_x, false]};
 
-MainMissions = [MainMissions, [["A3W_heliPatrolMissions", ["mission_Coastal_Convoy", "mission_HostileHeliFormation"]], ["A3W_underWaterMissions", ["mission_ArmedDiversquad"]]]] call removeDisabledMissions;
-SideMissions = [SideMissions, [["A3W_heliPatrolMissions", ["mission_HostileHelicopter"]], ["A3W_underWaterMissions", ["mission_SunkenSupplies"]]]] call removeDisabledMissions;
+MainMissions = [MainMissions, [["A3W_heliPatrolMissions", ["mission_Coastal_Convoy", "mission_HostileHeliFormation", "mission_HostileJetFormation"]], ["A3W_underWaterMissions", ["mission_ArmedDiversquad"]]]] call removeDisabledMissions;
+SideMissions = [SideMissions, [["A3W_heliPatrolMissions", ["mission_HostileHelicopter", "mission_HostileJet"]], ["A3W_underWaterMissions", ["mission_SunkenSupplies"]]]] call removeDisabledMissions;
 MoneyMissions = [MoneyMissions, [["A3W_underWaterMissions", ["mission_SunkenTreasure"]]]] call removeDisabledMissions;
 
 { _x set [2, false] } forEach MainMissions;
