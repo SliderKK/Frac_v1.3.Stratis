@@ -49,7 +49,6 @@ _setupObjects =
 
 		_vehicle = createVehicle [_type, _position, [], 0, "None"];
 		_vehicle setVariable ["R3F_LOG_disabled", true, true];
-		_vehicle setVariable ["A3W_skipAutoSave", true, true];
 		[_vehicle] call vehicleSetup;
 
 		_vehicle setDir _direction;
@@ -137,6 +136,8 @@ _successExec =
 	_box2 = createVehicle ["Box_East_WpsSpecial_F", _lastPos, [], 2, "None"];
 	_box2 setDir random 360;
 	[_box2, "mission_USLaunchers"] call fn_refillbox;
+	
+	{ _x setVariable ["R3F_LOG_disabled", false, true] } forEach [_box1, _box2];
 
 	_successHintMessage = "The convoy has been stopped, the weapon crates and vehicles are now yours to take.";
 };
