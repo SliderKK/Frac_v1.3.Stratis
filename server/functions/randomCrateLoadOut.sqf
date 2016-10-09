@@ -526,12 +526,12 @@ _optics =
 	"optic_LRPS_tna_F", // LRPS (Tropic) OPTIC"
 	"optic_MRCO", // MRCO OPTIC"
 	"optic_MRD", // MRD OPTIC"
-	//"optic_Nightstalker", // Nightstalker OPTIC"
+	"optic_Nightstalker", // Nightstalker OPTIC"
 	"optic_NVS", // NVS OPTIC"
 	"optic_SOS", // MOS OPTIC"
 	"optic_SOS_khk_F", // MOS (Khaki) OPTIC"
 	"optic_tws", // TWS OPTIC"
-	//"optic_tws_mg", // TWS MG OPTIC"
+	"optic_tws_mg", // TWS MG OPTIC"
 	"optic_Yorris" // Yorris J2 OPTIC"
 ];
 
@@ -1040,7 +1040,7 @@ _launcherAmount = floor (round (random 3) + 2); // minimum 2, maximum 5
 _magazineAmount = floor (round (random 5) + 5); // minimum 5, maximum 10
 _throwableAmount = floor (round (random 3) + 3); // minimum 3, maximum 6
 _muzzleAmount = floor (round (random 2) + 2); // minimum 2, maximum 4
-_opticAmount = floor (round (random 4) + 5); // minimum 5, maximum 9
+_opticAmount = floor (round (random 3) + 2); // minimum 2, maximum 5
 _primaryWeaponAmount = floor (round (random 5) + 5); // minimum 5, maximum 10
 _secondaryWeaponAmount = floor (round (random 3) + 2); // minimum 2, maximum 5
 _uniformAmount = floor (round (random 4) + 3); // minimum 3, maximum 7
