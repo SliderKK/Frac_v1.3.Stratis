@@ -36,7 +36,6 @@ player createDiaryRecord ["changelog",
 <br/>[FIXED] Gear going missing or spawning naked WILL not happen anymore!!!!!!!
 <br/>[Changed] Unstuck player function only throws players in the air for the ground height plus 20 meters so that they cannot abuse this as a relocate tactic.
 <br/>[Fixed] Gearlevel 0 or defult spawn is fixed
-<br/>[INFO] Laser designators will not have thermals until AgentRev FIXES his code on the matter, as of right now we CANNOT true thermals on because the code will not allow it.
 <br/>[FIXED] Double tap works
 <br/>[ADDED] Gearlevels on map again after 1.3 update
 <br/>[FIXED] UAV's will no longer being able to use thermals what so ever not even for a small ammount of time because it kills off instantly now.
