@@ -37,7 +37,7 @@ _setupObjects =
 	_currBox1 = _boxes1 call BIS_fnc_selectRandom;
 	_randomBox = ["mission_USLaunchers","mission_USSpecial","mission_Main_A3snipers"] call BIS_fnc_selectRandom;
 	_box1 = createVehicle [_currBox1,[(_missionPos select 0), (_missionPos select 1),0],[], 0, "NONE"];
-	[_box1, _randomBox] call fn_refillbox;
+	[_box1, _randomBox] call randomCrateLoadOut;
 	
 	_boxes2 = ["Box_FIA_Support_F","Box_FIA_Wps_F","Box_FIA_Ammo_F"];
 	_currBox2 = _boxes2 call BIS_fnc_selectRandom;
