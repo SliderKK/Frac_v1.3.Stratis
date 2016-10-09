@@ -23,6 +23,9 @@ player createDiaryRecord ["changelog",
 [
 "FRACTURED Logs",
 "
+<br/>[Added] Cleaner Store areas
+<br/>[Added] Dynamic Mission Markers
+<br/>[Changed] Enemy AI all have matching uniforms
 <br/>[Changed] Loot is now Randomized in Most Mission Crates
 <br/>[Fixed] Most Missions
 <br/>[Changed] NPCs now drop cash
