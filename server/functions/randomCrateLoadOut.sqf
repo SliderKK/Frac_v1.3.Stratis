@@ -485,24 +485,24 @@ _magazines =
 
 _throwables =
 [
-	// "B_IR_Grenade", // IR Grenade [NATO] MAGAZINE"
+	"B_IR_Grenade", // IR Grenade [NATO] MAGAZINE"
 	"HandGrenade", // RGO Grenade MAGAZINE"
 	"HandGrenade", // RGO Grenade MAGAZINE"
-	// "I_IR_Grenade", // IR Grenade [AAF] MAGAZINE"
+	"I_IR_Grenade", // IR Grenade [AAF] MAGAZINE"
 	"MiniGrenade", // RGN Grenade MAGAZINE"
 	"MiniGrenade", // RGN Grenade MAGAZINE"
-	// "O_IR_Grenade", // IR Grenade [CSAT] MAGAZINE"
-	// "SmokeShell", // Smoke Grenade (White) MAGAZINE"
+	"O_IR_Grenade", // IR Grenade [CSAT] MAGAZINE"
+	"SmokeShell", // Smoke Grenade (White) MAGAZINE"
 	"SmokeShellBlue", // Smoke Grenade (Blue) MAGAZINE"
 	"SmokeShellGreen", // Smoke Grenade (Green) MAGAZINE"
-	// "SmokeShellOrange", // Smoke Grenade (Orange) MAGAZINE"
-	// "SmokeShellPurple", // Smoke Grenade (Purple) MAGAZINE"
+	"SmokeShellOrange", // Smoke Grenade (Orange) MAGAZINE"
+	"SmokeShellPurple", // Smoke Grenade (Purple) MAGAZINE"
 	"SmokeShellRed", // Smoke Grenade (Red) MAGAZINE"
-	// "SmokeShellYellow" // Smoke Grenade (Yellow) MAGAZINE"
+	"SmokeShellYellow" // Smoke Grenade (Yellow) MAGAZINE"
 	"Chemlight_blue", // Chemlight (Blue) MAGAZINE"
 	"Chemlight_green", // Chemlight (Green) MAGAZINE"
 	"Chemlight_red" // Chemlight (Red) MAGAZINE"
-	// "Chemlight_yellow", // Chemlight (Yellow) MAGAZINE"
+	"Chemlight_yellow", // Chemlight (Yellow) MAGAZINE"
 ];
 
 _muzzles =
@@ -564,12 +564,12 @@ _optics =
 	"optic_LRPS_tna_F", // LRPS (Tropic) OPTIC"
 	"optic_MRCO", // MRCO OPTIC"
 	"optic_MRD", // MRD OPTIC"
-	"optic_Nightstalker", // Nightstalker OPTIC"
+	//"optic_Nightstalker", // Nightstalker OPTIC"
 	"optic_NVS", // NVS OPTIC"
 	"optic_SOS", // MOS OPTIC"
 	"optic_SOS_khk_F", // MOS (Khaki) OPTIC"
 	"optic_tws", // TWS OPTIC"
-	"optic_tws_mg", // TWS MG OPTIC"
+	//"optic_tws_mg", // TWS MG OPTIC"
 	"optic_Yorris" // Yorris J2 OPTIC"
 ];
 
