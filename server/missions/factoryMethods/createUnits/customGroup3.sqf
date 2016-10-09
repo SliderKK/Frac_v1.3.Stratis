@@ -25,10 +25,10 @@ _unitTypes =
 
 for "_i" from 1 to _nbUnits do
 {
-	_uPos = _pos vectorAdd ([[random _radius, random _radius, 0], random 360] call BIS_fnc_rotateVector2D);
+	_uPos = _pos vectorAdd ([[random _radius, 0, 0], random 360] call BIS_fnc_rotateVector2D);
 	_unit = _group createUnit [_unitTypes call BIS_fnc_selectRandom, _uPos, [], 0, "Form"];
 	_unit setPosATL _uPos;
-	
+
 	removeAllWeapons _unit;
 	removeAllAssignedItems _unit;
 	removeUniform _unit;
@@ -37,75 +37,48 @@ for "_i" from 1 to _nbUnits do
 	removeHeadgear _unit;
 	removeGoggles _unit;
 
+	_unit addHeadgear "H_Cap_police";
 	_unit addVest "V_TacVest_blk_POLICE";
-	_unit addUniform "U_C_Driver_3";
+	_unit addMagazine "30Rnd_556x45_Stanag_Tracer_Yellow";
+	_unit addMagazine "30Rnd_556x45_Stanag_Tracer_Yellow";
+	_unit addMagazine "30Rnd_556x45_Stanag_Tracer_Yellow";
 
 	switch (true) do
 	{
-		// AT every 5 units
-		case (_i % 5 == 0):
+		// Grenadier every 3 units
+		case (_i % 3 == 0):
 		{
-			_unit addBackpack "B_Carryall_oli";
-			_unit addMagazine "30Rnd_65x39_caseless_mag";
-			_unit addWeapon "arifle_MXM_Black_F";
-			_unit addMagazine "30Rnd_65x39_caseless_mag";
-			_unit addMagazine "30Rnd_65x39_caseless_mag";
-			_unit addMagazine "30Rnd_65x39_caseless_mag";
-			_unit addPrimaryWeaponItem "optic_Hamr";
-			_unit addMagazine "Titan_AT";
-			_unit addWeapon "launch_Titan_short_F";
-			_unit addMagazine "Titan_AT";
-			_unit addMagazine "Titan_AT";
-			_unit selectWeapon "launch_Titan_short_F";
+			_unit addUniform "U_C_Scientist";
+			_unit addMagazine "1Rnd_HE_Grenade_shell";
+			_unit addWeapon "arifle_SPAR_01_GL_blk_F";
+			_unit addMagazine "1Rnd_HE_Grenade_shell";
+			_unit addMagazine "1Rnd_HE_Grenade_shell";
 		};
-		// Sniper every 6 units
-		case (_i % 6 == 0):
+		// RPG every 7 units, starting from second one
+		case ((_i + 5) % 7 == 0):
 		{
-			_unit addMagazine "7Rnd_408_Mag";
-			_unit addWeapon "srifle_LRR_SOS_F";
-			_unit addMagazine "7Rnd_408_Mag";
-			_unit addMagazine "7Rnd_408_Mag";
-			_unit addMagazine "7Rnd_408_Mag";
-			_unit addPrimaryWeaponItem "optic_tws";
-		};
-		// AA every 7 units
-		case (_i % 7 == 0):
-		{
-			_unit addBackpack "B_Carryall_oli";
-			_unit addMagazine "30Rnd_65x39_caseless_mag";
-			_unit addWeapon "arifle_MXM_Black_F";
-			_unit addMagazine "30Rnd_65x39_caseless_mag";
-			_unit addMagazine "30Rnd_65x39_caseless_mag";
-			_unit addMagazine "30Rnd_65x39_caseless_mag";
-			_unit addPrimaryWeaponItem "optic_Hamr";
-			_unit addMagazine "Titan_AA";
-			_unit addWeapon "launch_I_Titan_F";
-			_unit addMagazine "Titan_AA";
-			_unit addMagazine "Titan_AA";
-			_unit selectWeapon "launch_I_Titan_F";
+			_unit addUniform "U_C_Scientist";
+			_unit addBackpack "B_ViperHarness_blk_F";
+			_unit addWeapon "arifle_SPAR_01_blk_F";
+			_unit addMagazine "RPG7_F";
+			_unit addWeapon "launch_RPG7_F";
+			_unit addMagazine "RPG7_F";
+			_unit addMagazine "RPG7_F";
 		};
 		// Rifleman
 		default
 		{
+			_unit addUniform "U_C_Scientist";
+
 			if (_unit == leader _group) then
 			{
-				_unit addMagazine "30Rnd_65x39_caseless_mag";
-				_unit addWeapon "arifle_MXM_Black_F";
-				_unit addMagazine "30Rnd_65x39_caseless_mag";
-				_unit addMagazine "30Rnd_65x39_caseless_mag";
-				_unit addMagazine "30Rnd_65x39_caseless_mag";
-				_unit addPrimaryWeaponItem "optic_Hamr";
+				_unit addWeapon "arifle_SPAR_01_GL_blk_F";
 				_unit addMagazine "HandGrenade";
 				_unit setRank "SERGEANT";
 			}
 			else
 			{
-				_unit addMagazine "30Rnd_65x39_caseless_mag";
-				_unit addWeapon "arifle_MXM_Black_F";
-				_unit addMagazine "30Rnd_65x39_caseless_mag";
-				_unit addMagazine "30Rnd_65x39_caseless_mag";
-				_unit addMagazine "30Rnd_65x39_caseless_mag";
-				_unit addPrimaryWeaponItem "optic_Hamr";
+				_unit addWeapon "arifle_SPAR_01_blk_F";
 				_unit addMagazine "HandGrenade";
 			};
 		};
@@ -115,11 +88,10 @@ for "_i" from 1 to _nbUnits do
 	_unit enablegunlights "forceOn";
 
 	_unit addRating 1e11;
-	_unit addHeadgear "H_Cap_press";
-	_unit addGoggles "G_Balaclava_blk";
+	_unit spawn addMilCap;
 	_unit spawn refillPrimaryAmmo;
 	_unit call setMissionSkill;
 	_unit addEventHandler ["Killed", server_playerDied];
 };
 
-[_group, _pos, "LandVehicle"] call defendArea;
+[_group, _pos] call defendArea;
