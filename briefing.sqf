@@ -23,25 +23,28 @@ player createDiaryRecord ["changelog",
 [
 "FRACTURED Logs",
 "
-<br/>[Added] Cleaner Store areas
-<br/>[Added] Dynamic Mission Markers
-<br/>[Changed] Enemy AI all have matching uniforms
-<br/>[Changed] Loot is now Randomized in Most Mission Crates
-<br/>[Fixed] Most Missions
-<br/>[Changed] NPCs now drop cash
-<br/>[Changed] Status bar
-<br/>[Removed] Some missions due to insta-popping
-<br/>[Changed] Changed vehicle prices
-<br/>[ADDED] Mine Detectors to Engineer Kits, Gear Levels ONLY!
-<br/>[FIXED] Gear going missing or spawning naked WILL not happen anymore!!!!!!!
-<br/>[Changed] Unstuck player function only throws players in the air for the ground height plus 20 meters so that they cannot abuse this as a relocate tactic.
-<br/>[Fixed] Gearlevel 0 or defult spawn is fixed
-<br/>[FIXED] Double tap works
-<br/>[ADDED] Gearlevels on map again after 1.3 update
-<br/>[FIXED] UAV's will no longer being able to use thermals what so ever not even for a small ammount of time because it kills off instantly now.
-<br/>[FIXED] Sway or aiming is the SAME as it was on 1.2 version of the server.
-<br/>[FIXED] View distance is fixed now and the ground across the board is set to 1
-<br/>[FIXED] Stealth uniform can be bought as indie.
+<br/>[CHANGE] Increased Sunken Treasure Mission Reward Amount.
+<br/>[CHANGE] Balanced Tank and Launcher Prices.
+<br/>[CHANGE] Raised Money Shipment Reward Amounts.
+<br/>[ADDED] Cleaner Store areas.
+<br/>[ADDED] Dynamic Mission Markers.
+<br/>[CHANGE] Enemy AI all have matching uniforms.
+<br/>[CHANGE] Loot is now Randomized in Most Mission Crates.
+<br/>[FIX] Most Missions.
+<br/>[CHANGE] NPCs now drop cash.
+<br/>[CHANGE] Status bar.
+<br/>[REMOVED] Some missions due to insta-popping.
+<br/>[CHANGE] Changed vehicle prices.
+<br/>[ADDED] Mine Detectors to Engineer Kits, Gear Levels ONLY!.
+<br/>[FIXED] Gear going missing or spawning naked.
+<br/>[CHANGE] Unstuck player function only throws players in the air for the ground height plus 20 meters so that they cannot abuse this as a relocate tactic.
+<br/>[FIX] Gearlevel 0 or defult spawn is fixed.
+<br/>[FIX] Double tap works.
+<br/>[ADDED] Gearlevels on map again after 1.3 update.
+<br/>[FIX] UAV's will no longer being able to use thermals what so ever not even for a small ammount of time because it kills off instantly now.
+<br/>[FIX] Sway or aiming is the SAME as it was on 1.2 version of the server.
+<br/>[FIX] View distance is fixed now and the ground across the board is set to 1.
+<br/>[FIX] Stealth uniform can be bought as indie.
 
 "
 ]];
