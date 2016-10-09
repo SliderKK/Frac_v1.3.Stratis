@@ -16,46 +16,8 @@
 	You should have received a copy of the GNU Affero General Public License
 	along with this program. If not, see <http://www.gnu.org/licenses/>.
 
-	----------------------------------------------------------------------------------------------
-	
-	Name: randomCrateLoadOut.sqf
-	Version: 1.0
-	Author: soulkobk (soulkobk.blogspot.com)
-	Creation Date: 4:40 PM 07/10/2016
-	Modification Date: 4:40 PM 07/10/2016
-	
-	Description:
-	For use with A3Wasteland 1.3x mission (A3Wasteland.com). This script is a replacement mission
-	crate load-out script that will randomly select and place items in to mission crates.
-	
-	Place this script in the mission file, in path \server\functions\randomCrateLoadOut.sqf
-	and edit \server\functions\serverCompile.sqf and place...	
-	randomCrateLoadOut = [_path, "randomCrateLoadOut.sqf"] call mf_compile;
-	underneath the line...
-	_path = "server\functions";
-	
-	In order to use this in your mission you can place in the init line of the crate...
-	this call randomCrateLoadOut;
-	
-	If you intend on using it within outpost scripts, you can call this script within using the
-	fourth paramater, Example...
-	["Box_East_WpsSpecial_F",[0,0,0],0,{_this call randomCrateLoadOut}],
-	["<object>",[<xyz location>],<direction>,{<init>}],
-	
-	The custom function will disable damage to the crate, lock the crate until mission is completed,
-	and randomly fill the crate with loot. To edit the script and how it functions, see the code
-	below from lines 64 to 1109. Some loot is commented out by default (OP items), I have left
-	them in should you want them in your A3Wasteland mission.
+	----------------------------------------------------------------------------------------------*/
 
-	Parameter(s): none
-
-	Example: none
-	
-	Change Log:
-	1.0.0 -	original base script.
-
-	----------------------------------------------------------------------------------------------
-*/
 
 if !(isServer) exitWith {}; // DO NOT DELETE THIS LINE!
 
@@ -498,7 +460,7 @@ _throwables =
 	"SmokeShellOrange", // Smoke Grenade (Orange) MAGAZINE"
 	"SmokeShellPurple", // Smoke Grenade (Purple) MAGAZINE"
 	"SmokeShellRed", // Smoke Grenade (Red) MAGAZINE"
-	"SmokeShellYellow" // Smoke Grenade (Yellow) MAGAZINE"
+	"SmokeShellYellow", // Smoke Grenade (Yellow) MAGAZINE"
 	"Chemlight_blue", // Chemlight (Blue) MAGAZINE"
 	"Chemlight_green", // Chemlight (Green) MAGAZINE"
 	"Chemlight_red", // Chemlight (Red) MAGAZINE"
