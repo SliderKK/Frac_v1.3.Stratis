@@ -501,8 +501,8 @@ _throwables =
 	"SmokeShellYellow" // Smoke Grenade (Yellow) MAGAZINE"
 	"Chemlight_blue", // Chemlight (Blue) MAGAZINE"
 	"Chemlight_green", // Chemlight (Green) MAGAZINE"
-	"Chemlight_red" // Chemlight (Red) MAGAZINE"
-	"Chemlight_yellow", // Chemlight (Yellow) MAGAZINE"
+	"Chemlight_red", // Chemlight (Red) MAGAZINE"
+	"Chemlight_yellow" // Chemlight (Yellow) MAGAZINE"
 ];
 
 _muzzles =
