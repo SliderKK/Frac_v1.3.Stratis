@@ -150,16 +150,16 @@ launcherArray = compileFinal str
 	["RPG-42 Alamut", "launch_RPG32_F", 1000],
 	["RPG-42 Alamut (G Hex)", "launch_RPG32_ghex_F", 1000, "noDLC"],
 	["PCML", "launch_NLAW_F", 1200],
-	["Titan MPRL Compact (Sand)", "launch_Titan_short_F", 3000],
-	["Titan MPRL Compact (Coyote)", "launch_O_Titan_short_F", 3000],
-	["Titan MPRL Compact (Olive)", "launch_I_Titan_short_F", 3000],
-	["Titan MPRL Compact (Tropic)", "launch_B_Titan_short_tna_F", 3000, "noDLC"],
-	["Titan MPRL Compact (G Hex)", "launch_O_Titan_short_ghex_F", 3000, "noDLC"],
-	["Titan MPRL AA (Sand)", "launch_Titan_F", 3000],
-	["Titan MPRL AA (Hex)", "launch_O_Titan_F", 3000],
-	["Titan MPRL AA (Digi)", "launch_I_Titan_F", 3000],
-	["Titan MPRL AA (Tropic)", "launch_B_Titan_tna_F", 3000, "noDLC"],
-	["Titan MPRL AA (G Hex)", "launch_O_Titan_ghex_F", 3000, "noDLC"]
+	["Titan MPRL Compact (Sand)", "launch_Titan_short_F", 2000],
+	["Titan MPRL Compact (Coyote)", "launch_O_Titan_short_F", 2000],
+	["Titan MPRL Compact (Olive)", "launch_I_Titan_short_F", 2000],
+	["Titan MPRL Compact (Tropic)", "launch_B_Titan_short_tna_F", 2000, "noDLC"],
+	["Titan MPRL Compact (G Hex)", "launch_O_Titan_short_ghex_F", 2000, "noDLC"],
+	["Titan MPRL AA (Sand)", "launch_Titan_F", 2000],
+	["Titan MPRL AA (Hex)", "launch_O_Titan_F", 2000],
+	["Titan MPRL AA (Digi)", "launch_I_Titan_F", 2000],
+	["Titan MPRL AA (Tropic)", "launch_B_Titan_tna_F", 2000, "noDLC"],
+	["Titan MPRL AA (G Hex)", "launch_O_Titan_ghex_F", 2000, "noDLC"]
 ];
 
 allGunStoreFirearms = compileFinal str (call pistolArray + call smgArray + call rifleArray + call lmgArray + call launcherArray);
@@ -919,9 +919,9 @@ tanksArray = compileFinal str
 	["IFV-6a Cheetah AA", "B_APC_Tracked_01_AA_F", 100000, "vehicle"],
 	["ZSU-39 Tigris AA", "O_APC_Tracked_02_AA_F", 125000, "vehicle"],
 	["M2A1 Slammer", "B_MBT_01_cannon_F", 100000, "vehicle"],
-	["M2A4 Slammer HMG", "B_MBT_01_TUSK_F", 125000, "vehicle"], // Commander gun variant
-	["T-100 Varsuk", "O_MBT_02_cannon_F", 150000, "vehicle"],
-	["MBT-52 Kuma", "I_MBT_03_cannon_F", 150000, "vehicle"]
+	["M2A4 Slammer HMG", "B_MBT_01_TUSK_F", 110000, "vehicle"], // Commander gun variant
+	["T-100 Varsuk", "O_MBT_02_cannon_F", 120000, "vehicle"],
+	["MBT-52 Kuma", "I_MBT_03_cannon_F", 125000, "vehicle"]
 ];
 
 
