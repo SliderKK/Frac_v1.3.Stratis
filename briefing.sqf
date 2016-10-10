@@ -23,6 +23,7 @@ player createDiaryRecord ["changelog",
 [
 "FRACTURED Logs",
 "
+<br/>[NEW] Outpost Missions
 <br/>[FIX] Clean Store Script
 <br/>[FIX] Mission Variable Calling
 <br/>[CHANGE] Lowered Chances of Optics in Mission Crates.
