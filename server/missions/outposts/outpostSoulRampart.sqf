@@ -67,7 +67,7 @@
 ["Land_HBarrier_3_F",[6.625,2.25,0.000377655],135],
 ["Land_HBarrier_3_F",[8.625,-1.125,0.000377655],135],
 ["Land_HBarrier_3_F",[-8.875,0.875,0.000342369],135],
-["Box_FIA_Wps_F",[4.75,-5,0],270,{[_this, "mission_USLaunchers"] call randomCrateLoadOut}],
-["Box_FIA_Wps_F",[-5,4.801,0],90,{[_this, ["mission_USSpecial", "mission_Main_A3snipers"] call BIS_fnc_selectRandom] call fn_refillbox}]
+["Box_FIA_Wps_F",[4.75,-5,0],270,{_this call randomCrateLoadOut;}],
+["Box_FIA_Wps_F",[-5,4.801,0],90,{_this call randomCrateLoadOut;}]
 
 ]
