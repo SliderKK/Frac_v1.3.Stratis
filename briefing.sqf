@@ -23,6 +23,8 @@ player createDiaryRecord ["changelog",
 [
 "FRACTURED Logs",
 "
+<br/>[FIX] Clean Store Script
+<br/>[FIX] Mission Variable Calling
 <br/>[CHANGE] Lowered Chances of Optics in Mission Crates.
 <br/>[ADDED] Night Stalker, TWS, TWS MG to Mission Crates.
 <br/>[FIX] All vest now sell for 50% of value.
