@@ -91,8 +91,9 @@ for "_i" from 1 to _nbUnits do
 	_unit spawn addMilCap;
 	_unit spawn refillPrimaryAmmo;
 	_unit call setMissionSkill;
-	_unit addEventHandler ["Killed", server_playerDied];
+	
 	[_unit] call randomSoldierLoadOut;
+	_unit addEventHandler ["Killed", server_playerDied];
 };
 
 [_group, _pos] call defendArea;
