@@ -353,44 +353,44 @@ _backPacks =
 
 _opticsDisallow =
 [
-	//"optic_Aco", // ACO (Red)
-	//"optic_ACO_grn", // ACO (Green)
-	//"optic_ACO_grn_smg", // ACO SMG (Green)
-	//"optic_Aco_smg", // ACO SMG (Red)
-	//"optic_AMS", // AMS (Black)
-	//"optic_AMS_khk", // AMS (Khaki)
-	//"optic_AMS_snd", // AMS (Sand)
-	//"optic_Arco", // ARCO
-	//"optic_Arco_blk_F", // ARCO (Black)
-	//"optic_Arco_ghex_F", // ARCO (Green Hex)
-	//"optic_DMS", // DMS
-	//"optic_DMS_ghex_F", // DMS (Green Hex)
-	//"optic_ERCO_blk_F", // ERCO (Black)
-	//"optic_ERCO_khk_F", // ERCO (Khaki)
-	//"optic_ERCO_snd_F", // ERCO (Sand)
-	//"optic_Hamr", // RCO
-	//"optic_Hamr_khk_F", // RCO (Khaki)
-	//"optic_Holosight", // Mk17 Holosight
-	//"optic_Holosight_blk_F", // Mk17 Holosight (Black)
-	//"optic_Holosight_khk_F", // Mk17 Holosight (Khaki)
-	//"optic_Holosight_smg", // Mk17 Holosight SMG
-	//"optic_Holosight_smg_blk_F", // Mk17 Holosight SMG (Black)
-	//"optic_KHS_blk", // Kahlia (Black)
-	//"optic_KHS_hex", // Kahlia (Hex)
-	//"optic_KHS_old", // Kahlia (Old)
-	//"optic_KHS_tan", // Kahlia (Tan)
+	"optic_Aco", // ACO (Red)
+	"optic_ACO_grn", // ACO (Green)
+	"optic_ACO_grn_smg", // ACO SMG (Green)
+	"optic_Aco_smg", // ACO SMG (Red)
+	"optic_AMS", // AMS (Black)
+	"optic_AMS_khk", // AMS (Khaki)
+	"optic_AMS_snd", // AMS (Sand)
+	"optic_Arco", // ARCO
+	"optic_Arco_blk_F", // ARCO (Black)
+	"optic_Arco_ghex_F", // ARCO (Green Hex)
+	"optic_DMS", // DMS
+	"optic_DMS_ghex_F", // DMS (Green Hex)
+	"optic_ERCO_blk_F", // ERCO (Black)
+	"optic_ERCO_khk_F", // ERCO (Khaki)
+	"optic_ERCO_snd_F", // ERCO (Sand)
+	"optic_Hamr", // RCO
+	"optic_Hamr_khk_F", // RCO (Khaki)
+	"optic_Holosight", // Mk17 Holosight
+	"optic_Holosight_blk_F", // Mk17 Holosight (Black)
+	"optic_Holosight_khk_F", // Mk17 Holosight (Khaki)
+	"optic_Holosight_smg", // Mk17 Holosight SMG
+	"optic_Holosight_smg_blk_F", // Mk17 Holosight SMG (Black)
+	"optic_KHS_blk", // Kahlia (Black)
+	"optic_KHS_hex", // Kahlia (Hex)
+	"optic_KHS_old", // Kahlia (Old)
+	"optic_KHS_tan", // Kahlia (Tan)
 	"optic_LRPS", // LRPS
 	"optic_LRPS_ghex_F", // LRPS (Green Hex)
 	"optic_LRPS_tna_F", // LRPS (Tropic)
-	//"optic_MRCO", // MRCO
-	//"optic_MRD", // MRD
+	"optic_MRCO", // MRCO
+	"optic_MRD", // MRD
 	"optic_Nightstalker", // Nightstalker
-	//"optic_NVS", // NVS
-	//"optic_SOS", // MOS
-	//"optic_SOS_khk_F", // MOS (Khaki)
+	"optic_NVS", // NVS
+	"optic_SOS", // MOS
+	"optic_SOS_khk_F", // MOS (Khaki)
 	"optic_tws", // TWS
-	"optic_tws_mg" // TWS MG
-	//"optic_Yorris" // Yorris J2
+	"optic_tws_mg", // TWS MG
+	"optic_Yorris" // Yorris J2
 ];
 
 /*	------------------------------------------------------------------------------------------
