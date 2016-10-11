@@ -39,8 +39,6 @@ _soldier spawn refillPrimaryAmmo;
 _soldier spawn addMilCap;
 _soldier call setMissionSkill;
 
-[_soldier] call randomSoldierLoadOut;
-
 _soldier addEventHandler ["Killed", server_playerDied];
 
 _soldier

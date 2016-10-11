@@ -27,7 +27,6 @@ _leader addWeapon "launch_B_Titan_F";
 _leader addMagazine "Titan_AA";
 _leader addHeadgear "H_Cap_police";
 _leader addGoggles "G_Shades_Black";
-[_leader] call randomSoldierLoadOut;
 
 
 // Soldier2
@@ -45,7 +44,6 @@ _man2 addWeapon "launch_B_Titan_F";
 _man2 addMagazine "Titan_AA";
 _man2 addHeadgear "H_Cap_police";
 _man2 addGoggles "G_Shades_Black";
-[_man2] call randomSoldierLoadOut;
 
 // Soldier3
 _man3 = _group createUnit ["C_man_polo_3_F", [_pos select 0, (_pos select 1) + 30, 0], [], 1, "Form"];
@@ -59,7 +57,6 @@ _man3 addMagazine "30Rnd_65x39_caseless_mag";
 _man3 addMagazine "30Rnd_65x39_caseless_mag";
 _man3 addHeadgear "H_Cap_police";
 _man3 addGoggles "G_Shades_Black";
-[_man3] call randomSoldierLoadOut;
 
 // Soldier4
 _man4 = _group createUnit ["C_man_polo_4_F", [_pos select 0, (_pos select 1) + 40, 0], [], 1, "Form"];
@@ -73,7 +70,6 @@ _man4 addMagazine "30Rnd_65x39_caseless_mag";
 _man4 addMagazine "30Rnd_65x39_caseless_mag";
 _man4 addHeadgear "H_Cap_police";
 _man4 addGoggles "G_Shades_Black";
-[_man4] call randomSoldierLoadOut;
 
 
 // Soldier5
@@ -88,7 +84,7 @@ _man5 addMagazine "30Rnd_65x39_caseless_mag";
 _man5 addMagazine "30Rnd_65x39_caseless_mag";
 _man5 addHeadgear "H_Cap_police";
 _man5 addGoggles "G_Shades_Black";
-[_man5] call randomSoldierLoadOut;
+
 
 // Soldier6
 _man6 = _group createUnit ["C_man_polo_4_F", [_pos select 0, (_pos select 1) - 30, 0], [], 1, "Form"];
@@ -101,14 +97,14 @@ _man6 addMagazine "30Rnd_65x39_caseless_mag";
 _man6 addMagazine "30Rnd_65x39_caseless_mag";
 _man6 addHeadgear "H_Cap_police";
 _man6 addGoggles "G_Shades_Black";
-[_man6] call randomSoldierLoadOut;
+
 
 
 
 _leader = leader _group;
 
 {
-//	_x spawn refillPrimaryAmmo;
+	_x spawn refillPrimaryAmmo;
 //	_x spawn addMilCap;
 	_x call setMissionSkill;
 	_x addRating 9999999;

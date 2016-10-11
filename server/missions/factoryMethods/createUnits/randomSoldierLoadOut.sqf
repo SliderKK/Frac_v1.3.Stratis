@@ -140,17 +140,17 @@ _launcherWeapons =
 
 _uniforms =
 [
-	"U_BG_Guerilla1_1", // Guerilla Garment
-	"U_BG_Guerilla2_1", // Guerilla Outfit (Plain, Dark)
-	"U_BG_Guerilla2_2", // Guerilla Outfit (Pattern)
-	"U_BG_Guerilla2_3", // Guerilla Outfit (Plain, Light)
-	"U_BG_Guerilla3_1", // Guerilla Smocks
-	"U_BG_Guerrilla_6_1", // Guerilla Apparel
-	"U_BG_leader", // Guerilla Uniform
+	// "U_BG_Guerilla1_1", // Guerilla Garment
+	// "U_BG_Guerilla2_1", // Guerilla Outfit (Plain, Dark)
+	// "U_BG_Guerilla2_2", // Guerilla Outfit (Pattern)
+	// "U_BG_Guerilla2_3", // Guerilla Outfit (Plain, Light)
+	// "U_BG_Guerilla3_1", // Guerilla Smocks
+	// "U_BG_Guerrilla_6_1", // Guerilla Apparel
+	// "U_BG_leader", // Guerilla Uniform
 	"U_B_CombatUniform_mcam", // Combat Fatigues (MTP)
 	"U_B_CombatUniform_mcam_tshirt", // Combat Fatigues (MTP) (Tee)
-	"U_B_CombatUniform_mcam_vest", // Recon Fatigues (MTP)
-	"U_B_CombatUniform_mcam_worn", // Worn Combat Fatigues (MTP)
+	// "U_B_CombatUniform_mcam_vest", // Recon Fatigues (MTP)
+	// "U_B_CombatUniform_mcam_worn", // Worn Combat Fatigues (MTP)
 	"U_B_CTRG_1", // CTRG Combat Uniform
 	"U_B_CTRG_2", // CTRG Combat Uniform (Tee)
 	"U_B_CTRG_3", // CTRG Combat Uniform (Rolled-up)
@@ -184,30 +184,30 @@ _uniforms =
 	"U_I_C_Soldier_Para_3_F", // Paramilitary Garb (Shirt)
 	"U_I_C_Soldier_Para_4_F", // Paramilitary Garb (Tank Top)
 	"U_I_C_Soldier_Para_5_F", // Paramilitary Garb (Shorts)
-	"U_I_FullGhillie_ard", // Full Ghillie (Arid) [AAF]
-	"U_I_FullGhillie_lsh", // Full Ghillie (Lush) [AAF]
-	"U_I_FullGhillie_sard", // Full Ghillie (Semi-Arid) [AAF]
+	// "U_I_FullGhillie_ard", // Full Ghillie (Arid) [AAF]
+	// "U_I_FullGhillie_lsh", // Full Ghillie (Lush) [AAF]
+	// "U_I_FullGhillie_sard", // Full Ghillie (Semi-Arid) [AAF]
 	"U_I_GhillieSuit", // Ghillie Suit [AAF]
 	"U_I_HeliPilotCoveralls", // Heli Pilot Coveralls [AAF]
 	"U_I_OfficerUniform", // Combat Fatigues [AAF] (Officer)
 	"U_I_pilotCoveralls", // Pilot Coveralls [AAF]
-	"U_I_Wetsuit", // Wetsuit [AAF]
+	// "U_I_Wetsuit", // Wetsuit [AAF]
 	"U_O_CombatUniform_ocamo", // Fatigues (Hex) [CSAT]
 	"U_O_CombatUniform_oucamo", // Fatigues (Urban) [CSAT]
-	"U_O_FullGhillie_ard", // Full Ghillie (Arid) [CSAT]
-	"U_O_FullGhillie_lsh", // Full Ghillie (Lush) [CSAT]
-	"U_O_FullGhillie_sard", // Full Ghillie (Semi-Arid) [CSAT]
+	// "U_O_FullGhillie_ard", // Full Ghillie (Arid) [CSAT]
+	// "U_O_FullGhillie_lsh", // Full Ghillie (Lush) [CSAT]
+	// "U_O_FullGhillie_sard", // Full Ghillie (Semi-Arid) [CSAT]
 	"U_O_GhillieSuit", // Ghillie Suit [CSAT]
 	"U_O_OfficerUniform_ocamo", // Officer Fatigues (Hex)
 	"U_O_PilotCoveralls", // Pilot Coveralls [CSAT]
 	"U_O_SpecopsUniform_ocamo", // Recon Fatigues (Hex)
-	"U_O_T_FullGhillie_tna_F", // Full Ghillie (Jungle) [CSAT]
+	// "U_O_T_FullGhillie_tna_F", // Full Ghillie (Jungle) [CSAT]
 	"U_O_T_Officer_F", // Officer Fatigues (Green Hex) [CSAT]
 	"U_O_T_Sniper_F", // Ghillie Suit (Green Hex) [CSAT]
-	"U_O_T_Soldier_F", // Fatigues (Green Hex) [CSAT]
-	"U_O_V_Soldier_Viper_F", // Special Purpose Suit (Green Hex)
-	"U_O_V_Soldier_Viper_hex_F" // Special Purpose Suit (Hex)
-	//"U_O_Wetsuit", // Wetsuit [CSAT]
+	"U_O_T_Soldier_F" // Fatigues (Green Hex) [CSAT]
+	// "U_O_V_Soldier_Viper_F", // Special Purpose Suit (Green Hex)
+	// "U_O_V_Soldier_Viper_hex_F", // Special Purpose Suit (Hex)
+	// "U_O_Wetsuit", // Wetsuit [CSAT]
 ];
 
 _vests =
@@ -357,14 +357,14 @@ _opticsDisallow =
 	// "optic_ACO_grn", // ACO (Green)
 	// "optic_ACO_grn_smg", // ACO SMG (Green)
 	// "optic_Aco_smg", // ACO SMG (Red)
-	//"optic_AMS", // AMS (Black)
-	//"optic_AMS_khk", // AMS (Khaki)
-	//"optic_AMS_snd", // AMS (Sand)
+	"optic_AMS", // AMS (Black)
+	"optic_AMS_khk", // AMS (Khaki)
+	"optic_AMS_snd", // AMS (Sand)
 	// "optic_Arco", // ARCO
 	// "optic_Arco_blk_F", // ARCO (Black)
 	// "optic_Arco_ghex_F", // ARCO (Green Hex)
-	//"optic_DMS", // DMS
-	//"optic_DMS_ghex_F", // DMS (Green Hex)
+	"optic_DMS", // DMS
+	"optic_DMS_ghex_F", // DMS (Green Hex)
 	// "optic_ERCO_blk_F", // ERCO (Black)
 	// "optic_ERCO_khk_F", // ERCO (Khaki)
 	// "optic_ERCO_snd_F", // ERCO (Sand)
@@ -372,18 +372,18 @@ _opticsDisallow =
 	// "optic_Hamr_khk_F", // RCO (Khaki)
 	// "optic_Holosight", // Mk17 Holosight
 	// "optic_Holosight_blk_F", // Mk17 Holosight (Black)
-	//"optic_Holosight_khk_F", // Mk17 Holosight (Khaki)
-	//"optic_Holosight_smg", // Mk17 Holosight SMG
-	//"optic_Holosight_smg_blk_F", // Mk17 Holosight SMG (Black)
-	//"optic_KHS_blk", // Kahlia (Black)
-	//"optic_KHS_hex", // Kahlia (Hex)
-	//"optic_KHS_old", // Kahlia (Old)
-	//"optic_KHS_tan", // Kahlia (Tan)
-	//"optic_LRPS", // LRPS
-	//"optic_LRPS_ghex_F", // LRPS (Green Hex)
-	//"optic_LRPS_tna_F", // LRPS (Tropic)
-	//"optic_MRCO", // MRCO
-	//"optic_MRD", // MRD
+	// "optic_Holosight_khk_F", // Mk17 Holosight (Khaki)
+	// "optic_Holosight_smg", // Mk17 Holosight SMG
+	// "optic_Holosight_smg_blk_F", // Mk17 Holosight SMG (Black)
+	"optic_KHS_blk", // Kahlia (Black)
+	"optic_KHS_hex", // Kahlia (Hex)
+	"optic_KHS_old", // Kahlia (Old)
+	"optic_KHS_tan", // Kahlia (Tan)
+	"optic_LRPS", // LRPS
+	"optic_LRPS_ghex_F", // LRPS (Green Hex)
+	"optic_LRPS_tna_F", // LRPS (Tropic)
+	// "optic_MRCO", // MRCO
+	// "optic_MRD", // MRD
 	"optic_Nightstalker", // Nightstalker
 	"optic_NVS", // NVS
 	"optic_SOS", // MOS
