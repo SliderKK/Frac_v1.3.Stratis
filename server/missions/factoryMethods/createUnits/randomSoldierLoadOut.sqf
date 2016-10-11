@@ -387,10 +387,11 @@ _opticsDisallow =
 	"optic_Nightstalker", // Nightstalker
 	//"optic_NVS", // NVS
 	//"optic_SOS", // MOS
-	//"optic_SOS_khk_F", // MOS (Khaki)
+	//"optic_SOS_khk_F",
+	//"optic_Yorris" 
+	// Yorris J2,	// MOS (Khaki)
 	"optic_tws", // TWS
 	"optic_tws_mg" // TWS MG
-	//"optic_Yorris" // Yorris J2
 ];
 
 /*	------------------------------------------------------------------------------------------
