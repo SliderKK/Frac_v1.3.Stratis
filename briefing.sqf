@@ -23,6 +23,8 @@ player createDiaryRecord ["changelog",
 [
 "FRACTURED Logs",
 "
+<br/>[NEW] Changed randomization on AI a little more.
+<br/>[FIX] Drugs have been re-added and fixed.
 <br/>[NEW] All AI now have randomized Loadouts
 <br/>[NEW] All items not in Store found in Missions can be sold for a high amount.
 <br/>[NEW] Outpost Missions
