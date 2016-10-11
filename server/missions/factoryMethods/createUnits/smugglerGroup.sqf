@@ -13,8 +13,6 @@ _pos = _this select 1;
 
 // Leader
 _leader = _group createUnit ["C_man_polo_1_F", [(_pos select 0) + 10, _pos select 1, 0], [], 1, "Form"];
-_leader call randomSoldierLoadOut;
-/*
 _leader addUniform "U_IG_leader";
 _leader addVest "V_TacVestIR_blk";
 _leader addBackpack "B_AssaultPack_blk";
@@ -28,12 +26,9 @@ _leader addWeapon "launch_Titan_F";
 _leader addMagazine "Titan_AA";
 _leader addMagazine "HandGrenade";
 _leader selectWeapon "launch_Titan_F";
-*/
 
 // Rifleman - AT Rockets
 _man2 = _group createUnit ["C_man_polo_2_F", [(_pos select 0) - 30, _pos select 1, 0], [], 1, "Form"];
-_man2 call randomSoldierLoadOut;
-/*
 _man2 addUniform "U_IG_leader";
 _man2 addVest "V_TacVestIR_blk";
 _man2 addBackpack "B_AssaultPack_blk";
@@ -47,12 +42,9 @@ _man2 addWeapon "launch_B_Titan_short_F";
 _man2 addMagazine "Titan_AT";
 _man2 addMagazine "HandGrenade";
 _man2 selectWeapon "launch_B_Titan_short_F";
-*/
 
 // Rifleman
 _man3 = _group createUnit ["C_man_polo_3_F", [_pos select 0, (_pos select 1) + 30, 0], [], 1, "Form"];
-_man3 call randomSoldierLoadOut;
-/*
 _man3 addUniform "U_IG_leader";
 _man3 addVest "V_TacVestIR_blk";
 _man3 addMagazine "30Rnd_556x45_Stanag";
@@ -61,12 +53,9 @@ _man3 addPrimaryWeaponItem "optic_Holosight";
 _man3 addMagazine "30Rnd_556x45_Stanag";
 _man3 addMagazine "30Rnd_556x45_Stanag";
 _man3 addMagazine "HandGrenade";
-*/
 
 // Rifleman
 _man4 = _group createUnit ["C_man_polo_4_F", [_pos select 0, (_pos select 1) + 40, 0], [], 1, "Form"];
-_man4 call randomSoldierLoadOut;
-/*
 _man4 addUniform "U_IG_Guerilla1_1";
 _man4 addVest "V_TacVestIR_blk";
 _man4 addMagazine "30Rnd_556x45_Stanag";
@@ -75,12 +64,9 @@ _man4 addPrimaryWeaponItem "optic_Holosight";
 _man4 addMagazine "30Rnd_556x45_Stanag";
 _man4 addMagazine "30Rnd_556x45_Stanag";
 _man4 addMagazine "HandGrenade";
-*/
 
 // Rifleman
 _man5 = _group createUnit ["C_man_polo_5_F", [_pos select 0, (_pos select 1) + 40, 0], [], 1, "Form"];
-_man5 call randomSoldierLoadOut;
-/*
 _man5 addUniform "U_IG_Guerilla1_1";
 _man5 addVest "V_TacVestIR_blk";
 _man5 addMagazine "30Rnd_556x45_Stanag";
@@ -89,12 +75,9 @@ _man5 addPrimaryWeaponItem "optic_Holosight";
 _man5 addMagazine "30Rnd_556x45_Stanag";
 _man5 addMagazine "30Rnd_556x45_Stanag";
 _man5 addMagazine "HandGrenade";
-*/
 
 // Rifleman
 _man6 = _group createUnit ["C_man_polo_4_F", [_pos select 0, (_pos select 1) - 30, 0], [], 1, "Form"];
-_man6 call randomSoldierLoadOut;
-/*
 _man6 addUniform "U_IG_Guerilla1_1";
 _man6 addVest "V_TacVestIR_blk";
 _man6 addMagazine "30Rnd_556x45_Stanag";
@@ -103,12 +86,9 @@ _man6 addPrimaryWeaponItem "optic_Holosight";
 _man6 addMagazine "30Rnd_556x45_Stanag";
 _man6 addMagazine "30Rnd_556x45_Stanag";
 _man6 addMagazine "HandGrenade";
-*/
 
 // Grenadier
 _man7 = _group createUnit ["C_man_polo_3_F", [_pos select 0, (_pos select 1) - 40, 0], [], 1, "Form"];
-_man7 call randomSoldierLoadOut;
-/*
 _man7 addUniform "U_IG_leader";
 _man7 addVest "V_TacVestIR_blk";
 _man7 addMagazine "30Rnd_556x45_Stanag";
@@ -120,12 +100,9 @@ _man7 addMagazine "30Rnd_556x45_Stanag";
 _man7 addMagazine "1Rnd_HE_Grenade_shell";
 _man7 addMagazine "1Rnd_HE_Grenade_shell";
 _man7 addMagazine "HandGrenade";
-*/
 
 // Rifleman
 _man8 = _group createUnit ["C_man_polo_5_F", [_pos select 0, (_pos select 1) + 40, 0], [], 1, "Form"];
-_man8 call randomSoldierLoadOut;
-/*
 _man8 addUniform "U_IG_Guerilla1_1";
 _man8 addVest "V_TacVestIR_blk";
 _man8 addMagazine "30Rnd_556x45_Stanag";
@@ -134,12 +111,9 @@ _man8 addPrimaryWeaponItem "optic_Holosight";
 _man8 addMagazine "30Rnd_556x45_Stanag";
 _man8 addMagazine "30Rnd_556x45_Stanag";
 _man8 addMagazine "HandGrenade";
-*/
 
 // Rifleman
 _man9 = _group createUnit ["C_man_polo_4_F", [_pos select 0, (_pos select 1) - 30, 0], [], 1, "Form"];
-_man9 call randomSoldierLoadOut;
-/*
 _man9 addUniform "U_IG_Guerilla1_1";
 _man9 addVest "V_TacVestIR_blk";
 _man9 addMagazine "30Rnd_556x45_Stanag";
@@ -148,12 +122,9 @@ _man9 addPrimaryWeaponItem "optic_Holosight";
 _man9 addMagazine "30Rnd_556x45_Stanag";
 _man9 addMagazine "30Rnd_556x45_Stanag";
 _man9 addMagazine "HandGrenade";
-*/
 
 // Grenadier
 _man10 = _group createUnit ["C_man_polo_3_F", [_pos select 0, (_pos select 1) - 40, 0], [], 1, "Form"];
-_man10 call randomSoldierLoadOut;
-/*
 _man10 addUniform "U_IG_leader";
 _man10 addVest "V_TacVestIR_blk";
 _man10 addMagazine "30Rnd_556x45_Stanag";
@@ -165,7 +136,6 @@ _man10 addMagazine "30Rnd_556x45_Stanag";
 _man10 addMagazine "1Rnd_HE_Grenade_shell";
 _man10 addMagazine "1Rnd_HE_Grenade_shell";
 _man10 addMagazine "HandGrenade";
-*/
 
 sleep 0.1; // Without this delay, headgear doesn't get removed properly
 
