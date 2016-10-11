@@ -37,35 +37,26 @@ for "_i" from 1 to _nbUnits do
 	removeHeadgear _unit;
 	removeGoggles _unit;
 
-	//-----Default-----
-	/*
 	_unit addHeadgear "H_Cap_police";
 	_unit addVest "V_TacVest_blk_POLICE";
 	_unit addMagazine "30Rnd_556x45_Stanag_Tracer_Yellow";
 	_unit addMagazine "30Rnd_556x45_Stanag_Tracer_Yellow";
 	_unit addMagazine "30Rnd_556x45_Stanag_Tracer_Yellow";
-	*/
-	_unit call randomSoldierLoadOut;
 
 	switch (true) do
 	{
 		// Grenadier every 3 units
 		case (_i % 3 == 0):
 		{
-			_unit call randomSoldierLoadOut;
-			/*
 			_unit addUniform "U_C_Scientist";
 			_unit addMagazine "1Rnd_HE_Grenade_shell";
 			_unit addWeapon "arifle_SPAR_01_GL_blk_F";
 			_unit addMagazine "1Rnd_HE_Grenade_shell";
 			_unit addMagazine "1Rnd_HE_Grenade_shell";
-			*/
 		};
 		// RPG every 7 units, starting from second one
 		case ((_i + 5) % 7 == 0):
 		{
-			_unit call randomSoldierLoadOut;
-			/*
 			_unit addUniform "U_C_Scientist";
 			_unit addBackpack "B_ViperHarness_blk_F";
 			_unit addWeapon "arifle_SPAR_01_blk_F";
@@ -73,30 +64,22 @@ for "_i" from 1 to _nbUnits do
 			_unit addWeapon "launch_RPG7_F";
 			_unit addMagazine "RPG7_F";
 			_unit addMagazine "RPG7_F";
-			*/
 		};
 		// Rifleman
 		default
 		{
-			_unit call randomSoldierLoadOut;
-			//_unit addUniform "U_C_Scientist";
+			_unit addUniform "U_C_Scientist";
 
 			if (_unit == leader _group) then
 			{
-				_unit call randomSoldierLoadOut;
-				/*
 				_unit addWeapon "arifle_SPAR_01_GL_blk_F";
 				_unit addMagazine "HandGrenade";
-				*/
 				_unit setRank "SERGEANT";
 			}
 			else
 			{
-				_unit call randomSoldierLoadOut;
-				/*
 				_unit addWeapon "arifle_SPAR_01_blk_F";
 				_unit addMagazine "HandGrenade";
-				*/
 			};
 		};
 	};
@@ -105,10 +88,8 @@ for "_i" from 1 to _nbUnits do
 	_unit enablegunlights "forceOn";
 
 	_unit addRating 1e11;
-	/*
 	_unit spawn addMilCap;
 	_unit spawn refillPrimaryAmmo;
-	*/
 	_unit call setMissionSkill;
 	_unit addEventHandler ["Killed", server_playerDied];
 };
