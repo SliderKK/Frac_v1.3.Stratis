@@ -98,8 +98,6 @@ _man6 addMagazine "30Rnd_65x39_caseless_mag";
 _man6 addHeadgear "H_Cap_police";
 _man6 addGoggles "G_Balaclava_blk";
 
-
-
 _leader = leader _group;
 
 {
@@ -109,5 +107,12 @@ _leader = leader _group;
 	_x addRating 9999999;
 	_x addEventHandler ["Killed", server_playerDied];
 } forEach units _group;
+
+[_leader] call randomSoldierLoadOut;
+[_man2] call randomSoldierLoadOut;
+[_man3] call randomSoldierLoadOut;
+[_man4] call randomSoldierLoadOut;
+[_man5] call randomSoldierLoadOut;
+[_man6] call randomSoldierLoadOut;
 
 [_group, _pos, "LandVehicle"] call defendArea;

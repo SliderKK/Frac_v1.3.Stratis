@@ -44,4 +44,6 @@ _soldier call setMissionSkill;
 
 _soldier addEventHandler ["Killed", server_playerDied];
 
+[_soldier] call randomSoldierLoadOut;
+
 _soldier

@@ -109,4 +109,11 @@ _leader = leader _group;
 	_x addEventHandler ["Killed", server_playerDied];
 } forEach units _group;
 
+[_leader] call randomSoldierLoadOut;
+[_man2] call randomSoldierLoadOut;
+[_man3] call randomSoldierLoadOut;
+[_man4] call randomSoldierLoadOut;
+[_man5] call randomSoldierLoadOut;
+[_man6] call randomSoldierLoadOut;
+
 [_group, _pos, "LandVehicle"] call defendArea;
