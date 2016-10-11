@@ -14,6 +14,9 @@ _pos = _this select 1;
 // Leader
 _leader = _group createUnit ["C_man_polo_1_F", [(_pos select 0) + 10, _pos select 1, 0], [], 1, "Form"];
 removeAllAssignedItems _leader;
+
+_leader call randomSoldierLoadOut;
+/*
 _leader addUniform "U_C_Scientist";
 _leader addVest "V_TacVest_blk_POLICE";
 _leader addBackpack "B_FieldPack_ocamo";
@@ -27,11 +30,14 @@ _leader addWeapon "launch_I_Titan_short_F";
 _leader addMagazine "Titan_AT";
 _leader addHeadgear "H_Cap_police";
 _leader addGoggles "G_Balaclava_blk";
-
+*/
 
 // Soldier2
 _man2 = _group createUnit ["C_man_polo_2_F", [(_pos select 0) - 30, _pos select 1, 0], [], 1, "Form"];
 removeAllAssignedItems _man2;
+
+_man2 call randomSoldierLoadOut;
+/*
 _man2 addUniform "U_C_Scientist";
 _man2 addVest "V_TacVest_blk_POLICE";
 _man2 addBackpack "B_FieldPack_ocamo";
@@ -44,10 +50,14 @@ _man2 addWeapon "launch_I_Titan_short_F";
 _man2 addMagazine "Titan_AT";
 _man2 addHeadgear "H_Cap_police";
 _man2 addGoggles "G_Balaclava_blk";
+*/
 
 // Soldier3
 _man3 = _group createUnit ["C_man_polo_3_F", [_pos select 0, (_pos select 1) + 30, 0], [], 1, "Form"];
 removeAllAssignedItems _man3;
+
+_man3 call randomSoldierLoadOut;
+/*
 _man3 addUniform "U_C_Scientist";
 _man3 addVest "V_TacVest_blk_POLICE";
 _man3 addMagazine "10Rnd_762x51_Mag";
@@ -57,10 +67,13 @@ _man3 addMagazine "10Rnd_762x51_Mag";
 _man3 addMagazine "10Rnd_762x51_Mag";
 _man3 addHeadgear "H_Cap_police";
 _man3 addGoggles "G_Balaclava_blk";
-
+*/
 // Soldier4
 _man4 = _group createUnit ["C_man_polo_4_F", [_pos select 0, (_pos select 1) + 40, 0], [], 1, "Form"];
 removeAllAssignedItems _man4;
+
+_man4 call randomSoldierLoadOut;
+/*
 _man4 addUniform "U_C_Scientist";
 _man4 addVest "V_TacVest_blk_POLICE";
 _man4 addMagazine "10Rnd_762x51_Mag";
@@ -70,11 +83,14 @@ _man4 addMagazine "10Rnd_762x51_Mag";
 _man4 addMagazine "10Rnd_762x51_Mag";
 _man4 addHeadgear "H_Cap_police";
 _man4 addGoggles "G_Balaclava_blk";
-
+*/
 
 // Soldier5
 _man5 = _group createUnit ["C_man_polo_5_F", [_pos select 0, (_pos select 1) + 40, 0], [], 1, "Form"];
 removeAllAssignedItems _man5;
+
+_man5 call randomSoldierLoadOut;
+/*
 _man5 addUniform "U_C_Scientist";
 _man5 addVest "V_TacVest_blk_POLICE";
 _man5 addMagazine "10Rnd_762x51_Mag";
@@ -84,11 +100,14 @@ _man5 addMagazine "10Rnd_762x51_Mag";
 _man5 addMagazine "10Rnd_762x51_Mag";
 _man5 addHeadgear "H_Cap_police";
 _man5 addGoggles "G_Balaclava_blk";
-
+*/
 
 // Soldier6
 _man6 = _group createUnit ["C_man_polo_4_F", [_pos select 0, (_pos select 1) - 30, 0], [], 1, "Form"];
 removeAllAssignedItems _man6;
+
+_man6 call randomSoldierLoadOut;
+/*
 _man6 addUniform "U_C_Scientist";
 _man6 addVest "V_TacVest_blk_POLICE";
 _man6 addWeapon "srifle_DMR_01_F";
@@ -97,12 +116,12 @@ _man6 addMagazine "10Rnd_762x51_Mag";
 _man6 addMagazine "10Rnd_762x51_Mag";
 _man6 addHeadgear "H_Cap_police";
 _man6 addGoggles "G_Balaclava_blk";
-
+*/
 
 _leader = leader _group;
 
 {
-	_x spawn refillPrimaryAmmo;
+//	_x spawn refillPrimaryAmmo;
 //	_x spawn addMilCap;
 	_x call setMissionSkill;
 	_x addRating 9999999;
