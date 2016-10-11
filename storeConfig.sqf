@@ -383,8 +383,8 @@ accessoriesArray = compileFinal str
 	["LRPS (G Hex)", "optic_LRPS_ghex_F", 300, "item"],
 	["LRPS (Tropic)", "optic_LRPS_tna_F", 300, "item"],
 	["NVS", "optic_NVS", 500, "item"],
-	["TWS", "optic_tws", 100000, "item", "HIDDEN"], // To hide from store list, add "HIDDEN" after "item", like "item", "HIDDEN"]
-	["TWS MG", "optic_tws_mg", 150000, "item", "HIDDEN"],
+	["TWS", "optic_tws", 150000, "item", "HIDDEN"], // To hide from store list, add "HIDDEN" after "item", like "item", "HIDDEN"]
+	["TWS MG", "optic_tws_mg", 100000, "item", "HIDDEN"],
 	["Nightstalker", "optic_Nightstalker", 200000, "item", "HIDDEN"]
 ];
 
@@ -498,7 +498,7 @@ headArray = compileFinal str
 	["Shemag (Olive, Headset)", "H_Shemag_olive_hs", 25, "hat"],
 	["Shemag (Tan)", "H_ShemagOpen_tan", 25, "hat"],
 	["Shemag (White)", "H_ShemagOpen_khk", 25, "hat"],
-	// ["Shemag mask (Tan)", "H_Shemag_tan", 25, "hat"],
+	["Shemag mask (Tan)", "H_Shemag_tan", 25, "hat"],
 	["Racing Helmet (Black)", "H_RacingHelmet_1_black_F", 25, "hat"],
 	["Racing Helmet (Blue)", "H_RacingHelmet_1_blue_F", 25, "hat"],
 	["Racing Helmet (Green)", "H_RacingHelmet_1_green_F", 25, "hat"],
@@ -950,23 +950,31 @@ helicoptersArray = compileFinal str
 	["PO-30 Orca (Armed, Black)", "O_Heli_Light_02_v2_F", 70000, "vehicle"], // Armed Ka-60 with orca paintjob
 	["PO-30 Orca (Armed, Hex)", "O_Heli_Light_02_F", 80000, "vehicle"], // Armed Ka-60
 	["WY-55 Hellcat (Armed)", "I_Heli_light_03_F", 90000, "vehicle"], // Armed AW159
-	["MQ-12 Falcon UAV", "B_T_UAV_03_F", 100000, "vehicle"]
+	["MQ-12 Falcon UAV", "B_T_UAV_03_F", 100000, "vehicle"],
+	
+	["AH-99 Blackfoot", "B_Heli_Attack_01_F", 225000, "vehicle", "HIDDEN"], // RAH-66 with gunner
+	["Mi-48 Kajman (Hex)", "O_Heli_Attack_02_F", 300000, "vehicle", "HIDDEN"], // Mi-28 with gunner
+	["Mi-48 Kajman (Black)", "O_Heli_Attack_02_black_F", 300000, "vehicle", "HIDDEN"] // Mi-28 with gunner (black camo)
 ];
 
 planesArray = compileFinal str
 [
 	["Caesar BTT", "C_Plane_Civil_01_F", 3000, "vehicle"],
 	["V-44 X Blackfish (Infantry)", "B_T_VTOL_01_infantry_F", 40000, "vehicle"],
-	//["V-44 X Blackfish (Gunship)", "B_T_VTOL_01_armed_F", 600000, "vehicle"],
-	//["Y-32 Xi'an", "O_T_VTOL_02_infantry_F", 250000, "vehicle", "HIDDEN"],
+	["V-44 X Blackfish (Gunship)", "B_T_VTOL_01_armed_F", 600000, "vehicle", "HIDDEN"],
+	["Y-32 Xi'an", "O_T_VTOL_02_infantry_F", 250000, "vehicle", "HIDDEN"],
 	["MQ4A Greyhawk Missile UAV", "B_UAV_02_F", 50000, "vehicle"],
 	["MQ4A Greyhawk Bomber UAV", "B_UAV_02_CAS_F", 35000, "vehicle"],
 	["K40 Ababil-3 Missile UAV", "O_UAV_02_F", 50000, "vehicle"],
 	["K40 Ababil-3 Bomber UAV", "O_UAV_02_CAS_F", 35000, "vehicle"],
 	["K40 Ababil-3 Missile UAV", "I_UAV_02_F", 50000, "vehicle"],
 	["K40 Ababil-3 Bomber UAV", "I_UAV_02_CAS_F", 35000, "vehicle"],
-
-	["KH-3A Fenghuang UAV", "O_T_UAV_04_CAS_F", 75000, "vehicle"]
+	["KH-3A Fenghuang UAV", "O_T_UAV_04_CAS_F", 75000, "vehicle"],
+	["A-143 Buzzard AA", "I_Plane_Fighter_03_AA_F", 250000, "vehicle", "HIDDEN"],
+	["A-143 Buzzard CAS", "I_Plane_Fighter_03_CAS_F", 300000, "vehicle", "HIDDEN"],
+	["A-164 Wipeout CAS", "B_Plane_CAS_01_F", 350000, "vehicle", "HIDDEN"],
+	["To-199 Neophron CAS", "O_Plane_CAS_02_F", 400000, "vehicle", "HIDDEN"]
+	
 ];
 
 boatsArray = compileFinal str
