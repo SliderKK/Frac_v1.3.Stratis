@@ -34,6 +34,8 @@ _leader = leader _group;
 {
 	_x call randomSoldierLoadOut;
 	_x spawn refillPrimaryAmmo;
+	_x addPrimaryWeaponItem "acc_flashlight";
+	_x enablegunlights "forceOn";
 //	_x spawn addMilCap;
 	_x call setMissionSkill;
 	_x addRating 9999999;
