@@ -1063,7 +1063,7 @@ _loadCrateWithWhatArray =
 	"_optics",
 	"_primaryWeapons",
 	"_secondaryWeapons",
-	"_uniforms",
+	//"_uniforms",
 	"_vests",
 	"_weaponAccessories",
 	"_mines",

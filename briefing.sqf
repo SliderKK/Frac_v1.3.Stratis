@@ -23,6 +23,7 @@ player createDiaryRecord ["changelog",
 [
 "FRACTURED Logs",
 "
+<br/>[REMOVED] Uniforms from random crates.
 <br/>[CHANGE] Increase Vehicle Prices of OP Vehicles.
 <br/>[NEW] Changed randomization on AI a little more.
 <br/>[FIX] Drugs have been re-added and fixed.
