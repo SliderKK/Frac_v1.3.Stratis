@@ -952,28 +952,28 @@ helicoptersArray = compileFinal str
 	["WY-55 Hellcat (Armed)", "I_Heli_light_03_F", 90000, "vehicle"], // Armed AW159
 	["MQ-12 Falcon UAV", "B_T_UAV_03_F", 100000, "vehicle"],
 	
-	["AH-99 Blackfoot", "B_Heli_Attack_01_F", 225000, "vehicle", "HIDDEN"], // RAH-66 with gunner
-	["Mi-48 Kajman (Hex)", "O_Heli_Attack_02_F", 300000, "vehicle", "HIDDEN"], // Mi-28 with gunner
-	["Mi-48 Kajman (Black)", "O_Heli_Attack_02_black_F", 300000, "vehicle", "HIDDEN"] // Mi-28 with gunner (black camo)
+	["AH-99 Blackfoot", "B_Heli_Attack_01_F", 600000, "vehicle"], // RAH-66 with gunner
+	["Mi-48 Kajman (Hex)", "O_Heli_Attack_02_F", 700000, "vehicle"], // Mi-28 with gunner
+	["Mi-48 Kajman (Black)", "O_Heli_Attack_02_black_F", 700000, "vehicle"] // Mi-28 with gunner (black camo)
 ];
 
 planesArray = compileFinal str
 [
 	["Caesar BTT", "C_Plane_Civil_01_F", 3000, "vehicle"],
-	["V-44 X Blackfish (Infantry)", "B_T_VTOL_01_infantry_F", 40000, "vehicle"],
-	["V-44 X Blackfish (Gunship)", "B_T_VTOL_01_armed_F", 600000, "vehicle", "HIDDEN"],
-	["Y-32 Xi'an", "O_T_VTOL_02_infantry_F", 250000, "vehicle", "HIDDEN"],
-	["MQ4A Greyhawk Missile UAV", "B_UAV_02_F", 50000, "vehicle"],
-	["MQ4A Greyhawk Bomber UAV", "B_UAV_02_CAS_F", 35000, "vehicle"],
-	["K40 Ababil-3 Missile UAV", "O_UAV_02_F", 50000, "vehicle"],
-	["K40 Ababil-3 Bomber UAV", "O_UAV_02_CAS_F", 35000, "vehicle"],
-	["K40 Ababil-3 Missile UAV", "I_UAV_02_F", 50000, "vehicle"],
-	["K40 Ababil-3 Bomber UAV", "I_UAV_02_CAS_F", 35000, "vehicle"],
-	["KH-3A Fenghuang UAV", "O_T_UAV_04_CAS_F", 75000, "vehicle"],
-	["A-143 Buzzard AA", "I_Plane_Fighter_03_AA_F", 250000, "vehicle", "HIDDEN"],
-	["A-143 Buzzard CAS", "I_Plane_Fighter_03_CAS_F", 300000, "vehicle", "HIDDEN"],
-	["A-164 Wipeout CAS", "B_Plane_CAS_01_F", 350000, "vehicle", "HIDDEN"],
-	["To-199 Neophron CAS", "O_Plane_CAS_02_F", 400000, "vehicle", "HIDDEN"]
+	["V-44 X Blackfish (Infantry)", "B_T_VTOL_01_infantry_F", 100000, "vehicle"],
+	["V-44 X Blackfish (Gunship)", "B_T_VTOL_01_armed_F", 600000, "vehicle"],
+	["Y-32 Xi'an", "O_T_VTOL_02_infantry_F", 250000, "vehicle"],
+	["MQ4A Greyhawk Missile UAV", "B_UAV_02_F", 300000, "vehicle"],
+	["MQ4A Greyhawk Bomber UAV", "B_UAV_02_CAS_F", 400000, "vehicle"],
+	["K40 Ababil-3 Missile UAV", "O_UAV_02_F", 400000, "vehicle"],
+	["K40 Ababil-3 Bomber UAV", "O_UAV_02_CAS_F", 500000, "vehicle"],
+	["K40 Ababil-3 Missile UAV", "I_UAV_02_F", 400000, "vehicle"],
+	["K40 Ababil-3 Bomber UAV", "I_UAV_02_CAS_F", 500000, "vehicle"],
+	["KH-3A Fenghuang UAV", "O_T_UAV_04_CAS_F", 600000, "vehicle"],
+	["A-143 Buzzard AA", "I_Plane_Fighter_03_AA_F", 1000000, "vehicle"],
+	["A-143 Buzzard CAS", "I_Plane_Fighter_03_CAS_F", 11000000, "vehicle"],
+	["A-164 Wipeout CAS", "B_Plane_CAS_01_F", 12000000, "vehicle"],
+	["To-199 Neophron CAS", "O_Plane_CAS_02_F", 13000000, "vehicle"]
 	
 ];
 

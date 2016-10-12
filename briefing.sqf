@@ -23,6 +23,7 @@ player createDiaryRecord ["changelog",
 [
 "FRACTURED Logs",
 "
+<br/>[CHANGE] Increase Vehicle Prices of OP Vehicles.
 <br/>[NEW] Changed randomization on AI a little more.
 <br/>[FIX] Drugs have been re-added and fixed.
 <br/>[NEW] All AI now have randomized Loadouts
