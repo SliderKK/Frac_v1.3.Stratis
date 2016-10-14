@@ -971,9 +971,9 @@ planesArray = compileFinal str
 	["K40 Ababil-3 Bomber UAV", "I_UAV_02_CAS_F", 500000, "vehicle"],
 	["KH-3A Fenghuang UAV", "O_T_UAV_04_CAS_F", 600000, "vehicle"],
 	["A-143 Buzzard AA", "I_Plane_Fighter_03_AA_F", 1000000, "vehicle"],
-	["A-143 Buzzard CAS", "I_Plane_Fighter_03_CAS_F", 11000000, "vehicle"],
-	["A-164 Wipeout CAS", "B_Plane_CAS_01_F", 12000000, "vehicle"],
-	["To-199 Neophron CAS", "O_Plane_CAS_02_F", 13000000, "vehicle"]
+	["A-143 Buzzard CAS", "I_Plane_Fighter_03_CAS_F", 1100000, "vehicle"],
+	["A-164 Wipeout CAS", "B_Plane_CAS_01_F", 1200000, "vehicle"],
+	["To-199 Neophron CAS", "O_Plane_CAS_02_F", 1300000, "vehicle"]
 	
 ];
 
@@ -1278,7 +1278,7 @@ customPlayerItems = compileFinal str
 	["Repair Kit", "repairkit", localize "STR_WL_ShopDescriptions_RepairKit", "client\icons\briefcase.paa", 500, 250],
 	["Jerry Can (Full)", "jerrycanfull", localize "STR_WL_ShopDescriptions_fuelFull", "client\icons\jerrycan.paa", 150, 75],
 	["Jerry Can (Empty)", "jerrycanempty", localize "STR_WL_ShopDescriptions_fuelEmpty", "client\icons\jerrycan.paa", 50, 25],
-	["Spawn Beacon", "spawnbeacon", localize "STR_WL_ShopDescriptions_spawnBeacon", "client\icons\spawnbeacon.paa", 1500, 750],
+	["Spawn Beacon", "spawnbeacon", localize "STR_WL_ShopDescriptions_spawnBeacon", "client\icons\spawnbeacon.paa", 10000, 5000],
 	["Camo Net", "camonet", localize "STR_WL_ShopDescriptions_Camo", "client\icons\camonet.paa", 200, 100],
 	["Syphon Hose", "syphonhose", localize "STR_WL_ShopDescriptions_SyphonHose", "client\icons\syphonhose.paa", 200, 100],
 	["Energy Drink", "energydrink", localize "STR_WL_ShopDescriptions_Energy_Drink", "client\icons\energydrink.paa", 100, 50],
