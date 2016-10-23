@@ -51,6 +51,8 @@ While{true} do{
 	}
     else
 	{
+		// titleText [text, type, speed] Shows Text near bottom of screen.
+		titleText ["Your Lungs Are Burning from Nerve Gas", "PLAIN DOWN"];
 		call setGasStatus;
 		call gasDamage;
 	};
