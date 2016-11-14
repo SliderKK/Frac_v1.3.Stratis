@@ -23,9 +23,11 @@ player createDiaryRecord ["changelog",
 [
 "FRACTURED Logs",
 "
-<br/>[ADDED] Out of Bounds, may need tweaking.
-<br/>[ADDED] ''Bury Dead Body'' to Player menu.
-<br/>[REMOVED] Uniforms from random crates.
+<br/>[CHANGE] Increased town and spawn beacon Cooldown to 5 minutes.
+<br/>[CHANGE]Spawn Beacon Spawn Height to 1200m from 1500
+<br/>[ADDED]Out of Bounds, may need tweaking.
+<br/>[ADDED]''Bury Dead Body'' to Player menu.
+<br/>[REMOVE] Uniforms from random crates.
 <br/>[CHANGE] Increase Vehicle Prices of OP Vehicles.
 <br/>[NEW] Changed randomization on AI a little more.
 <br/>[FIX] Drugs have been re-added and fixed.
