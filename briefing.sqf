@@ -23,6 +23,7 @@ player createDiaryRecord ["changelog",
 [
 "FRACTURED Logs",
 "
+<br/>[FIX]Camera Glitches while Jumping.
 <br/>[CHANGE] Increased town and spawn beacon Cooldown to 5 minutes.
 <br/>[CHANGE]Spawn Beacon Spawn Height to 1200m from 1500
 <br/>[ADDED]Out of Bounds, may need tweaking.
