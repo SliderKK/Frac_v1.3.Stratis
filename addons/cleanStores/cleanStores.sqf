@@ -17,35 +17,6 @@
 	along with this program. If not, see <http://www.gnu.org/licenses/>.
 
 	----------------------------------------------------------------------------------------------
-	
-	Name: cleanStores.sqf
-	Version: 1.0.1
-	Author: soulkobk (soulkobk.blogspot.com)
-	Creation Date: 9:33 PM 04/07/2016
-	Modification Date: 3:01 PM 06/07/2016
-	
-	Description:
-	For use with A3Wasteland 1.2b mission (A3Wasteland.com). This script is for cleaning up left-over
-	store objects that lay around and clutter up the store floors with unwanted items that were
-	disregarded by players (players don't always place items in the store crates).
-	
-	Place this script in the mission file, in path \addons\cleanStores\cleanStores.sqf and edit
-	\server\init.sqf and place the following line at the bottom of the script...
-	[] ExecVM "addons\cleanStores\cleanStores.sqf";
-	
-	The script will output to the server log file that the script is initialized and for how many
-	stores and radius.
-	
-	Parameter(s): none
-
-	Example: none
-	
-	Change Log:
-	1.0.0 -	original base script.
-	1.0.1 -	updated to getNumber of the mapSize from the configFile and calculate the map center,
-			and calculate a proper radius to cover the entire map square.
-	
-	----------------------------------------------------------------------------------------------
 */
 
 if !(isServer) exitWith {}; // DO NOT DELETE THIS LINE!

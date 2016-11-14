@@ -17,45 +17,6 @@
 	along with this program. If not, see <http://www.gnu.org/licenses/>.
 
 	----------------------------------------------------------------------------------------------
-	
-	Name: outOfBounds.sqf
-	Version: 1.0.0
-	Author: soulkobk (soulkobk.blogspot.com)
-	Creation Date: 9:33 PM 04/07/2016
-	Modification Date: 3:01 PM 06/07/2016
-	
-	Description:
-	For use with A3Wasteland 1.xx mission (A3Wasteland.com). This script will create a playable area
-	boundary on the map (server side) which is automatically calculated from the current maps
-	configuration. It will also execute a constant player check to make sure they are within the
-	playable area at all times. If the player is outside of the play area, a timer will show on
-	screen with a count down and an audible warning. If the countdown reaches 0 seconds, then the
-	player (and any vehicle the player is in) will be killed and forced to respawn.
-	
-	The playable area is within a visible blue circle border on the map as well as an altitude limit
-	(in meters) as set per the _maxHeight variable. The maximum time duration any player is allowed
-	to be outside the playable area (in seconds) is set by the _maxTime variable.
-	
-	Place this file at...
-	\addons\outOfBounds\outOfBounds.sqf
-	
-	Edit the file...
-	\init.sqf
-	
-	And paste in at the bottom...
-	[] execVM "addons\outOfBounds\outOfBounds.sqf";
-	
-	Below the line...
-	[] execVM "addons\R3F_ARTY_AND_LOG\init.sqf";
-	
-	Parameter(s): none
-
-	Example: none
-	
-	Change Log:
-	1.0.0 -	original base script.
-	
-	----------------------------------------------------------------------------------------------
 */
 
 _maxTime = 20; // 20 seconds max default
