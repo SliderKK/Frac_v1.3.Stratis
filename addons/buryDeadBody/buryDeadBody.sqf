@@ -17,44 +17,6 @@
 	along with this program. If not, see <http://www.gnu.org/licenses/>.
 
 	----------------------------------------------------------------------------------------------
-
-	Name: buryDeadBody.sqf
-	Version: 1.0.2
-	Author: soulkobk (soulkobk.blogspot.com) (base script authors MercyfulFate, AgentRev, Gigatek)
-	Creation Date: 12:47 PM 29/10/2016
-	Modification Date: 6:41 PM 08/11/2016
-
-	Description:
-	For use with A3Wasteland 1.Xx mission (A3Wasteland.com). The script adds a 'Bury Dead Body'
-	action to dead bodies for a COST set in the header of this script (default $5000 of CARRIED
-	money). The action will remove dead bodies and immediate surrounding (< 2 meters) dropped items.
-	
-	Place this file at...
-	\addons\buryDeadBody\buryDeadBody.sqf
-	
-	Place the buryDeadBody.paa icon at...
-	\addons\buryDeadBody\buryDeadBody.paa
-	
-	Edit file...
-	\client\functions\playerActions.sqf
-	
-	And paste in...
-	["<img image='addons\buryDeadBody\buryDeadBody.paa'/> Bury Dead Body", "addons\buryDeadBody\buryDeadBody.sqf", [], 1.1, false, false, "", "!isNull cursorObject && !alive cursorObject && {cursorObject isKindOf 'Man' && player distance cursorObject <= 2}"],
-	
-	Above the line...
-	[format ["<img image='client\icons\playerMenu.paa' color='%1'/>.......
-
-	Parameter(s): NONE
-
-	Example: NONE
-
-	Change Log:
-	1.0.0 -	original base script. all credit to original authors of base script.
-	1.0.1 -	updated setVariable to global, line 91 and 131.
-	1.0.2 -	updated enableSimulationGlobal function for server-side execution and updated
-			deleteVehicle to use objectFromNetId.
-
-	----------------------------------------------------------------------------------------------
 */
 
 _price = 5000;
