@@ -23,6 +23,7 @@ player createDiaryRecord ["changelog",
 [
 "FRACTURED Logs",
 "
+<br/>[ADDED] ''Bury Dead Body'' to Player menu.
 <br/>[REMOVED] Uniforms from random crates.
 <br/>[CHANGE] Increase Vehicle Prices of OP Vehicles.
 <br/>[NEW] Changed randomization on AI a little more.
