@@ -8,10 +8,20 @@ _player = _this;
 
 _player setVariable ["cmoney", (_player getVariable "cmoney") + 1000, true];
 
+[missionNamespace, "arsenalOpened", {
+    disableSerialization;
+    _display = _this select 0;
+    (_display displayCtrl 44150) ctrlRemoveAllEventHandlers "buttonclick";
+    (_display displayCtrl 44150) ctrlEnable false;
+}] call BIS_fnc_addScriptedEventHandler;
+
+_display displayAddEventHandler ["KeyDown", "if ((_this select 1) in [19,29]) then {true}"];
+
 _crate = "Box_East_Ammo_F";		
 ["Open",_crate] call BIS_fnc_arsenal;
 [_crate,[true],true] call BIS_fnc_addVirtualMagazineCargo;
 [_crate,[true],true] call BIS_fnc_addVirtualBackpackCargo;
+
 
 [_crate,[
 
