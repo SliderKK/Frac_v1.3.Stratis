@@ -23,6 +23,7 @@ player createDiaryRecord ["changelog",
 [
 "FRACTURED Logs",
 "
+<br/>[FIX]People Dying on Respawn Screen.
 <br/>[FIX]Some Virtual Arsenal bugs.
 <br/>[FIX]Disconnected HVT marker will now remove itself. 
 <br/>[CHANGE]Reduced Bury Body Price to $2500 from $5000 
