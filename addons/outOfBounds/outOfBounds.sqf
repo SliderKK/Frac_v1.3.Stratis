@@ -72,7 +72,7 @@ if (hasInterface) then
 						};
 						_oobText = format ["YOU ARE OUTSIDE OF THE PLAYABLE AREA!\n\nYOU HAVE %1 %2 TO BE INSIDE THE PLAYABLE AREA AND UNDER %3M ALTITUDE!",_inLoopTimer,_secondsText,_maxHeight];
 						[_oobText, 1] call mf_notify_client;
-						playSound "Alarm";
+						// playSound "Alarm";
 						uiSleep 1;
 						_inLoopTimer = _inLoopTimer - 1;
 						if (_inLoopTimer isEqualTo 0) exitWith

@@ -23,6 +23,9 @@ player createDiaryRecord ["changelog",
 [
 "FRACTURED Logs",
 "
+<br/>[CHANGE]Reduced Bury Body Price to $2500 from $5000 
+<br/>[CHANGE]Reduced Bury Body Time in half
+<br/>[REMOVED]Beeping Noise when out of bounds
 <br/>[FIX]Camera Glitches while Jumping.
 <br/>[CHANGE] Increased town and spawn beacon Cooldown to 5 minutes.
 <br/>[CHANGE]Spawn Beacon Spawn Height to 1200m from 1500
