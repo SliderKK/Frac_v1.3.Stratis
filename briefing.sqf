@@ -23,6 +23,8 @@ player createDiaryRecord ["changelog",
 [
 "FRACTURED Logs",
 "
+<br/>[FIX]Some Virtual Arsenal bugs.
+<br/>[FIX]Disconnected HVT marker will now remove itself. 
 <br/>[CHANGE]Reduced Bury Body Price to $2500 from $5000 
 <br/>[CHANGE]Reduced Bury Body Time in half
 <br/>[REMOVED]Beeping Noise when out of bounds
