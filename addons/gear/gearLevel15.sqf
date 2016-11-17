@@ -129,7 +129,114 @@ _crate = "Box_East_Ammo_F";
     ["APERSTripMine_Wire_Mag", 4]
 ],true] call BIS_fnc_addVirtualMagazineCargo;
 
-[_crate,[true],true] call BIS_fnc_addVirtualBackpackCargo;
+[_crate,[
+
+        //Handgun Ammo
+    ["9Rnd_45ACP_Mag", 3],
+    ["16Rnd_9x21_Mag", 3],
+    ["30Rnd_9x21_Mag", 3],
+    ["6Rnd_45ACP_Cylinder", 3],
+
+    //Sniper Rifle Ammo
+    ["10Rnd_93x64_DMR_05_Mag", 2],
+    ["10Rnd_338_Mag", 2],
+    ["5Rnd_127x108_Mag", 3],
+    ["7Rnd_408_Mag", 3],
+    ["10Rnd_127x54_Mag", 2],
+    ["10Rnd_50BW_Mag_F", 3],
+
+    // DMR Ammo
+    ["20Rnd_762x51_Mag", 3],
+    ["10Rnd_762x54_Mag", 3],
+    ["20Rnd_650x39_Cased_Mag_F", 3],
+    ["20Rnd_762x51_Mag", 3],
+
+    //Assault Rifle Ammo
+    ["30Rnd_545x39_Mag_F", 3],
+    ["30Rnd_65x39_caseless_mag", 3],
+    ["30Rnd_65x39_caseless_green", 3],
+    ["30Rnd_556x45_Stanag", 3],
+    ["30Rnd_762x39_Mag_F", 3],
+    ["30Rnd_580x42_Mag_F", 3],
+    ["20Rnd_556x45_UW_mag", 2],
+
+    // LMG Ammo
+    ["200Rnd_65x39_cased_Box", 2],
+    ["150Rnd_762x54_Box", 2],
+    ["100Rnd_65x39_caseless_mag", 2],
+    ["150Rnd_93x64_Mag", 2],
+    ["130Rnd_338_Mag", 2],
+    ["200Rnd_556x45_Box_F", 2],
+    ["150Rnd_556x45_Drum_Mag_F", 2],
+
+    // SMG Ammo
+    ["30Rnd_9x21_Mag_SMG_02", 3],
+    ["30Rnd_45ACP_Mag_SMG_01", 3],
+
+    // Rocket Launcher Ammo
+    ["RPG32_F", 1],
+    ["RPG32_HE_F", 1],
+    ["RPG7_F", 1],
+
+    // Grenade Launcher Ammo
+    ["1Rnd_HE_Grenade_shell", 3],
+    ["UGL_FlareWhite_F", 3],
+    ["UGL_FlareGreen_F", 3],
+    ["UGL_FlareRed_F", 3],
+    ["UGL_FlareYellow_F", 3],
+    ["UGL_FlareCIR_F", 3],
+    ["1Rnd_Smoke_Grenade_shell", 3],
+    ["1Rnd_SmokeRed_Grenade_shell", 3],
+    ["1Rnd_SmokeGreen_Grenade_shell", 3],
+    ["1Rnd_SmokeYellow_Grenade_shell", 3],
+    ["1Rnd_SmokePurple_Grenade_shell", 3],
+    ["1Rnd_SmokeBlue_Grenade_shell", 3],
+    ["1Rnd_SmokeOrange_Grenade_shell", 3],
+    ["3Rnd_HE_Grenade_shell", 1],
+    ["3Rnd_UGL_FlareWhite_F", 1],
+    ["3Rnd_UGL_FlareGreen_F", 1],
+    ["3Rnd_UGL_FlareRed_F", 1],
+    ["3Rnd_UGL_FlareYellow_F", 1],
+    ["3Rnd_UGL_FlareCIR_F", 1],
+    ["3Rnd_Smoke_Grenade_shell", 1],
+    ["3Rnd_SmokeRed_Grenade_shell", 1],
+    ["3Rnd_SmokeGreen_Grenade_shell", 1],
+    ["3Rnd_SmokeYellow_Grenade_shell", 1],
+    ["3Rnd_SmokePurple_Grenade_shell", 1],
+    ["3Rnd_SmokeBlue_Grenade_shell", 1],
+    ["3Rnd_SmokeOrange_Grenade_shell", 1],
+
+    //Throwables
+    ["HandGrenade", 2],
+    ["MiniGrenade", 3],
+    ["SmokeShell", 3],
+    ["SmokeShellYellow", 2],
+    ["SmokeShellGreen", 3],
+    ["SmokeShellRed", 3],
+    ["SmokeShellPurple", 3],
+    ["SmokeShellOrange", 3],
+    ["SmokeShellBlue", 3],
+    ["Chemlight_green", 5],
+    ["Chemlight_red", 5],
+    ["Chemlight_yellow", 5],
+    ["Chemlight_blue", 5],
+    ["B_IR_Grenade", 5],
+    ["O_IR_Grenade", 5],
+    ["I_IR_Grenade", 5],
+
+    //Puttable Explosives
+    ["IEDUrbanSmall_Remote_Mag", 2],
+    ["IEDLandSmall_Remote_Mag", 2],
+    ["SatchelCharge_Remote_Mag", 2],
+    ["IEDUrbanBig_Remote_Mag", 1],
+    ["IEDLandBig_Remote_Mag", 1],
+    ["ATMine_Range_Mag", 2],
+    ["ClaymoreDirectionalMine_Remote_Mag", 3],
+    ["APERSMine_Range_Mag", 4],
+    ["SLAMDirectionalMine_Wire_Mag", 4],
+    ["APERSBoundingMine_Range_Mag", 4],
+    ["APERSTripMine_Wire_Mag", 4]
+],true] call BIS_fnc_addVirtualBackpackCargo;
 
 
 [_crate,[
