@@ -28,7 +28,7 @@ class ServerAdminMenu
 		{
 			idc = -1;
 			colorText[] = {1, 1, 1, 1};
-			colorBackground[] = {A3W_UICOLOR_R, A3W_UICOLOR_G, A3W_UICOLOR_B, A3W_UIFILL};
+			colorBackground[] = {A3W_UICOLOR_R, A3W_UICOLOR_G, A3W_UICOLOR_B, 0.8};
 
 			x=0.28;
 			y=0.10;
@@ -39,7 +39,7 @@ class ServerAdminMenu
 		class ServerAdminMenu_Title:w_RscText
 		{
 			idc=-1;
-			text="Admin Menu";
+			text="CCG Admin Menu";
 			x=0.29;
 			y=0.108;
 			w=0.088;

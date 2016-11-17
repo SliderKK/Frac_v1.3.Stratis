@@ -92,6 +92,9 @@ if (_uid call isAdmin) then
 			_dir = [player, _objPos] call BIS_fnc_dirTo;
 			player setDir _dir;
 			player globalChat "Teleported to your object";
+
+			CCGLogger = ["AdminLog", format["Teleported to Object [%1 (%2)]", name player, getPlayerUID player]];
+			publicVariableServer "CCGLogger";
 		};
 		case OBJECT_SEARCH_ACTION_CLEAR_MAP:
 		{
