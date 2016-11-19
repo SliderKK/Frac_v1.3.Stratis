@@ -1,12 +1,12 @@
 // ******************************************************************************************
-// * This project is licensed under the GNU Affero GPL v3. Copyright ? 2014 A3Wasteland.com *
+// * This project is licensed under the GNU Affero GPL v3. Copyright © 2014 A3Wasteland.com *
 // ******************************************************************************************
 //	@file Version: 1.0
 //	@file Name: deleteUnlocked.sqf
 //	@file Author: LouD
 //	@file Created: 15-08-2015
 
-#define RADIUS 60
+#define RADIUS 30
 _objects = nearestObjects [position player, ["thingX", "Building", "ReammoBox_F"], RADIUS];
 _ownedObjects = {typeName _x == "OBJECT" && {!(_x getVariable "objectLocked")}} count _objects;
 

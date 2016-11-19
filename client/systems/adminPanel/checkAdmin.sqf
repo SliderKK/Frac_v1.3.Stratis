@@ -17,7 +17,7 @@ switch (true) do
 	case ([_uid, serverOwners] call isAdmin || isServer):
 	{
 		execVM "client\systems\adminPanel\loadServerAdministratorMenu.sqf";
-		hint "Welcome CCG Admin you shitbag";
+		hint "Welcome Boss";
 	};
 	case ([_uid, highAdmins] call isAdmin):
 	{
@@ -27,7 +27,7 @@ switch (true) do
 	case ([_uid, lowAdmins] call isAdmin):
 	{
 		execVM "client\systems\adminPanel\loadModeratorMenu.sqf";
-		hint "Welcome CCG Mod";
+		hint "Welcome Low Admin";
 	};
 	case (serverCommandAvailable "#kick"):
 	{
