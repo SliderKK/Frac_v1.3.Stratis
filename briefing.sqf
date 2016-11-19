@@ -23,7 +23,6 @@ player createDiaryRecord ["changelog",
 [
 "FRACTURED Logs",
 "
-<br/>[CHANGE] Limited Ammo amount for Prestiege lvl 5. 
 <br/>[CHANGE]VIP to HVT
 <br/>[FIX]People Dying on Respawn Screen.
 <br/>[FIX]Some Virtual Arsenal bugs.
