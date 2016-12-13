@@ -35,6 +35,7 @@ removeDisabledMissions = [_path, "removeDisabledMissions.sqf"] call mf_compile;
 setLocationObjects = [_path, "setLocationObjects.sqf"] call mf_compile;
 setLocationState = [_path, "setLocationState.sqf"] call mf_compile;
 setMissionState = [_path, "setMissionState.sqf"] call mf_compile;
+moveToHC = [_path, "createUnits\moveToHC.sqf"] call mf_compile;
 //non-vanilla missions
 createsniperGroup = [_path, "createUnits\sniperGroup.sqf"] call mf_compile; 
 createsmugglerGroup = [_path, "createUnits\smugglerGroup.sqf"] call mf_compile;
@@ -96,6 +97,13 @@ randomCrateLoadOut = [_path, "randomCrateLoadOut.sqf"] call mf_compile;
 //Player Management
 server_playerDied = [_path, "serverPlayerDied.sqf"] call mf_compile;
 A3W_fnc_serverPlayerDied = server_playerDied;
+
+//Bounty System
+_path = "server\systems\bounties";
+onBountySystemPlayerDied = [_path, "onBountySystemPlayerDied.sqf"] call mf_compile;
+startPlayerBounty = [_path, "startPlayerBounty.sqf"] call mf_compile;
+startSystemBounty = [_path, "startSystemBounty.sqf"] call mf_compile;
+startSystemBountyByName = [_path, "startSystemBountyByName.sqf"] call mf_compile;
 
 //Spawning Compiles
 _path = "server\spawning";

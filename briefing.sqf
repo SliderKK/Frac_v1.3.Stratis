@@ -23,6 +23,8 @@ player createDiaryRecord ["changelog",
 [
 "FRACTURED Logs",
 "
+<br/>[FIXED] Optimizations for Server
+<br/>[ADDED] Bounty System by Centrifugal
 <br/>[CHANGE]VIP to HVT
 <br/>[FIX]People Dying on Respawn Screen.
 <br/>[FIX]Some Virtual Arsenal bugs.
