@@ -80,7 +80,7 @@ _setupObjects =
 	_leader = effectiveCommander (_vehicles select 0);
 	_aiGroup selectLeader _leader;
 	_leader setRank "LIEUTENANT";
-	
+	[_aiGroup,A3W_HC1] call moveToHC;
 	_aiGroup setCombatMode "RED";
 	_aiGroup setBehaviour "COMBAT";
 	_aiGroup setFormation "LINE";

@@ -292,6 +292,7 @@ if (_playerSavingOn || _objectSavingOn || _vehicleSavingOn || _mineSavingOn || _
 	};
 
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	call compile preprocessFileLineNumbers "server\systems\bounties\init.sqf";
 
 	call compile preProcessFileLineNumbers format ["persistence\server\setup\%1\init.sqf", call A3W_savingMethodDir];
 

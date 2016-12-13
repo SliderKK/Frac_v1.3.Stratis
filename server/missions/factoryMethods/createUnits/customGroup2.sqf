@@ -40,5 +40,7 @@ for "_i" from 1 to _nbUnits do
     _unit call setMissionSkill;
     _unit addEventHandler ["Killed", server_playerDied];
 };
+
+[_group,HC1] call moveToHC;
  
 [_group, _pos] call defendArea;

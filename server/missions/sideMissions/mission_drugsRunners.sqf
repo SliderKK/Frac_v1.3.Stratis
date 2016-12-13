@@ -81,6 +81,8 @@ _setupObjects =
 
 	_leader = effectiveCommander (_vehicles select 0);
 	_aiGroup selectLeader _leader;
+	
+	[_aiGroup,A3W_HC1] call moveToHC;
 
 	_aiGroup setCombatMode "GREEN"; // BLUE = units will never fire
 	_aiGroup setBehaviour "CARELESS"; // units will try to stay on roads, not caring about finding any cover

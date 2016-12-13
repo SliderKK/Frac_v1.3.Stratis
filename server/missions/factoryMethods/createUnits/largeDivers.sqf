@@ -87,4 +87,6 @@ _leader = leader _group;
 	_x addEventHandler ["Killed", server_playerDied];
 } forEach units _group;
 
+[_group,HC1] call moveToHC;
+
 [_group, _pos, "Ship"] call defendArea;

@@ -89,6 +89,8 @@ _setupObjects =
 
 	_leader = effectiveCommander _vehicle;
 	_aiGroup selectLeader _leader;
+	
+	[_aiGroup,A3W_HC1] call moveToHC;
 
 	_aiGroup setCombatMode "WHITE"; // Defensive behaviour
 	_aiGroup setBehaviour "AWARE";

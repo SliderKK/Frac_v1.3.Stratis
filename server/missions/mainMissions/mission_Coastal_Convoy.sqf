@@ -123,6 +123,8 @@ _setupObjects =
 
 	_leader = effectiveCommander (_vehicles select 0);
 	_aiGroup selectLeader _leader;
+	
+	[_aiGroup,A3W_HC1] call moveToHC;
 
 	_aiGroup setCombatMode "GREEN"; // units will defend themselves
 	_aiGroup setBehaviour "SAFE"; // units feel safe until they spot an enemy or get into contact

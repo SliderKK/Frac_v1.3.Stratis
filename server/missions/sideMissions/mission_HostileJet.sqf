@@ -64,6 +64,8 @@ _setupObjects =
 	
 	_leader = effectiveCommander (_vehicles select 0);
 	_aiGroup selectLeader _leader;
+	
+	[_aiGroup,A3W_HC1] call moveToHC;
 	_leader setRank "LIEUTENANT";
 	
 	_aiGroup setCombatMode "RED";
