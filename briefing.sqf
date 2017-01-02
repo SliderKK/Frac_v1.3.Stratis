@@ -446,15 +446,6 @@ player createDiaryRecord ["changelog",
 "
 ]];
 
-player createDiaryRecord ["changelog",
-[
-"v0.9b",
-"
-<br/>[Initial release] - Welcome to Altis!
-"
-]];
-
-
 player createDiaryRecord ["credits",
 [
 "Credits",
@@ -929,23 +920,21 @@ player createDiaryRecord ["admins",
 <br/> * Ghostyy
 <br/> * OutlawII
 <br/> * RequiemAnarchy
-<br/> * GeneralNukes
+<br/> * Shine_Dwarf
 
 <br/><font color='#0066FF' size='18'>High Admins</font>
 <br/><font color='#00FFEF' size='12'>Teleport, Spectate, Slay Delete Hacked objects</font>
-<br/> * Greenmold
-<br/> * ExaMpLez
 <br/> * Harry
-<br/> * Downey
 <br/> * StinkySneeze
 <br/> * Doc Whiskey
+<br/> * Magmalation
+<br/> * NeoUSMCVet
 
 <br/><font color='#002FFF' size='18'>Low Admins</font>
 <br/><font color='#00FFEF' size='12'>Spectate, Slay, Delete Hacked Objects</font>
-<br/> * Magmalation
 <br/> * Llama
-<br/> * Shine_Dwarf
-<br/> * Sugar
+<br/> * ExaMpLez
+<br/> * Razex
 
 "
 ]];
