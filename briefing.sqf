@@ -709,7 +709,7 @@ player createDiaryRecord ["gearlevel",
 <br/> A First Aid Kit
 <br/> A pair of Red Goggles
 <br/> An ECH Light Helmet
-<br/> A MK 14 with 5 Standard Mags a RCO and a suppressor instead of a Sting
+<br/> A MK 14 with 5 Standard Mags a RCO and a suppressor instead of a MX Marksmen Rifle
 <br/> A 4-five .45 Pistol with an MRD Sight and suppressor instead of the ACP .45
 <br/> An RPG-42 Alamut with 1 Rocket
 <br/> You also get extra mags for the 4-five .45
@@ -732,7 +732,7 @@ player createDiaryRecord ["gearlevel",
 <br/> A First Aid Kit
 <br/> A pair of Red Goggles
 <br/> An ECH Helmet
-<br/> An MX Marksmen rifle with 4 Mags an RCO and a suppressor instead of a Sting
+<br/> An MX Marksmen rifle with 4 Mags an RCO and a suppressor instead of a MX Carbine
 <br/> A 4-five .45 Pistol with an MRD Sight and Suppressor instead of the ACP .45
 <br/> An RPG-42 Alamut with 1 Rocket
 <br/> You also get extra mags for the 4-five .45
@@ -755,7 +755,7 @@ player createDiaryRecord ["gearlevel",
 <br/> A First Aid Kit
 <br/> A pair of Red Goggles
 <br/> An ECH Light Helmet
-<br/> An MX Carbine with 2 Mags and a Hologsight instead of a Sting
+<br/> An MX Carbine with 2 Mags and a Hologsight instead of a TRG-20
 <br/> A 4-five .45 Pistol with an MRD Sight instead of the ACP .45
 <br/> An RPG-42 Alamut with 1 Rocket
 <br/> You also get extra mags for the 4-five .45
@@ -778,7 +778,7 @@ player createDiaryRecord ["gearlevel",
 <br/> A First Aid Kit
 <br/> A pair of Red Goggles
 <br/> An ECH Helmet
-<br/> A TRG-20 with 2 Mags and a Hologsight and Suppressor instead of a Sting
+<br/> A TRG-20 with 2 Mags and a Hologsight and Suppressor instead of a Vermin
 <br/> A 4-five .45 Pistol with an MRD Sight instead of the ACP .45
 <br/> An RPG-42 Alamut with 1 Rocket
 <br/> You also get extra mags for the 4-five .45
@@ -801,7 +801,7 @@ player createDiaryRecord ["gearlevel",
 <br/> A First Aid Kit
 <br/> A pair of Red Goggles
 <br/> An ECH Helmet
-<br/> A TRG-20 with 2 Mags and a Hologsight instead of a Sting
+<br/> A TRG-20 with 2 Mags and a Hologsight instead of a Vermin
 <br/> A 4-five .45 Pistol instead of the ACP .45
 <br/> An RPG-42 Alamut with 1 Rocket
 <br/> You also get extra mags for the 4-five .45
@@ -822,7 +822,7 @@ player createDiaryRecord ["gearlevel",
 <br/> An Extra Grenade
 <br/> A First Aid Kit
 <br/> A pair of Red Goggles
-<br/> A TRG-20 with 2 Mags and a Hologsight instead of a Sting
+<br/> A TRG-20 with 2 Mags and a Hologsight instead of a Vermin
 <br/> A 4-five .45 Pistol instead of the ACP .45
 <br/> An RPG-42 Alamut with 1 Rocket
 <br/> You also get extra mags for the 4-five .45
@@ -843,10 +843,10 @@ player createDiaryRecord ["gearlevel",
 <br/> An Extra Grenade
 <br/> A First Aid Kit
 <br/> A pair of Red Goggles
-<br/> A holosight and Suppressor on your Sting
+<br/> A holosight and Suppressor on your Vermin
 <br/> A 4-five .45 Pistol instead of the ACP .45
 <br/> An RPG-42 Alamut with 1 Rocket
-<br/> You also get extra mags for the Sting and 4-five .45
+<br/> You also get extra mags for the Vermin and 4-five .45
 "
 ]];
 
@@ -864,9 +864,8 @@ player createDiaryRecord ["gearlevel",
 <br/> An Extra Grenade
 <br/> A First Aid Kit
 <br/> A pair of Red Goggles
-<br/> A holosight and Suppressor on your Sting
+<br/> A holosight for your Vermin
 <br/> A 4-five .45 Pistol instead of the ACP .45
-<br/> You also get extra mags for the Sting and 4-five .45
 "
 ]];
 
@@ -884,8 +883,7 @@ player createDiaryRecord ["gearlevel",
 <br/> An Extra Grenade
 <br/> A First Aid Kit
 <br/> A pair of Red Goggles
-<br/> A holosight on your Sting
-<br/> You also get extra mags for both Sting and ACP .45
+<br/> A Vermin .45 ACP + 3 Mags
 "
 ]];
 
@@ -902,6 +900,7 @@ player createDiaryRecord ["gearlevel",
 <br/> A pair of Binoculars
 <br/> An Extra Grenade
 <br/> A First Aid Kit
+<br/> A holosight for the Sting
 <br/> You will also get extra mags for both your Sting and ACP .45
 "
 ]];
@@ -927,13 +926,13 @@ player createDiaryRecord ["admins",
 <br/> * Harry
 <br/> * StinkySneeze
 <br/> * Doc Whiskey
+<br/> * ExaMpLez
 <br/> * Magmalation
 <br/> * NeoUSMCVet
 
 <br/><font color='#002FFF' size='18'>Low Admins</font>
 <br/><font color='#00FFEF' size='12'>Spectate, Slay, Delete Hacked Objects</font>
 <br/> * Llama
-<br/> * ExaMpLez
 <br/> * Razex
 
 "
