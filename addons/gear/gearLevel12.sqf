@@ -16,7 +16,7 @@ removeHeadgear _player;
 
 _player addBackpack "G_Bergen";
 _player addMagazines ["9Rnd_45ACP_Mag", 1];
-_player addWeapon "hgun_ACPC2_F";
+_player addWeapon "hgun_ACPC2_F"; 
 
 _player selectWeapon "hgun_ACPC2_F";
 switch (true) do
@@ -34,13 +34,12 @@ switch (true) do
 	};
 	case (["_sniper_", typeOf _player] call fn_findString != -1):
 	{
-		_player addWeapon "Rangefinder";
+		_player addWeapon "Rangefinder"; 
 		_player removeItem "";
 	};
 		case (["_diver_", typeOf _player] call fn_findString != -1):
 	{
 		_player addVest "V_RebreatherIA";
-		_player addGoggles "G_Diving";
 		_player removeItem "";
 
 	};
